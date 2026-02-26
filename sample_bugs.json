@@ -1,0 +1,8 @@
+{
+  "title": "Login fails when JWT token expires",
+  "description": "Users receive a 500 error when token is expired during authentication.",
+  "comments": [
+    "Issue started after last backend deployment.",
+    "JWT validation logic might be broken."
+  ]
+}
