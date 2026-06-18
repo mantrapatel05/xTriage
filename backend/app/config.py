@@ -24,7 +24,7 @@ class Settings:
 	debug: bool = False
 	log_level: str = "INFO"
 	cors_origins: tuple[str, ...] = ("http://localhost:5173",)
-	gemini_api_key: str | None = None
+	groq_api_key: str | None = None
 
 
 @lru_cache(maxsize=1)
@@ -39,5 +39,5 @@ def get_settings() -> Settings:
 			os.getenv("CORS_ORIGINS"),
 			default=("http://localhost:5173",),
 		),
-		gemini_api_key=os.getenv("GEMINI_API_KEY"),
+		groq_api_key=os.getenv("GROQ_API_KEY"),
 	)

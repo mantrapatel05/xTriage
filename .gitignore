@@ -12,3 +12,4 @@ venv/
 htmlcov/
 dist/
 build/
+.md
