@@ -2,6 +2,7 @@ from datetime import datetime, timezone
 
 from fastapi import APIRouter
 from pydantic import BaseModel, Field
+from backend.app.services.metrics_tracker import metrics
 
 
 router = APIRouter(tags=["metrics"])
@@ -18,11 +19,5 @@ class MetricsSnapshot(BaseModel):
 
 @router.get("/metrics", response_model=MetricsSnapshot)
 async def get_metrics() -> MetricsSnapshot:
-	return MetricsSnapshot(
-		total_bugs=2,
-		triaged_bugs=1,
-		duplicate_rate=0.0,
-		average_triage_seconds=2.4,
-		severity_breakdown={"low": 0, "medium": 1, "high": 1, "critical": 0},
-		last_updated=datetime.now(timezone.utc),
-	)
+	data = metrics.snapshot()
+	return MetricsSnapshot(**data)
