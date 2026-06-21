@@ -23,7 +23,13 @@ class Settings:
 	environment: str = "development"
 	debug: bool = False
 	log_level: str = "INFO"
-	cors_origins: tuple[str, ...] = ("http://localhost:5173",)
+	cors_origins: tuple[str, ...] = (
+		"http://localhost:5173",
+		"http://127.0.0.1:5173",
+		"http://localhost:5174",
+		"http://127.0.0.1:5174",
+		"http://localhost:3000",
+	)
 	groq_api_key: str | None = None
 
 
@@ -37,7 +43,13 @@ def get_settings() -> Settings:
 		log_level=os.getenv("LOG_LEVEL", "INFO"),
 		cors_origins=_parse_csv(
 			os.getenv("CORS_ORIGINS"),
-			default=("http://localhost:5173",),
+			default=(
+				"http://localhost:5173",
+				"http://127.0.0.1:5173",
+				"http://localhost:5174",
+				"http://127.0.0.1:5174",
+				"http://localhost:3000",
+			),
 		),
 		groq_api_key=os.getenv("GROQ_API_KEY"),
 	)
