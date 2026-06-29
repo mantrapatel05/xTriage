@@ -1,5 +1,288 @@
 [
   {
+    "id": "microsoft -- vscode -- 323589",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323589",
+    "title": "Bad flickering on windows update button",
+    "description": "https://github.com/user-attachments/assets/520cf717-9a14-4cce-aaf8-5e364062eb35",
+    "labels": [
+      "bug",
+      "install-update"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323570",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323570",
+    "title": "Make sure default vscode terminal auto approve rules are migrated.",
+    "description": "VS  Code user setting for auto approve list seems to be working/respected , but need to make sure the built in rules we have from vscode are also working. \nhttps://github.com/microsoft/vscode/issues/322112#issuecomment-4754403408 ",
+    "labels": [
+      "bug",
+      "agent-host",
+      "terminal-auto-approve"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323562",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323562",
+    "title": "Sign in to use Copilot is no-op",
+    "description": "Testing #323186\n\n1. code-insiders --transient\n2. Try signing in from the model picker action\n\nhttps://github.com/user-attachments/assets/cd99299b-09b2-4fc9-8e2c-18494dbfd2fd",
+    "labels": [
+      "bug",
+      "model-picker"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323552",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323552",
+    "title": "Isolation picker shows only 'Folder' (grayed out) when folder is not git-backed",
+    "description": "Does this issue occur when all extensions are disabled?: Unknown\n\n- VS Code Version: main\n- OS Version: \n\nSteps to Reproduce:\n\n1. Create or open a folder that is not a git repository.\n2. Open the isolation picker (the UI that lets you choose how to open the workspace/isolation target).\n3. Observe that only the \"Folder\" option is shown and it appears grayed out; the \"Worktree\" option is not shown and there is no indication why.\n\nExpected behavior:\n\n- The isolation picker should indicate why Worktree is unavailable when the folder is not git-backed. Preferably both options (Folder and Worktree) could be shown, and when the user selects Worktree, VS Code could offer to initialize a git repository in that folder (git init) or provide a clear action to enable worktrees.\n\nActual behavior:\n\n- Only \"Folder\" is shown (grayed out) with no explanation, which is confusing for users who expect worktrees to be available.\n\nProposed fix / suggestion:\n\n- Show both options in the isolation picker. If the folder is not git-backed, either:\n  - Disable the Worktree option but show a clear message explaining that a git repository is required and offer an inline action to initialize git in the folder, or\n  - Allow selecting Worktree and prompt to initialize a git repository (run `git init`) in that folder so the user can proceed.\n\nNotes:\n\n- This came up during internal testing of a new repository — the folder being new (no git) made the picker behavior confusing. Adding an explanatory message or an init action should improve discoverability and UX.\n\n[View original Slack conversation](https://vscodeteam.slack.com/archives/C09MVCZKLP4/p1782750547562709?thread_ts=1782750547.562709&cid=C09MVCZKLP4)",
+    "labels": [
+      "bug",
+      "ux"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323531",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323531",
+    "title": "[Error] unhandlederror-The reader object cannot be used outside its compute function!",
+    "description": "## Error Message\n````\nunhandlederror-The reader object cannot be used outside its compute function!\n````\n\n## Stack Trace\n&nbsp;&nbsp;&nbsp;&nbsp;at Zb._ensureReaderValid ([./src/vs/base/common/observableInternal/observables/derivedImpl.ts:335:36](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/observableInternal/observables/derivedImpl.ts#L335))  \n&nbsp;&nbsp;&nbsp;&nbsp;at Zb.readObservable ([./src/vs/base/common/observableInternal/observables/derivedImpl.ts:339:7](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/observableInternal/observables/derivedImpl.ts#L339))  \n&nbsp;&nbsp;&nbsp;&nbsp;at Zb.read ([./src/vs/base/common/observableInternal/observables/baseObservable.ts:54:17](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/observableInternal/observables/baseObservable.ts#L54))  \n&nbsp;&nbsp;&nbsp;&nbsp;at Zb._computeFn ([./src/vs/editor/contrib/inlineCompletions/browser/model/inlineCompletionsModel.ts:395:31](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/editor/contrib/inlineCompletions/browser/model/inlineCompletionsModel.ts#L395))  \n&nbsp;&nbsp;&nbsp;&nbsp;at Zb._recompute ([./src/vs/base/common/observableInternal/observables/derivedImpl.ts:201:23](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/observableInternal/observables/derivedImpl.ts#L201))  \n&nbsp;&nbsp;&nbsp;&nbsp;at Zb.get ([./src/vs/base/common/observableInternal/observables/derivedImpl.ts:159:10](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/observableInternal/observables/derivedImpl.ts#L159))  \n&nbsp;&nbsp;&nbsp;&nbsp;at Zb.reportChanges ([./src/vs/base/common/observableInternal/observables/baseObservable.ts:45:7](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/observableInternal/observables/baseObservable.ts#L45))  \n&nbsp;&nbsp;&nbsp;&nbsp;at VIt.endUpdate ([./src/vs/base/common/observableInternal/utils/utils.ts:238:15](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/observableInternal/utils/utils.ts#L238))  \n&nbsp;&nbsp;&nbsp;&nbsp;at Zb.endUpdate ([./src/vs/base/common/observableInternal/observables/derivedImpl.ts:281:6](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/observableInternal/observables/derivedImpl.ts#L281))  \n&nbsp;&nbsp;&nbsp;&nbsp;at $F.finish ([./src/vs/base/common/observableInternal/transaction.ts:102:12](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/observableInternal/transaction.ts#L102))  \n&nbsp;&nbsp;&nbsp;&nbsp;at $i ([./src/vs/base/common/observableInternal/transaction.ts:21:5](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/observableInternal/transaction.ts#L21))  \n&nbsp;&nbsp;&nbsp;&nbsp;at transaction ([./src/vs/base/common/observableInternal/transaction.ts:58:2](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/observableInternal/transaction.ts#L58))  \n&nbsp;&nbsp;&nbsp;&nbsp;at subtransaction ([./src/vs/base/common/observableInternal/observables/observableFromEvent.ts:110:4](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/observableInternal/observables/observableFromEvent.ts#L110))  \n&nbsp;&nbsp;&nbsp;&nbsp;at cb ([./src/vs/editor/contrib/inlineCompletions/browser/model/suggestWidgetAdapter.ts:268:38](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/editor/contrib/inlineCompletions/browser/model/suggestWidgetAdapter.ts#L268))  \n&nbsp;&nbsp;&nbsp;&nbsp;at cb ([./src/vs/editor/browser/observableCodeEditor.ts:240:10](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/editor/browser/observableCodeEditor.ts#L240))  \n&nbsp;&nbsp;&nbsp;&nbsp;at BCe.value ([./src/vs/editor/contrib/inlineCompletions/browser/model/suggestWidgetAdapter.ts:268:19](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/editor/contrib/inlineCompletions/browser/model/suggestWidgetAdapter.ts#L268))  \n&nbsp;&nbsp;&nbsp;&nbsp;at D._deliver ([./src/vs/base/common/event.ts:1364:12](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/event.ts#L1364))  \n&nbsp;&nbsp;&nbsp;&nbsp;at D.fire ([./src/vs/base/common/event.ts:1395:8](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/base/common/event.ts#L1395))  \n&nbsp;&nbsp;&nbsp;&nbsp;at gyi.update ([./src/vs/editor/contrib/inlineCompletions/browser/model/suggestWidgetAdapter.ts:142:33](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/editor/contrib/inlineCompletions/browser/model/suggestWidgetAdapter.ts#L142))  \n&nbsp;&nbsp;&nbsp;&nbsp;at BCe.value ([./src/vs/editor/contrib/inlineCompletions/browser/model/suggestWidgetAdapter.ts:104:10](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/editor/contrib/inlineCompletions/browser/model/suggestWidgetAdapter.ts#L104))\n\n<details>\n<summary>Raw Stack Trace (minified)</summary>\n\n````\nError: The reader object cannot be used outside its compute function!     at Zb._ensureReaderValid (out/vs/workbench/workbench.desktop.main.js:435:15061)     at Zb.readObservable (out/vs/workbench/workbench.desktop.main.js:435:15157)     at Zb.read (out/vs/workbench/workbench.desktop.main.js:435:522)     at Zb._computeFn (out/vs/workbench/workbench.desktop.main.js:929:39158)     at Zb._recompute (out/vs/workbench/workbench.desktop.main.js:435:13168)     at Zb.get (out/vs/workbench/workbench.desktop.main.js:435:12502)     at Zb.reportChanges (out/vs/workbench/workbench.desktop.main.js:435:497)     at VIt.endUpdate (out/vs/workbench/workbench.desktop.main.js:435:22977)     at Zb.endUpdate (out/vs/workbench/workbench.desktop.main.js:435:14169)     at $F.finish (out/vs/workbench/workbench.desktop.main.js:434:110609)     at $i (out/vs/workbench/workbench.desktop.main.js:434:109809)     at jF (out/vs/workbench/workbench.desktop.main.js:434:110034)     at handleEvent (out/vs/workbench/workbench.desktop.main.js:435:19762)     at out/vs/workbench/workbench.desktop.main.js:936:50960     at a.forceUpdate (out/vs/workbench/workbench.desktop.main.js:883:32379)     at BCe.value (out/vs/workbench/workbench.desktop.main.js:936:50945)     at D._deliver (out/vs/workbench/workbench.desktop.main.js:433:3268)     at D.fire (out/vs/workbench/workbench.desktop.main.js:433:3587)     at gyi.update (out/vs/workbench/workbench.desktop.main.js:936:49167)     at BCe.value (out/vs/workbench/workbench.desktop.main.js:936:48531)     at D._deliver (out/vs/workbench/workbench.desktop.main.js:433:3268)     at D._deliverQueue (out/vs/workbench/workbench.desktop.main.js:433:3357)     at D.fire (out/vs/workbench/workbench.desktop.main.js:433:3692)     at QH.hideWidget (out/vs/workbench/workbench.desktop.main.js:936:24806)     at BCe.value (out/vs/workbench/workbench.desktop.main.js:936:33033)     at D._deliver (out/vs/workbench/workbench.desktop.main.js:433:3268)     at D._deliverQueue (out/vs/workbench/workbench.desktop.main.js:433:3357)     at D.fire (out/vs/workbench/workbench.desktop.main.js:433:3692)     at yG.cancel (out/vs/workbench/workbench.desktop.main.js:930:18169)     at Ll._insertSuggestion (out/vs/workbench/workbench.desktop.main.js:936:35818)     at Ll.acceptSelectedSuggestion (out/vs/workbench/workbench.desktop.main.js:936:39443)     at a.handler [as _callback] (out/vs/workbench/workbench.desktop.main.js:936:41702)     at a.runEditorCommand (out/vs/workbench/workbench.desktop.main.js:442:11007)     at out/vs/workbench/workbench.desktop.main.js:442:11302     at out/vs/workbench/workbench.desktop.main.js:442:11213     at a.invokeFunction (out/vs/workbench/workbench.desktop.main.js:1969:944)     at Cs.invokeWithinContext (out/vs/workbench/workbench.desktop.main.js:710:17672)     at a.runEditorCommand (out/vs/workbench/workbench.desktop.main.js:442:11139)     at a.runCommand (out/vs/workbench/workbench.desktop.main.js:442:11249)     at handler (out/vs/workbench/workbench.desktop.main.js:442:9614)     at a.invokeFunction (out/vs/workbench/workbench.desktop.main.js:1969:944)     at brt._tryExecuteCommand (out/vs/workbench/workbench.desktop.main.js:1876:4962)     at brt.executeCommand (out/vs/workbench/workbench.desktop.main.js:1876:4376)     at m6._doDispatch (out/vs/workbench/workbench.desktop.main.js:1854:16708)     at m6._dispatch (out/vs/workbench/workbench.desktop.main.js:1854:13607)     at out/vs/workbench/workbench.desktop.main.js:1855:3124\n````\n\n</details>\n\n## Details\n| Property | Value |\n| --- | --- |\n| Bucket ID | [`cb4c3d48-3dbf-ec70-742c-f3e659ba4666`](https://errors.code.visualstudio.com/bucket/cb4c3d48-3dbf-ec70-742c-f3e659ba4666?product=VSCode&extension=core&commit=7e7950df89d055b5a378379db9ee14290772148a) |\n| Version | 1.126.0 |\n| Commit | [`7e7950df`](https://insiders.vscode.dev/github/microsoft/vscode/tree/7e7950df89d055b5a378379db9ee14290772148a) |\n| Last Seen | Sun Jun 28 2026 23:55:55 GMT+0000 (Coordinated Universal Time) |\n| Platforms | Mac, Windows, Linux |\n| Product | VSCode |\n\n---\n*This issue was automatically created from the VS Code Errors Dashboard*",
+    "labels": [
+      "bug",
+      "error-telemetry",
+      "recent-regression",
+      "stable-anomaly",
+      "ai-generated",
+      "ai-analyzed"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323530",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323530",
+    "title": "[Error] unhandlederror-署名の検証が 'UnknownError' エラーで失敗しました。",
+    "description": "## Error Message\n````\nunhandlederror-署名の検証が 'UnknownError' エラーで失敗しました。\n````\n\n## Stack Trace\n&nbsp;&nbsp;&nbsp;&nbsp;at fa.downloadExtension ([./src/vs/platform/extensionManagement/node/extensionManagementService.ts:381:0](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/platform/extensionManagement/node/extensionManagementService.ts#L381))  \n&nbsp;&nbsp;&nbsp;&nbsp;at async fa.downloadAndExtractGalleryExtension ([./src/vs/platform/extensionManagement/node/extensionManagementService.ts:300:0](https://github.com/microsoft/vscode/blob/7e7950df89d055b5a378379db9ee14290772148a/src/vs/platform/extensionManagement/node/extensionManagementService.ts#L300))\n\n<details>\n<summary>Raw Stack Trace (minified)</summary>\n\n````\nSignatureVerificationInternal: 署名の検証が 'UnknownError' エラーで失敗しました。     at fa.downloadExtension (out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:482:79847)     at async fa.downloadAndExtractGalleryExtension (out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:482:78128)\n````\n\n</details>\n\n## Details\n| Property | Value |\n| --- | --- |\n| Bucket ID | [`233fde49-ab63-7392-9cf4-3d5a361bab01`](https://errors.code.visualstudio.com/bucket/233fde49-ab63-7392-9cf4-3d5a361bab01?product=VSCode&extension=core&commit=7e7950df89d055b5a378379db9ee14290772148a) |\n| Version | 1.126.0 |\n| Commit | [`7e7950df`](https://insiders.vscode.dev/github/microsoft/vscode/tree/7e7950df89d055b5a378379db9ee14290772148a) |\n| Last Seen | Sun Jun 28 2026 23:58:54 GMT+0000 (Coordinated Universal Time) |\n| Platforms | Windows, Mac, Linux |\n| Product | VSCode |\n\n---\n*This issue was automatically created from the VS Code Errors Dashboard*",
+    "labels": [
+      "bug",
+      "error-telemetry",
+      "recent-regression",
+      "stable-anomaly",
+      "ai-generated",
+      "ai-analyzed"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323525",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323525",
+    "title": "overly aggressive matching for searching chat sessions",
+    "description": "This feels far beyond fuzzy matching, every letter is on its own in the result, even the space character.\n\nthis was in the editor window\n\n<img width=\"942\" height=\"403\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/87b5dd45-0fce-4498-a751-2b7e2e9dfaf7\" />",
+    "labels": [
+      "bug",
+      "chat"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323508",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323508",
+    "title": "Context window widget missing from AHP sessions",
+    "description": "<img width=\"872\" height=\"1323\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/d3ab2d4a-02ae-4b9f-a513-8ad2ee1ef36c\" />\n\nThis is on a Copilot Student account, ~will update if it shows for other account types.~ but it is showing for my staff account. It also shows as expected for my Student account in Local session. \n\nNot showing for Agents or Editor windows ",
+    "labels": [
+      "bug",
+      "context-widget",
+      "agent-host"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323496",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323496",
+    "title": "Fix code formatting in onboarding svgs",
+    "description": "<img width=\"6720\" height=\"2836\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/512fc18b-d1c6-4325-9848-6fd41c753da7\" />\n\nFunction body in onboarding theme picking svgs is not indented ",
+    "labels": [
+      "bug"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323465",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323465",
+    "title": "No inline screenshot rendered for `screenshotPage` tool",
+    "description": "Testing #323222\n\nI told the agent to do some actions on the page, then create a screenshot. It seems to have done it but we do not render the screenshot inline.\n\n<img width=\"609\" height=\"326\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/0f89f4ef-82d5-436b-81c9-72b417210f91\" />\n\n[ah-logs-add-functionality-and-test-in-browser.zip](https://github.com/user-attachments/files/29461744/ah-logs-add-functionality-and-test-in-browser.zip)",
+    "labels": [
+      "bug",
+      "browser-integration"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323460",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323460",
+    "title": "Empty screenshots when session is not active/open",
+    "description": "Testing #323222\n\nIn the agents window\n1. I asked the agent to use the browser.\n2. I switched to the new session view\n3. When I returned to the session I saw these empty screenshots, but it seems like the model is able to see them?\n\n<img width=\"593\" height=\"371\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/917510bc-5634-4b4a-9900-0a97350b67fd\" />",
+    "labels": [
+      "bug",
+      "browser-integration"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323455",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323455",
+    "title": "Agent couldn't open browser with correct link first try",
+    "description": "Testing #323222\n\n<img width=\"707\" height=\"371\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/29e7c95c-da07-4a55-8c48-e064af4e1892\" />\n\nFrom what I remember I saw the blank browser open first. Then a second blank browser open, and then the link was set for the second browser tab. It felt like it was having a hard time getting the browser open at the correct link.\n\n[ah-logs-add-functionality-and-test-in-browser.zip](https://github.com/user-attachments/files/29460680/ah-logs-add-functionality-and-test-in-browser.zip)\n\n",
+    "labels": [
+      "bug",
+      "browser-integration"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323453",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323453",
+    "title": "Onboarding tour can appear over dialog window",
+    "description": "Testing #323362\n\nrepro: \n\n1. open agents window\n2. open settings to enable the onboarding tour\n3. the tour starts on top of the dialog\n\n![Image](https://github.com/user-attachments/assets/1f1b4d30-0e9e-4687-96ec-82766ff38919)\n\n\n\nhttps://github.com/user-attachments/assets/9e5d9e42-d388-44d7-94ed-c65577779cb7\n\nVersion: 1.127.0-insider (Universal)\nCommit: 0d2dfb2eb897808a27356ab6e5d33000acec4590\nDate: 2026-06-29T02:03:34Z\nElectron: 42.2.0\nElectronBuildId: 14159160\nChromium: 148.0.7778.97\nNode.js: 24.15.0\nV8: 14.8.178.14-electron.0\nOS: Darwin arm64 25.5.0\n",
+    "labels": [
+      "bug",
+      "unreleased",
+      "agents-window"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323428",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323428",
+    "title": "Selecting a custom agent at session creation is ignored — session starts with the default agent",
+    "description": "When creating a new session in the Agents window and selecting a custom agent (e.g. **Agents Window Developer**) for a Copilot session from Agent Host, the created session does **not** use the selected custom agent — it starts with the **default** agent instead.\n\n## Steps\n1. Open the Agents window → New Sessions view.\n2. Select the **vscode** folder using a Copilot session from Agent Host (this is needed to see the **Agents Window Developer** custom agent), and a worktree.\n3. Select the **Agents Window Developer** custom agent.\n4. Create/start the session.\n\n🐛 The session runs the **default** agent, not the selected custom agent.\n",
+    "labels": [
+      "bug",
+      "unreleased",
+      "agent-host"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323416",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323416",
+    "title": "Models view shows localhost port for model group name",
+    "description": "Testing #323394\nI'm surprised it's not noted in any way that it's Ollama-provided group\n\n![Image](https://github.com/user-attachments/assets/08f7c367-bc58-43e6-883e-94593699c335)\n\n\n\nVersion: 1.127.0-insider (Universal)\nCommit: 0d2dfb2eb897808a27356ab6e5d33000acec4590\nDate: 2026-06-29T02:03:34Z\nElectron: 42.2.0\nElectronBuildId: 14159160\nChromium: 148.0.7778.97\nNode.js: 24.15.0\nV8: 14.8.178.14-electron.0\nOS: Darwin arm64 25.5.0",
+    "labels": [
+      "bug",
+      "unreleased",
+      "model-byok"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323389",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323389",
+    "title": "Copilot SDK API calls for commands do not seem to end up in events.jsonl",
+    "description": "",
+    "labels": [
+      "bug",
+      "agent-host"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323338",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323338",
+    "title": "Agents window: hidden editor part is restored when switching back to a session",
+    "description": "In the Agents window, the per-session layout did not remember when the user **hid the editor part** for a session, so switching away and back forced it open again.\n\n**Repro:**\n1. Open session A with only the editor part visible (not the aux bar).\n2. Close the side pane using the **Toggle Side Panel** action (this hides both the editor part and the auxiliary bar while keeping editors open).\n3. Switch to session B.\n4. Switch back to session A.\n\n**Bug:** the editor part was made visible again instead of staying hidden.\n\nFixed in https://github.com/microsoft/vscode/pull/323029.\n",
+    "labels": [
+      "bug",
+      "verification-found",
+      "blocked",
+      "agents-window"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323337",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323337",
+    "title": "Agents window: editor layout actions missing in single-tab mode",
+    "description": "In the Agents window, the editor-area layout controls — **Maximize Editor Area**, **Restore Editor Area**, **Close Editor Area**, **Open in Modal Editor**, and the secondary side bar toggle — disappeared when `workbench.editor.showTabs` was set to `single`.\n\nThese actions are contributed to the editor title layout menu, which in single-tab mode is rendered by `SingleEditorTabsControl` — and it returned an empty set of layout actions, so the whole group went missing.\n\nFixed in https://github.com/microsoft/vscode/pull/322908.\n",
+    "labels": [
+      "bug",
+      "verified",
+      "agents-window"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323305",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323305",
+    "title": "Agent host: client tool calls in the default chat hang (never resolved)",
+    "description": "## Problem\n\nClient-provided tool calls running in a session's **default chat** can hang: the SDK handler's deferred is never resolved, so the agent waits forever on a tool result that already came back.\n\n## Root cause\n\n`ChatToolCallComplete` envelopes are emitted on the chat channel URI, which is formatted as:\n\n```\nahp-chat://<chatId>/<base64(sessionUri)>\n```\n\nIn `agentSideEffects.ts`, both dispatch paths forwarded that chat URI straight into `IAgent.onClientToolCallComplete(session, ...)`. But every agent keys its `_sessions` map by the raw session id, resolved via `AgentSession.id(uri)` = `uri.path.substring(1)`. For a chat URI that path is the **base64 blob**, not the session GUID, so the default-chat lookup never matched and the completion was silently dropped.\n\nThis affected the copilot, claude, and codex agents. Peer (additional, non-default) chats happened to still work because they resolve through a separate `_chatSessions` map keyed by the chat URI.\n\n## Fix\n\nForward the resolved session URI for the default chat (so `AgentSession.id` yields the GUID), and keep forwarding the chat URI for peer chats. Tracked in [#323302](https://github.com/microsoft/vscode/pull/323302).\n\n## Follow-ups to consider\n\n- The footgun is that `onClientToolCallComplete(session, ...)` accepts a URI that is sometimes a session URI and sometimes a chat URI, and each agent re-derives routing. Worth considering a clearer contract or a single shared resolution helper so this can't silently regress.\n- Add broader coverage that the URI handed to agents at the side-effects boundary is always the one the agent can resolve.",
+    "labels": [
+      "bug",
+      "verified",
+      "insiders-released",
+      "agent-host"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
     "id": "microsoft -- vscode -- 323283",
     "source": "github",
     "repo": "microsoft/vscode",
@@ -8,7 +291,53 @@
     "description": "## Type of Bug\n\nBug\n\n## Description\n\nRestoring an Agent Host Copilot session can split one SDK interaction into multiple AHP turns and therefore multiple `ChatResponseViewModel` instances. The additional requests have empty prompts.\n\nThe Copilot SDK can persist empty `assistant.message` events with no tool requests immediately before another assistant message in the same `interactionId` and SDK `turnId`. The live adapter ignores these non-renderable messages, but `mapSessionEvents` treats every parent assistant message without tool requests as the end of the current turn. The following assistant message then has no active builder, so history replay creates a fallback turn with an empty user message.\n\nThe resulting chain is:\n\n1. `mapSessionEvents` prematurely finalizes the parent turn.\n2. The next assistant message creates a fallback turn with an empty prompt.\n3. `turnsToHistory` emits a request/response pair for every reconstructed turn.\n4. `ChatServiceImpl` and `ChatViewModel` create multiple top-level response view models.\n\nCaptured restored models showed six empty requests created within the same millisecond. Their request IDs exactly matched the orphaned SDK `assistant.message` event IDs.\n\n## Steps to Reproduce\n\n1. Run a tool-heavy Copilot Agent Host conversation that produces multiple SDK model rounds.\n2. Switch away from the session or restart/reopen it so history is rebuilt from SDK events.\n3. Inspect the chat model or rendered transcript.\n4. Observe multiple requests/responses with empty prompts for what was one live interaction.\n\n## Expected Behavior\n\nAll assistant messages belonging to the same SDK interaction are reconstructed into one AHP turn and one top-level chat response, preserving markdown/tool ordering. Empty, non-renderable assistant events must not create a turn boundary.\n\n## Relevant Code\n\n- `src/vs/platform/agentHost/node/copilot/mapSessionEvents.ts`\n- `src/vs/platform/agentHost/test/node/mapSessionEvents.test.ts`\n\n(Written by Copilot)",
     "labels": [
       "bug",
+      "verified",
+      "insiders-released",
       "agent-host"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323280",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323280",
+    "title": "Clicking links doesn't work in the markdown editor",
+    "description": "* open the file\n* try to click a link\n* the link doesn't open\n* **EDIT**: after alt-tabbing and returning to vscode now clicking the links works.\n\n\n<details><summary>Markdown file</summary>\n\n```\n# PR / CI flake triage — re-run analysis\n\nWorkdir: /tmp/flake-triage2 · 33 re-run runs with a failed earlier attempt · **27 confirmed flakes** (re-ran to green on the same commit) · 3 re-ran-and-still-failed.\n\n> A flake = the check **failed on a commit, was re-run on that same commit, and then passed**. The code never changed between attempts, so the failure was not caused by the PR.\n\n## Confident flakes (failed → re-run on same SHA → passed)\n\nGrouped by what failed. The count is how many **distinct PRs (branches)** the same failure flaked on — a higher count means a chronically flaky test worth fixing at the source. Each link points at the **failed attempt** so you can read the exact error.\n\n### verifies that \"hot exit\" works for dirty files (without delay) — 3 distinct PR(s), 3 flaky run(s)\n\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28204583248/job/83552206917) — Use Copilot shell exit codes for Agent Host shell execution decoration (anthonykim1/correctCommandDecorationAHcopilot @ ea3df7d7, attempt 1→2)\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28202244072/job/83544474849) — Add Initial BYOK Support to Local Copilot Agent Host (agents/byok-inference-path @ ff1db6eb, attempt 1→2)\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28184815822/job/83483745274) — feat: Enhance command handling and completion for runtime commands (don/moderate-guineafowl @ ec85b7ed, attempt 1→2)\n\n### verifies editors can save and restore — 3 distinct PR(s), 3 flaky run(s)\n\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28202684088/job/83545995646) — More comprehensive fix for Update button overlapping (dev/dmitriv/update-button-overlap @ e5de91ab, attempt 1→2)\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28151383464/job/83369684650) — AgentHost - handle edge case to disable action while chat is in progre (lszomoru/melted-dormouse @ e8e6e5d9, attempt 1→4)\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28147435096/job/83357539329) — AH: honor yolo mode setting (justin/buzzwole @ 5519eb9a, attempt 1→2)\n\n### sigterm after grace — 2 distinct PR(s), 2 flaky run(s)\n\n- [Linux / Electron](https://github.com/microsoft/vscode/actions/runs/28274391241/job/83778117152) — fix rounded separator in action widget (justin/guzzlord @ c182349f, attempt 1→2)\n- [Linux / Electron](https://github.com/microsoft/vscode/actions/runs/28238317232/job/83658488903) — AgentHost -  show commit/sync changes operations for all changesets (lszomoru/jittery-guan @ ab30aaf2, attempt 1→2)\n\n### Request cancellation during retry backoff — 2 distinct PR(s), 2 flaky run(s)\n\n- [macOS / Electron](https://github.com/microsoft/vscode/actions/runs/28251634337/job/83704321028) — chore: run npm audit fix (rzhao271/vocal-anteater @ 05ab9643, attempt 1→2)\n- [macOS / Electron](https://github.com/microsoft/vscode/actions/runs/28203327645/job/83548152706) — fix(oss): carry the cached NOTICE forward through multi-build CG outag (bv/oss-notice-carry-forward @ cd9865b3, attempt 1→2)\n\n### \"before all\" hook for \"verifies quick outline (js)\" — 2 distinct PR(s), 2 flaky run(s)\n\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28198874101/job/83532828023) — AgentHost - seed github state from the session database when restoring (lszomoru/clumsy-goose @ cae2e372, attempt 1→2)\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28188049700/job/83495048703) — Add chatSessionId to chat.modelChange telemetry (chat-modelchange-conversation-id @ 73d1bcc9, attempt 1→2)\n\n### \"before all\" hook for \"verifies that application launches when user data directory has non-ascii characters\" — 2 distinct PR(s), 2 flaky run(s)\n\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28185534254/job/83486278800) — fix: guard WorkspaceTrustEditor.render against disposed instantiation  (fix/workspace-trust-editor-disposed-render-9319655c1f6b9760 @ b6fff5b3, attempt 1→2)\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28177574518/job/83458036497) — chat: update tunnel host toggle dimensions to 22px with 0 padding (agents/tunnel-host-css-width-height-padding-cb47ece4 @ 53ce1cd3, attempt 1→3)\n\n### verifies opened editors are restored — 2 distinct PR(s), 2 flaky run(s)\n\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28179162106/job/83463706435) — chat: fix new-session picker no-op for extension chat sessions (agents/codex-extension-picker-issue-fdce8f5a @ f76e41c5, attempt 1→2)\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28154131044/job/83378490911) — Implement session resource aliasing for untitled and real chat session (don/associated-angelfish @ 64f6cba3, attempt 1→2)\n\n### step: 🧪 Run integration tests (Remote) — 1 distinct PR(s), 1 flaky run(s)\n\n- [Windows / Remote](https://github.com/microsoft/vscode/actions/runs/28239428993/job/83662319871) — sessions: always show New Chat action in session header (agents/agents-window-new-chat-action-0a16eb5e @ ce31b321, attempt 1→2)\n\n### step: 🧪 Run integration tests (Electron) — 1 distinct PR(s), 1 flaky run(s)\n\n- [macOS / Electron](https://github.com/microsoft/vscode/actions/runs/28229324799/job/83628935046) — Allow sandbox bypass (chrmarti/identical-dingo @ bd897de7, attempt 1→2)\n\n### \"before all\" hook in \"Terminal\" — 1 distinct PR(s), 1 flaky run(s)\n\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28202007056/job/83543661565) — build(deps): bump actions/checkout from 6 to 7 (dependabot/github_actions/actions/checkout-7 @ 098c79c6, attempt 1→2)\n\n### \"before all\" hook in \"Task\" — 1 distinct PR(s), 1 flaky run(s)\n\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28199874875/job/83536341774) — Claude handle undercounted credits for cancelled requests (pawang/fixClaudeCancel @ 70991757, attempt 1→2)\n\n### \"before all\" hook for \"check heap leaks\" — 1 distinct PR(s), 1 flaky run(s)\n\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28197318126/job/83527454123) — chat: restore last-used agent and model for new chat editors (DonJayamanne/322792 @ 6ace6de9, attempt 1→2)\n\n### step: 🧪 Run smoke tests (Remote) — 1 distinct PR(s), 1 flaky run(s)\n\n- [Windows / Remote](https://github.com/microsoft/vscode/actions/runs/28193873631/job/83515302858) — AgentHost - use etag when searching for pull requests (lszomoru/mammoth-lark @ 53752ef0, attempt 1→2)\n\n### verifies that auto save triggers on shutdown — 1 distinct PR(s), 1 flaky run(s)\n\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28191147740/job/83505788158) — feat: Enhance command handling and completion for runtime commands (don/moderate-guineafowl @ 329bb1f2, attempt 1→2)\n\n### \"before all\" hook for \"turns off editor line numbers and verifies the live change\" — 1 distinct PR(s), 1 flaky run(s)\n\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28189391827/job/83499649635) — Update customizations sidebar content and behavior (agents/update-agents-sidebar-customizations-8c1e9ed8 @ a19ee581, attempt 1→2)\n\n### \"before all\" hook for \"can disable AI features\" — 1 distinct PR(s), 1 flaky run(s)\n\n- [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28184927658/job/83484140874) — remove convenience getStorageSourceFilter, unused workspaceSubpaths, i (aeschli/convenient-scorpion-542 @ 351b244a, attempt 1→2)\n\n### verifies that \"hot exit\" works for dirty files (with delay) — 1 distinct PR(s), 1 flaky run(s)\n\n- [Windows / Remote](https://github.com/microsoft/vscode/actions/runs/28177574518/job/83458036773) — chat: update tunnel host toggle dimensions to 22px with 0 padding (agents/tunnel-host-css-width-height-padding-cb47ece4 @ 53ce1cd3, attempt 1→3)\n\n### \"before all\" hook in \"{root}\" — 1 distinct PR(s), 1 flaky run(s)\n\n- [macOS / Remote](https://github.com/microsoft/vscode/actions/runs/28169245202/job/83428907962) — Update input needed session animations with pulsing background (mrleemurray/input-needed-animation @ 9485ebc3, attempt 1→2)\n\n### step: Run vitest unit tests — 1 distinct PR(s), 1 flaky run(s)\n\n- [Copilot - Test (Windows)](https://github.com/microsoft/vscode/actions/runs/28169224359/job/83428833727) — agents: new session action group toolbar f3219f4a (agents/new-session-action-group-toolbar-f3219f4a @ 98139cd3, attempt 1→2)\n\n## Re-ran and still failed (likely REAL, not flake)\n\nRe-running on the same commit did **not** make these green, so the failure reproduces — treat as a real failure to investigate, not a retry.\n\n- ci: install CVE-fixed libexpat to fix fontconfig SIGSEGV in Electron smo (fix-install-libexpat-fontconfig-crash @ 9396f744)\n    - [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28192795744/job/83511550358) · verifies opened editors are restored\n    - [macOS / Browser](https://github.com/microsoft/vscode/actions/runs/28192795744/job/83511550601) · \"before all\" hook for \"turns off editor line numbers and verifies the live chang\n- Agent host: generate PR title and description from session conversation (agents/improve-pr-title-description-gen-557092ec @ 4f0a3261)\n    - [Linux / Electron-Smoke](https://github.com/microsoft/vscode/actions/runs/28179209195/job/83463960986) · \"before all\" hook for \"kills blocked extension host on window reload (windowLife\n- Agents - unify the view mode and the view service (lszomoru/amateur-dragonfly @ dd45af0f)\n    - [Compile & Hygiene](https://github.com/microsoft/vscode/actions/runs/28164996058/job/83414670667) · Compile & Hygiene\n\n## Inconclusive re-runs (cancelled / other)\n\n- Enterprise OTel managed-settings policy for Copilot (extension + agent h (zhichli/otelpolicy2) · latest=cancelled\n- Agents - unify the view mode and the view service (lszomoru/amateur-dragonfly) · latest=cancelled\n- Refactor `galleryItemRenderer` into reusable component and add extension (dev/dmitriv/tools-refactor-widgets-gallery) · latest=cancelled\n\n## Counts\n\n- Confident flakes (re-run to green): 27\n- Re-ran and still failed (real): 3\n- Inconclusive (cancelled/other): 3\n\nTop recurring flaky signatures (by distinct PRs):\n- 3× verifies that \"hot exit\" works for dirty files (without delay)\n- 3× verifies editors can save and restore\n- 2× sigterm after grace\n- 2× Request cancellation during retry backoff\n- 2× \"before all\" hook for \"verifies quick outline (js)\"\n```\n\n</details>\n\n\n```\nVersion: 1.127.0-insider\nCommit: 628f6de50e89b20c7688c66ac2923cce2862c1b0\nDate: 2026-06-26T14:01:19-07:00\nElectron: 42.2.0\nElectronBuildId: 14159160\nChromium: 148.0.7778.97\nNode.js: 24.15.0\nV8: 14.8.178.14-electron.0\nOS: Darwin arm64 25.5.0\n```",
+    "labels": [
+      "bug",
+      "markdown-editor"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323261",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323261",
+    "title": "Can't update properly",
+    "description": "\nType: <b>Bug</b>\n\nI encountered this problem while upgrading from Code v.1.123.0 to 1.126.0.\nSpecifically, it seems that the update program didn't properly rename new_Code.exe to Code.exe. After the update is complete, it will prompt 'Code.exe not found'.\n\nI opened the installation directory of Code and found that both old_Code.exe and new_Code.exe were there.\n\nWhen I renamed new_Code.exe to Code.exe and new_Code.VisualElementsManifest to Code.VisualElementsManifest, it successfully updated.\n\nVS Code version: Code 1.126.0 (7e7950df89d055b5a378379db9ee14290772148a, 2026-06-23T01:46:13Z)\nOS version: Windows_NT x64 10.0.19045\nModes:\n\n<details>\n<summary>System Info</summary>\n\n|Item|Value|\n|---|---|\n|CPUs|12th Gen Intel(R) Core(TM) i5-12490F (12 x 2995)|\n|GPU Status|2d_canvas: enabled<br>GPU0: VENDOR= 0x10de, DEVICE=0x1f08 [NVIDIA GeForce RTX 2060], DRIVER_VENDOR=NVIDIA, DRIVER_VERSION=32.0.16.1047 *ACTIVE*<br>GPU1: VENDOR= 0x1414, DEVICE=0x008c [Microsoft Basic Render Driver], DRIVER_VERSION=10.0.19041.5794<br>Machine model name: <br>Machine model version: <br>direct_rendering_display_compositor: disabled_off_ok<br>gpu_compositing: enabled<br>multiple_raster_threads: enabled_on<br>opengl: enabled_on<br>rasterization: enabled<br>raw_draw: disabled_off_ok<br>skia_graphite: disabled_off<br>trees_in_viz: disabled_off<br>video_decode: enabled<br>video_encode: enabled<br>webgl: enabled<br>webgpu: enabled<br>webnn: disabled_off|\n|Load (avg)|undefined|\n|Memory (System)|15.82GB (7.70GB free)|\n|Process Argv|--crash-reporter-id a8a92fb9-f83d-49dc-8601-387b9b072f8d|\n|Screen Reader|no|\n|VM|0%|\n</details><details><summary>Extensions (14)</summary>\n\nName|Identifier|Author|Version\n---|---|---|---\nCode Runner|formulahendry.code-runner|formulahendry|0.12.2\nGitHub 拉取请求|github.vscode-pull-request-github|GitHub|0.153.2026062604\nRainbow CSV|mechatroner.rainbow-csv|mechatroner|3.24.1\ngettext|mrorz.language-gettext|mrorz|0.5.0\nJapanese Language Pack for Visual Studio Code|ms-ceintl.vscode-language-pack-ja|MS-CEINTL|1.126.2026062701\nChinese (Simplified) (简体中文) Language Pack for Visual Studio Code|ms-ceintl.vscode-language-pack-zh-hans|MS-CEINTL|1.126.2026062702\nCMake Tools|ms-vscode.cmake-tools|ms-vscode|1.23.52\nC/C++ DevTools|ms-vscode.cpp-devtools|ms-vscode|0.5.13\nC/C++|ms-vscode.cpptools|ms-vscode|1.32.2\nC/C++ Extension Pack|ms-vscode.cpptools-extension-pack|ms-vscode|1.5.1\n十六进制编辑器|ms-vscode.hexeditor|ms-vscode|1.11.1\nPowerShell|ms-vscode.powershell|ms-vscode|2025.4.0\nGDScript File Support|nthnn.gdscript-vsce|nthnn|0.0.1\nMarkdown 增强预览|shd101wyy.markdown-preview-enhanced|shd101wyy|0.8.30\n\n</details><details>\n<summary>A/B Experiments</summary>\n\n```\nvsliv368cf:30146710\nbinariesv615:30325510\nnativeloc1:31344060\ndwcopilot:31170013\ndwoutputs:31242946\ncopilot_t_ci:31333650\ne5gg6876:31282496\npythonrdcb7:31342333\n6518g693:31463988\naj953862:31281341\n6abeh943:31336334\nenvsdeactivate2:31538737\ncloudbuttont:31379625\n3efgi100_wstrepl:31403338\nbj468946:31457056\nec5jj548:31422691\ncp_cls_t_966_ss:31526232\n4je02754:31466945\n8hhj4413:31478653\n38bie571_auto:31426784\ncp_cls_c_1081:31454833\nconptydll_true:31498968\nia-use-proxy-models-svc:31452481\ne9c30283:31461165\ntest_treatment2:31471001\nc9b86496:31447327\nidci7584:31464702\ne3e4d672:31494082\nei9d7968:31496641\nchat:31457767\n8hig5102:31480529\n89g7j272:31518289\n7e187181:31503455\ni2gc6536:31499202\n52612955:31516516\nghj88844:31499326\nh08i8180_copy:31475368\nec1eg703:31520046\nddid_t:31478206\nhmra_i5g22:31518061\n7df3h592:31512476\ncp_cls_t_1082:31535311\nlogging_enabled_new:31498466\ndb5d2638:31499441\nnes-extended-cfe-himalia-004:31500446\njb_cp_cls_t_632:31537244\n56dj4588:31512888\n32d76977:31512328\nha629193:31508444\ncdk-lw-on:31524445\n2cfga817_c:31522397\na1ije391_t:31540920\n8hfba999:31537718\njbcp_cls_pctr_t:31531130\n61138546:31518536\ncp_intellij_t_nes:31533504\nd7b18187:31526828\nnes-curr-leftover-1500:31538366\nh561g132:31533256\nsessions_3:31532893\n52ge9494:31538318\nihg5j128:31534457\n\n```\n\n</details>\n\n<!-- generated by issue reporter -->",
+    "labels": [
+      "bug",
+      "install-update",
+      "windows"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323252",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323252",
+    "title": "the app is  not updating",
+    "description": "\n\n```\n\n",
+    "labels": [
+      "bug",
+      "info-needed",
+      "install-update"
     ],
     "ground_truth_severity": "manual_label_needed",
     "ground_truth_team": "manual_label_needed"
@@ -35,7 +364,22 @@
     "title": "Browser `read_page` tool hangs the turn (\"Evaluating\") when called without required `pageId`",
     "description": "## Summary\n\nA `read_page` (Read Page) browser tool call gets stuck forever in **\"Evaluating\"** when the model invokes it with empty arguments (omitting the required `pageId`). The tool crashes synchronously inside `prepareToolInvocation`, which leaves the agent-host permission request unresolved and hangs the entire turn.\n\n## Root cause\n\n`createBrowserPageLink` in `src/vs/workbench/contrib/browserView/electron-browser/tools/browserToolHelpers.ts` calls `pageId.toString()` without guarding against `undefined`:\n\n```ts\nexport function createBrowserPageLink(pageId: string | URI): string {\n\tif (typeof pageId === 'string') { pageId = BrowserViewUri.forId(pageId); }\n\treturn `[${BrowserEditorInput.DEFAULT_LABEL}](${pageId.toString()}?vscodeLinkType=browser)`; // throws when undefined\n}\n```\n\n`ReadBrowserTool.prepareToolInvocation` calls `createBrowserPageLink(_context.parameters.pageId)`. When the model calls `readPage` with `{}`, `pageId` is `undefined` and `prepareToolInvocation` throws `Cannot read properties of undefined (reading 'toString')`.\n\nNote that `ReadBrowserTool.invoke` already guards with `if (!params.pageId)` and returns a graceful error — but `prepareToolInvocation` runs first and crashes before `invoke` is ever reached.\n\nThis is not specific to `read_page`: nearly every browser tool (`navigate`, `click`, `type`, `hover`, `drag`, `handleDialog`, …) calls `createBrowserPageLink(params.pageId)` in `prepareToolInvocation`, so all share the same fragility.\n\n## Evidence (from agent host logs)\n\n1. `events.jsonl`: `tool.execution_start … toolName: 'readPage', arguments: {}` — required `pageId` omitted.\n2. `Window.log`:\n   - `[AgentHost] Invoking client tool: readPage (callId=toolu_01FgX…)`\n   - `[LanguageModelToolsService#invokeTool] Error from tool read_page with parameters {}: Cannot read properties of undefined (reading 'toString'): TypeError` (stack: `createBrowserPageLink` → `prepareToolInvocation`)\n   - `[AgentHost] Client tool rejected pre-execution: readPage Cannot read properties of undefined (reading 'toString')`\n3. `Agent Host.log`: `permission.requested … readPage` (custom-tool) is emitted, but unlike the sibling `bash` permission request — which receives `Permission response: approved=true` followed by `permission.completed` — the `readPage` request has **no `permission.completed`** and **no `tool.execution_complete`**. With the permission never resolved, the UI stays in \"Evaluating\" indefinitely.\n\n## Steps to reproduce\n\n1. Open a browser page in the integrated browser.\n2. Have the agent call the `read_page` tool without a `pageId` argument (empty `{}`).\n3. The Read Page tool call hangs in \"Evaluating\" and never completes.\n\n## Fix\n\nMake `createBrowserPageLink` resilient to a missing/empty `pageId` — return a plain label instead of throwing, so `prepareToolInvocation` succeeds and `invoke` returns its proper \"No page ID provided\" error to the model instead of hanging the turn.\n\n## Related (separate, agent-host runtime — not this repo)\n\nA pre-execution client-tool rejection should still emit `permission.completed` / `tool.execution_complete` so that a crashing client tool can never leave the turn stuck. Worth tracking separately in the Copilot CLI runtime.",
     "labels": [
-      "bug"
+      "bug",
+      "unreleased"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 323212",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/323212",
+    "title": "viewUnreviewedComments for PR comments returning nothing for the agent",
+    "description": "Tried out the new \"address comments\" button in the agent window\n\n<img width=\"705\" height=\"576\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7d4c6561-696c-41b8-9b04-91abd0efa8b7\" />",
+    "labels": [
+      "bug",
+      "agents-window"
     ],
     "ground_truth_severity": "manual_label_needed",
     "ground_truth_team": "manual_label_needed"
@@ -49,7 +393,8 @@
     "description": "> A repeated problem I have is that I hit New button, start writing a message, but then need to switch to an old session to potentially clarify something or look up dependencies. There's no way for me to get back to my New page to continue, but my prior message is lost.\n\n> It makes for a really broken authoring experience that these states aren't persisted. Crafting the initial message can be a bit of work and require switching easily between multiple windows, files, or other places.\n\n\n```\nVersion: 1.127.0-insider\nCommit: 2fb1c411a7933676c4efd18140f2a98fc910c945\nDate: 2026-06-25T20:52:49-07:00\nElectron: 42.2.0\nElectronBuildId: 14159160\nChromium: 148.0.7778.97\nNode.js: 24.15.0\nV8: 14.8.178.14-electron.0\nOS: Darwin arm64 25.5.0\n```",
     "labels": [
       "bug",
-      "unreleased",
+      "verified",
+      "insiders-released",
       "agents-window"
     ],
     "ground_truth_severity": "manual_label_needed",
@@ -64,6 +409,7 @@
     "description": "Summary:\nWhen opening a session in the Agents window the header shows there are changes, but the Changes view (right side) and the changes modal show no diffs. This appears intermittent and may be a race condition when a session is being restored.\n\nSteps to Reproduce:\n1. Have VS Code open.\n2. Open the session in the Agents window.\n3. Search for a session that was open in VS Code and open it in Agents.\n4. Observe the changes indicator in the header at the top showing there are changes.\n5. The Changes view (right side) shows nothing.\n6. Click the changes in the header to open the modal — the modal shows no changes.\n\nExpected:\nThe Changes view and the changes modal should display the diffs corresponding to the header indicator.\n\nActual:\nNo changes are shown in the Changes view or modal despite the header indicating changes.\n\nAdditional details / context:\n- This is intermittent and not reliably reproducible. I suspect a race condition when a session is being restored.\n- This was discussed in Slack and is related to an earlier issue where changes are missing: https://github.com/microsoft/vscode/issues/320243\n- There are logs attached to the related issue, but recent logs may help reproduce — previous logs were a bit stale.\n\nPlease investigate potential race conditions during session restore that could cause the Agents window to fail to populate the changes view/modal.\n\n\n[View original Slack conversation](https://vscodeteam.slack.com/archives/C09MVCZKLP4/p1782496034381059?thread_ts=1782496034.381059&cid=C09MVCZKLP4)",
     "labels": [
       "bug",
+      "unreleased",
       "agents"
     ],
     "ground_truth_severity": "manual_label_needed",
@@ -78,6 +424,7 @@
     "description": "## Problem\n\nChat markdown rendering currently treats both `~text~` and `~~text~~` as strikethrough because Marked's GFM tokenizer accepts one or two tilde delimiters. This can accidentally strike out text when an agent uses unrelated single tildes.\n\nThe Markdown preview uses the stricter double-tilde syntax, so the two VS Code markdown surfaces behave inconsistently.\n\n## Expected behavior\n\n- `~text~` renders literally.\n- `~~text~~` renders as strikethrough.\n- Other GFM rendering remains unchanged.\n\n(Written by Copilot)",
     "labels": [
       "bug",
+      "verified",
       "insiders-released",
       "chat"
     ],
@@ -261,6 +608,20 @@
     "ground_truth_team": "manual_label_needed"
   },
   {
+    "id": "microsoft -- vscode -- 322984",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/322984",
+    "title": "Seeing two blinking cursors",
+    "description": "* Click on an edit to a markdown file\n\nhttps://github.com/user-attachments/assets/473ff376-1366-4f15-a6b4-06026e901049\n\n\n```\nVersion: 1.127.0-insider\nCommit: 3cf8af2ee6b3acc2ea190f0e6fbf3072b680511d\nDate: 2026-06-25T09:50:18+02:00\nElectron: 42.2.0\nElectronBuildId: 14159160\nChromium: 148.0.7778.97\nNode.js: 24.15.0\nV8: 14.8.178.14-electron.0\nOS: Darwin arm64 25.5.0\n```",
+    "labels": [
+      "bug",
+      "markdown-editor"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
     "id": "microsoft -- vscode -- 322973",
     "source": "github",
     "repo": "microsoft/vscode",
@@ -329,8 +690,7 @@
     "description": "# Bug: reasoningEffort setting written to wrong vendor section in chatLanguageModels.json\n\n## Bug Description\n\nWhen setting `reasoningEffort` for a model in the Chat Language Models configuration, the setting is written to the wrong vendor section in `chatLanguageModels.json`.\n\n## Steps to Reproduce\n\n1. Configure multiple custom endpoint vendors in `chatLanguageModels.json` (e.g., DeepSeek, MiMo, MyCustom)\n2. Each vendor has different models defined\n3. Select a model (e.g., `gpt-5.5` under MyCustom vendor) and set its `reasoningEffort` to `\"high\"` via the VS Code UI\n4. Check the `chatLanguageModels.json` file\n\n## Expected Behavior\n\nThe `settings` object with `reasoningEffort` should be added under the **MyCustom** vendor section where the `gpt-5.5` model is defined:\n\n```json\n{\n    \"name\": \"MyCustom\",\n    \"vendor\": \"customendpoint\",\n    \"models\": [\n        {\n            \"id\": \"gpt-5.5\",\n            \"name\": \"gpt-5.5\",\n            \"url\": \"http://127.0.0.1:15721\",\n            \"toolCalling\": true,\n            \"vision\": true,\n            \"streaming\": true,\n            \"thinking\": true,\n            \"reasoningEffortFormat\": \"responses\",\n            \"supportsReasoningEffort\": [\n                \"none\",\n                \"minimal\",\n                \"low\",\n                \"medium\",\n                \"high\",\n                \"xhigh\"\n            ],\n            \"maxInputTokens\": 1050000,\n            \"maxOutputTokens\": 128000\n        }\n    ],\n    \"settings\": {\n        \"gpt-5.5\": {\n            \"reasoningEffort\": \"high\"\n        }\n    }\n}\n```\n\n## Actual Behavior\n\nThe `settings` object is incorrectly written under the **DeepSeek** vendor section, which doesn't even contain a `gpt-5.5` model:\n\n```json\n{\n    \"name\": \"DeepSeek\",\n    \"vendor\": \"customendpoint\",\n    \"models\": [\n        {\n            \"id\": \"deepseek-v4-pro\",\n            \"name\": \"deepseek-v4-pro\",\n            \"url\": \"https://api.deepseek.com/v1\",\n            \"toolCalling\": true,\n            \"vision\": true,\n            \"streaming\": true,\n            \"thinking\": true,\n            \"supportsReasoningEffort\": [\n                \"high\",\n                \"max\"\n            ],\n            \"maxInputTokens\": 1000000,\n            \"maxOutputTokens\": 384000\n        }\n    ],\n    \"settings\": {\n        \"gpt-5.5\": {\n            \"reasoningEffort\": \"high\"\n        }\n    }\n}\n```\n\n## Configuration File\n\nFile path: `%APPDATA%\\Code\\User\\chatLanguageModels.json`\n\n## Environment\n\n- VS Code Version: 1.126.0\n- OS: Windows\n- Extension: GitHub Copilot Chat\n\n## Suggested Labels\n\n- `chat` or `copilot-chat`\n- `bug`\n- `settings`\n",
     "labels": [
       "bug",
-      "insiders-released",
-      "new release"
+      "insiders-released"
     ],
     "ground_truth_severity": "manual_label_needed",
     "ground_truth_team": "manual_label_needed"
@@ -391,8 +751,8 @@
     "labels": [
       "bug",
       "ux",
-      "polish",
-      "insiders-released"
+      "verification-found",
+      "polish"
     ],
     "ground_truth_severity": "manual_label_needed",
     "ground_truth_team": "manual_label_needed"
@@ -406,6 +766,7 @@
     "description": "<img width=\"881\" height=\"309\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/3a3eeb0b-f8fe-4fbe-a43e-cd35e93127ae\" />\n\nLogs here \nhttps://vscodeteam.slack.com/archives/C0AKR94N3CK/p1782312039086309",
     "labels": [
       "bug",
+      "verified",
       "insiders-released",
       "agent-host"
     ],
@@ -695,8 +1056,23 @@
     "description": "## Problem\n\nEDU/Student users currently appear to be routed through the same quota messaging as the `individual` plan. In `src/vs/workbench/contrib/chat/common/chatErrorMessages.ts`, `ChatEntitlement.EDU` maps to `copilotPlan: 'individual'`, and the quota messaging for `individual` tells users to upgrade to **Copilot Pro+**.\n\nFor EDU/Student users, we should nudge them to **Copilot Pro** instead.\n\n## Expected\n\nWhen EDU/Student users hit Copilot limits, the upgrade messaging should direct them to **Copilot Pro**, not **Copilot Pro+**.\n\n## Notes\n\nRelevant code paths:\n- `getCopilotPlanFromEntitlement(ChatEntitlement.EDU)` currently returns `'individual'`\n- `getQuotaMessageForPlan('individual', ...)` uses messaging that says to upgrade to Copilot Pro+",
     "labels": [
       "bug",
+      "verified",
       "insiders-released",
       "UBB"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
+    "id": "microsoft -- vscode -- 322536",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/322536",
+    "title": "Chat viewlet: scrollbar flickers",
+    "description": "I see quite often a flickering scrollbar in the chat viewlet.\n\nhttps://github.com/user-attachments/assets/8a828072-87c8-4c2b-9b4c-139914bce270",
+    "labels": [
+      "bug",
+      "ux"
     ],
     "ground_truth_severity": "manual_label_needed",
     "ground_truth_team": "manual_label_needed"
@@ -755,8 +1131,7 @@
     "description": "- VS Code Version: 1.125.1 (user setup)\n- OS Version: Windows_NT x64 10.0.26200\n\nI am using a Custom Endpoint for using a list of models. I noticed that when I am using OpenAI GPT-OSS-120B model, the extension works as expected and shows both thinking trace and the output content message. \n\nHowever, when I use Kimi K2.7 Code, I can see the thinking trace and that it is able to use the tools and apply changes, but it errors out when trying to display the output content message. \n\nI checked the output of both the models to see if there are any formatting issues, but I saw that the structure of the output is the exact same for both, but GitHub copilot chat fails to parse Kimi output as opposed to the GPT OSS model. Here are curl outputs for example:\n\nGPT OSS 120b:\n\n{\"id\":\"chatcmpl-0c58d2f9-4405-4c50-a542-8e78f7d129fa\",\"created\":1781600247,\"model\":\"openai/gpt-oss-120b\",\"object\":\"chat.completion\",\"system_fingerprint\":\"vllm-0.21.0-tp2-eff034d5\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"Hello! How can I help you today?\",\"role\":\"assistant\",\"reasoning_content\":\"The user says \\\"hello\\\". Likely they just want a greeting. Respond politely.\",\"provider_specific_fields\":{\"reasoning\":\"The user says \\\"hello\\\". Likely they just want a greeting. Respond politely.\",\"refusal\":null,\"reasoning_content\":\"The user says \\\"hello\\\". Likely they just want a greeting. Respond politely.\"}},\"provider_specific_fields\":{\"routed_experts\":null,\"stop_reason\":null,\"token_ids\":null}}],\"usage\":{\"completion_tokens\":36,\"prompt_tokens\":68,\"total_tokens\":104}}\n\nOutlook:\n\nKimi:\n\n{\"id\":\"chatcmpl-2938769a-1054-4acb-add1-ec9fb909cfb6\",\"created\":1781599372,\"model\":\"moonshotai/Kimi-K2.7-Code\",\"object\":\"chat.completion\",\"system_fingerprint\":\"vllm-0.21.0-tp8-82e81f83\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\" Hello! How can I help you today?\",\"role\":\"assistant\",\"reasoning_content\":\" We need respond to greeting. Need produce final answer only. \",\"provider_specific_fields\":{\"reasoning\":\" We need respond to greeting. Need produce final answer only. \",\"refusal\":null,\"reasoning_content\":\" We need respond to greeting. Need produce final answer only. \"}},\"provider_specific_fields\":{\"token_ids\":null,\"routed_experts\":null,\"stop_reason\":163586}}],\"usage\":{\"completion_tokens\":23,\"prompt_tokens\":9,\"total_tokens\":32}}\n\nMoreover, I used two other applications, Jan.ai and Hermes to see if I face the same issue, but it works perfectly without any errors. I was able to see both the thinking trace and the actual output message content.\n\nIt would be great to see if there are any fixes or workarounds since the provider I am using is my university and they host latest models that we would want to use.\n",
     "labels": [
       "bug",
-      "model-byok",
-      "new release"
+      "model-byok"
     ],
     "ground_truth_severity": "manual_label_needed",
     "ground_truth_team": "manual_label_needed"
@@ -770,8 +1145,7 @@
     "description": "<!-- Please search existing issues to avoid creating duplicates -->\n<!-- Please attach logs to help us diagnose your issue -->\n\n- Copilot Chat Extension Version: 0.41 (2026-03-25)\n- VS Code Version: 1.125.1\n- OS Version: Windows 11 Enterprise 25H2 26200.8390\n- Feature (e.g. agent/edit/ask mode): Any of the features \n- Selected model (e.g. GPT 4.1, Claude 3.7 Sonnet): Claude Opus 4.8 / Claude Sonnet 3.7 / Claude Haiku 4.5\n- Logs:\n\nSteps to Reproduce:\n\n1. Setup BYOK for VS Code Github Copilot using Azure Provider as per [Bring your own language model key](https://code.visualstudio.com/docs/agent-customization/language-models#_bring-your-own-language-model-key) to update the **chatLanguageModels.json**.  Sample JSON below for reference\n[\n\t{\n\t\t\"name\": \"BYOK Models\",\n\t\t\"vendor\": \"azure\",\n\t\t\"models\": [\n\t\t\t{\n\t\t\t\t\"id\": \"claude-opus-4-8\",\n\t\t\t\t\"name\": \"claude-opus-4-8\",\n\t\t\t\t\"url\": \"https://ai-gateway-endpoint/v1/messages\",\n\t\t\t\t\"toolCalling\": true,\n\t\t\t\t\"vision\": true,\n\t\t\t\t\"maxInputTokens\": 200000,\n\t\t\t\t\"maxOutputTokens\": 32000\n\t\t\t},\n                        {\n\t\t\t\t\"id\": \"gpt-5.4\",\n\t\t\t\t\"name\": \"gpt-5.4\",\n\t\t\t\t\"url\": \"https://ai-gateway-endpoint/v1/chat/completions\",\n\t\t\t\t\"toolCalling\": true,\n\t\t\t\t\"vision\": true,\n\t\t\t\t\"maxInputTokens\": 200000,\n\t\t\t\t\"maxOutputTokens\": 32000\n\t\t\t}\n\t\t]\n\t}\n]\n\n2. CoPilot chat works fine for gpt-5.4 which is configured for /chat/completions\n3. CoPilot chat fails for claude-opus-4.8 and other claude models as /messages endpoints is not supported \nError:\nUnrecognized Azure deployment URL: https://ai-gateway-endpoint/v1/messages\n\n{\n  \"error\": {\n    \"type\": \"api_error\",\n    \"message\": \"Unable to match incoming request to an operation.\",\n    \"reason\": \"OperationNotFound\",\n    \"original_path\": \"unknown\",\n    \"path_pattern\": \"unknown\",\n    \"request_id\": \"03c9740d-e025-41ec-90a3-c7b493bdd4b8\",\n    \"backend_id\": \"unknown\"\n  }\n}",
     "labels": [
       "bug",
-      "model-byok",
-      "new release"
+      "model-byok"
     ],
     "ground_truth_severity": "manual_label_needed",
     "ground_truth_team": "manual_label_needed"
@@ -800,6 +1174,7 @@
     "labels": [
       "bug",
       "important",
+      "verified",
       "agent-host"
     ],
     "ground_truth_severity": "manual_label_needed",
@@ -814,6 +1189,7 @@
     "description": "Testing #322128\n\n<img width=\"356\" height=\"278\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ed642381-b994-4d44-a6de-84fd6072475a\" />\n\nThe summary in the chat says `53.9 credits` which seems plausible (the subagent read a handful of files and output a summary).\n\nBut the cost indicator says `12.9 credits` which seems low.\n\nI'm at least not sure which is correct.",
     "labels": [
       "bug",
+      "verified",
       "insiders-released",
       "UBB"
     ],
@@ -829,6 +1205,7 @@
     "description": "<img src=\"https://github.com/user-attachments/assets/033a5805-8ac7-4fbc-a711-9ec02335e218\" alt=\"Image\" width=\"426\" height=\"223\">\n\n",
     "labels": [
       "bug",
+      "verification-found",
       "UBB"
     ],
     "ground_truth_severity": "manual_label_needed",
@@ -872,6 +1249,7 @@
     "description": "@justschen saw a session hung for a long time on a runTests tool call",
     "labels": [
       "bug",
+      "verified",
       "insiders-released",
       "agent-host"
     ],
@@ -900,6 +1278,7 @@
     "description": "- Copilot Chat Extension Version: (unknown)\n- VS Code Version: Insiders (latest)\n- OS Version: macOS (observed on macOS Insiders)\n- Feature: agents / local agent host (model refresh / model selector)\n- Selected model: N/A (models list refresh failed)\n\nSteps to Reproduce:\n1. Open VS Code Insiders with Copilot/agents enabled.\n2. Trigger model refresh (observed automatically when agents start).\n3. Observe models refreshed log followed by a rate-limit error and the model picker disappearing.\n\nActual behavior:\nModels refresh reports a 429 rate-limit error and the model selector is lost. Logs show: \"Request models.list failed with message: 429 \\\"too many requests\\\"\" and a subsequent \"Failed to refresh models\" message.\n\nExpected behavior:\nModels refresh should succeed or gracefully retry/backoff; the model selector should remain available or present a clear retry UI.\n\nRelevant logs (sanitized):\n2026-06-22 14:46:12.075 [info] [Claude] Models refreshed. Count: 7, Claude Opus 4.6, Claude Opus 4.7, Claude Opus 4.8, Claude Sonnet 4.6, Claude Sonnet 4.5, Claude Opus 4.5, Claude Haiku 4.5\n2026-06-22 14:46:13.544 [error] Error: Request models.list failed with message: 429 \"too many requests\\n\"\n    at handleResponse (.../vscode-jsonrpc/lib/common/connection.js:565:48)\n    at handleMessage (.../vscode-jsonrpc/lib/common/connection.js:345:13)\n    at processMessageQueue (.../vscode-jsonrpc/lib/common/connection.js:362:17)\n    at Immediate.<anonymous> (.../vscode-jsonrpc/lib/common/connection.js:334:13)\n    at process.processImmediate (node:internal/timers:504:21)\n[Copilot] Failed to refresh models\n\nNotes / privacy:\n- Logs were shared privately in a DM; the snippet above has been sanitized. If additional logs or repro details are needed they can be attached to the issue.\n\n[View original Slack conversation](https://vscodeteam.slack.com/archives/C0AKR94N3CK/p1782153628020949?thread_ts=1782153628.020949&cid=C0AKR94N3CK)",
     "labels": [
       "bug",
+      "verified",
       "insiders-released",
       "agent-host"
     ],
@@ -915,6 +1294,7 @@
     "description": "Testing #322285\n\nSee how in the sessions view the chat shows a spinner / working state ONLY from the first tab.\nSee how only the first tab shows a spinner on the tab itself\n\nhttps://github.com/user-attachments/assets/02b95858-a708-43c8-a99a-504e39e4e3ee",
     "labels": [
       "bug",
+      "verified",
       "insiders-released",
       "agents-window"
     ],
@@ -993,6 +1373,7 @@
     "description": "Related to https://github.com/microsoft/vscode/issues/287177 and need to try to repro",
     "labels": [
       "bug",
+      "verified",
       "insiders-released",
       "chat-terminal"
     ],
@@ -1067,6 +1448,8 @@
     "description": "Error serializing chat session for storage. The session will be lost if the window is closed. Please report this issue to the VS Code team:\n\nRangeError: Invalid string length\nat JSON.stringify (<anonymous>)\nat LBi (vscode-file://vscode-app/c:/Users/graha/AppData/Local/Programs/Microsoft%20VS%20Code/fcf604774b/resources/app/out/vs/workbench/workbench.desktop.main.js:2974:232)\nat O9.write (vscode-file://vscode-app/c:/Users/graha/AppData/Local/Programs/Microsoft%20VS%20Code/fcf604774b/resources/app/out/vs/workbench/workbench.desktop.main.js:2975:909)\nat Zre.writeSession (vscode-file://vscode-app/c:/Users/graha/AppData/Local/Programs/Microsoft%20VS%20Code/fcf604774b/resources/app/out/vs/workbench/workbench.desktop.main.js:2977:12316)\nat vscode-file://vscode-app/c:/Users/graha/AppData/Local/Programs/Microsoft%20VS%20Code/fcf604774b/resources/app/out/vs/workbench/workbench.desktop.main.js:2977:9277\nat Array.map (<anonymous>)\nat vscode-file://vscode-app/c:/Users/graha/AppData/Local/Programs/Microsoft%20VS%20Code/fcf604774b/resources/app/out/vs/workbench/workbench.desktop.main.js:2977:9265\nat vscode-file://vscode-app/c:/Users/graha/AppData/Local/Programs/Microsoft%20VS%20Code/fcf604774b/resources/app/out/vs/workbench/workbench.desktop.main.js:434:73977\n\n\n\n\n<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- 🕮 Read our guide about submitting issues: https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions -->\n<!-- 🔎 Search existing issues to avoid creating duplicates. -->\n<!-- 🧪 Test using the latest Insiders build to see if your issue has already been fixed: https://code.visualstudio.com/insiders/ -->\n<!-- 💡 Instead of creating your report here, use 'Report Issue' from the 'Help' menu in VS Code to pre-fill useful information. -->\n<!-- 🔧 Launch with `code --disable-extensions` to check. -->\nDoes this issue occur when all extensions are disabled?: Yes/No\n\n<!-- 🪓 If you answered No above, use 'Help: Start Extension Bisect' from Command Palette to try to identify the cause. -->\n<!-- 📣 Issues caused by an extension need to be reported directly to the extension publisher. The 'Help > Report Issue' dialog can assist with this. -->\n- VS Code Version: \n- OS Version: \n\nSteps to Reproduce:\n\n1. \n2.\n",
     "labels": [
       "bug",
+      "verified",
+      "author-verification-requested",
       "insiders-released",
       "chat"
     ],
@@ -1096,7 +1479,7 @@
     "description": "Testing https://github.com/microsoft/vscode/issues/322128\n\n> The usage indicator is missing in this session:\n> \n> <img width=\"534\" height=\"272\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/2774676c-5f3e-47d3-b516-d18476efaa39\" />\n> \n> Is this a limitation of the model, Auto mode or a bug? \n\n _Originally posted by @chrmarti in [#322128](https://github.com/microsoft/vscode/issues/322128#issuecomment-4766672819)_\n\nTotal credits are shown only after picking a model for a turn, I assume this is a limitation with Auto because that doesn't show the context window usage:\n\n<img width=\"526\" height=\"210\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a1a39e05-d2b1-48d4-932c-f2c62946d242\" />\n\nIt seems to make sense to show total credits with Auto mode.",
     "labels": [
       "bug",
-      "insiders-released",
+      "verified",
       "UBB"
     ],
     "ground_truth_severity": "manual_label_needed",
@@ -1112,8 +1495,7 @@
     "labels": [
       "bug",
       "editor-color-picker",
-      "insiders-released",
-      "new release"
+      "insiders-released"
     ],
     "ground_truth_severity": "manual_label_needed",
     "ground_truth_team": "manual_label_needed"
@@ -1198,8 +1580,7 @@
     "description": "VS Code Version:\n1.125.1\n\nCopilot Chat Version:\n0.53.1\n\nOS:\nWindows 11\n\nDescription:\nWhen configuring an OpenAI BYOK model through `chatLanguageModels.json` with `vendor: openai`, Copilot Chat appears to ignore the configured `maxInputTokens` and `maxOutputTokens` values.\n\nThe same configuration, when changed from `vendor: openai` to `vendor: customendpoint`, appears to honour the configured token limits correctly.\n\nThe documentation appears to imply that these model-level settings are valid for providers including `openai`, because the model configuration reference lists `vendor` examples including `azure`, `openai`, and `customendpoint`, and then lists `maxInputTokens` and `maxOutputTokens` as model-level properties. The docs also say VS Code uses the sum of these two values as the model's total context window in the Chat view.\n\nIf these settings are not intended to be supported for `vendor: openai`, the documentation should say that clearly. If they are intended to be supported, this appears to be a bug.\n\nModel configuration:\nThe model is configured through `chatLanguageModels.json`, not selected from the standard built-in Copilot model list.\n\nThe relevant OpenAI provider entry uses the Responses API:\n\n    vendor: openai\n    apiType: responses\n    model id: gpt-5.5\n    streaming: true\n    toolCalling: true\n    vision: true\n    thinking: true\n    zeroDataRetentionEnabled: true\n    reasoningEffort: medium\n    maxInputTokens: 272000\n    maxOutputTokens: 128000\n    url: https://api.openai.com/v1/responses\n\nRepresentative redacted configuration:\n\n```json\n[\n  {\n    \"name\": \"OpenAI\",\n    \"vendor\": \"openai\",\n    \"apiKey\": \"${input:chat.lm.secret.REDACTED}\",\n    \"models\": [\n      {\n        \"id\": \"gpt-5.5\",\n        \"name\": \"GPT-5.5\",\n        \"url\": \"https://api.openai.com/v1/responses\",\n        \"apiType\": \"responses\",\n        \"toolCalling\": true,\n        \"vision\": true,\n        \"thinking\": true,\n        \"streaming\": true,\n        \"maxInputTokens\": 272000,\n        \"maxOutputTokens\": 128000,\n        \"zeroDataRetentionEnabled\": true,\n        \"supportsReasoningEffort\": [\"none\", \"low\", \"medium\", \"high\", \"xhigh\"],\n        \"reasoningEffortFormat\": \"responses\"\n      }\n    ],\n    \"settings\": {\n      \"gpt-5.5\": {\n        \"reasoningEffort\": \"medium\"\n      }\n    }\n  }\n]\n```\n\nExpected:\nThe Context Window popover and context packing should use the configured model limits:\n\n    maxInputTokens + maxOutputTokens\n    272000 + 128000 = 400000 tokens\n\nSo the Chat UI should show a context window of approximately 400K tokens.\n\nThe configured `maxInputTokens` value should also be respected by context packing so that VS Code does not pack more input context than the configured cap.\n\nActual:\nWith `vendor: openai`, the Context Window popover showed a much larger context window, approximately:\n\n    18.8K / 888K tokens\n\nThis suggests VS Code is using built-in or discovered metadata for the recognised OpenAI model instead of the manually configured `maxInputTokens` and `maxOutputTokens`.\n\nWorkaround / comparison:\nChanging the same endpoint and model configuration to `vendor: customendpoint` causes the configured values to be honoured.\n\nFor example:\n\n```json\n[\n  {\n    \"name\": \"OpenAI Custom Endpoint\",\n    \"vendor\": \"customendpoint\",\n    \"apiKey\": \"${input:chat.lm.secret.REDACTED}\",\n    \"apiType\": \"responses\",\n    \"models\": [\n      {\n        \"id\": \"gpt-5.5\",\n        \"name\": \"GPT-5.5 Custom\",\n        \"url\": \"https://api.openai.com/v1/responses\",\n        \"apiType\": \"responses\",\n        \"toolCalling\": true,\n        \"vision\": true,\n        \"thinking\": true,\n        \"streaming\": true,\n        \"maxInputTokens\": 272000,\n        \"maxOutputTokens\": 128000,\n        \"zeroDataRetentionEnabled\": true,\n        \"supportsReasoningEffort\": [\"none\", \"low\", \"medium\", \"high\", \"xhigh\"],\n        \"reasoningEffortFormat\": \"responses\"\n      }\n    ],\n    \"settings\": {\n      \"gpt-5.5\": {\n        \"reasoningEffort\": \"medium\"\n      }\n    }\n  }\n]\n```\n\nWith `vendor: customendpoint`, the Context Window popover showed:\n\n    18.8K / 400K tokens\n\nThat matches the configured total:\n\n    272000 + 128000 = 400000 tokens\n\nImpact:\nThis prevents users from reliably controlling context packing for BYOK OpenAI models.\n\nIn this specific case, the configured model has a pricing threshold based on input-token count. If VS Code ignores the configured `maxInputTokens` value and instead packs according to the model's larger maximum context window, a conversation can unexpectedly cross into the higher pricing tier.\n\nThis is especially problematic because the UI appears to advertise the larger effective context window when `vendor: openai` is used, suggesting that the larger value may be used by the context packer rather than only displayed incorrectly.\n\nSuggested resolution:\nIf `maxInputTokens` and `maxOutputTokens` are intended to be supported with `vendor: openai`, ensure the OpenAI provider honours the configured model-level values and uses them for both:\n\n- the Chat Context Window display\n- context packing / prompt construction\n\nIf these settings are intentionally ignored or overridden for recognised OpenAI models when `vendor: openai` is used, please document that clearly in the BYOK / `chatLanguageModels.json` model configuration documentation.\n\nAdditional notes:\nOther model-level settings may also be affected when using `vendor: openai`, but this has not been verified. The demonstrated issue is specifically with `maxInputTokens` and `maxOutputTokens`.\n\nThe current workaround is to configure the same OpenAI Responses API endpoint using `vendor: customendpoint`, where the configured token limits appear to be honoured.",
     "labels": [
       "bug",
-      "model-byok",
-      "new release"
+      "model-byok"
     ],
     "ground_truth_severity": "manual_label_needed",
     "ground_truth_team": "manual_label_needed"
@@ -1256,6 +1637,7 @@
     "description": "Seeing many hundreds of log messages like this printed repeatedly. It doesn't make sense to me because I don't think that all of these sessions have terminals. How can a CCA agent have terminals?\n\n```\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/dc446e91-2a5d-4bba-882e-d34d0b712bff (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/77d5313c-4e11-4c26-bd2d-43f572682a05 (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/f0cb5ec2-d33d-4e75-beba-6cf84887eeff (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/7a64b2fd-987a-4c91-8ccc-f7025d0e3b15 (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/784f4cd9-8c68-45fb-9a71-8eb04b8f5100 (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/7f0018d8-d380-420f-9608-c665b75192f9 (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/715866d3-0d9f-483b-9b5c-1adf1b241d01 (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/02cbde52-856b-41ad-91a5-b96b25a3f6f4 (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/c60bb319-d692-4745-b892-cd07b35247b5 (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/f6adf45d-eb78-4421-89f5-6f086a56f77c (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/0d590de7-249a-48e4-97dc-8fdee296339e (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/df85acba-3892-48d4-8f6f-27dac7d1f6bf (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/a83ae55c-bd9b-4f76-ab8c-209701c66265 (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/6c343eb5-6342-4e9e-ba3d-462511d60c02 (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/ef3c91c7-0ac0-4d41-b10d-8c3bc3b57f67 (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/14f3e7c5-01b1-49b0-9fac-848cbd15dc13 (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/af2dabcb-23c4-4007-ad0c-6a1d934c5fbd (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/baa10dfe-8bb2-4791-b2c5-fa16cd85d332 (session archived)\n2026-06-19 15:21:23.039 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/c69e6408-fd19-4faf-847d-ff9421194b6d (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/8862f88b-db2a-4e8b-84f3-f3c0d9be2582 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/1140f5fe-2226-491b-b198-1da99361468b (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/6a10c92d-5f0e-4a95-b674-1790100f28c3 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/f0bd2fe9-ed09-4b46-b918-7ac3a20edb29 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/d0443303-f359-4074-9d58-4de7c8c09113 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/500c0fe3-9477-4fe1-9817-4e7f8c4fec42 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/8aab3d9f-90c6-4afa-a1b5-50aa7bd3f5e3 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/93a4732c-b2d0-4b49-9961-12a23b4f8c2a (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/bbbf7cb1-97dd-4d59-b926-e0e09e23b363 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/18d12d54-6e55-45c1-8fe4-3a1a5a84a380 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/2bb98b4a-cbc3-46af-9609-636f8926cdab (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/4ee72f03-897d-4f3b-a8bd-6cc51a285faf (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/75ad31db-ce90-4aa6-a52c-96de8a369751 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/3520e366-c4f0-4595-a075-450138006511 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/4013bfe3-26d2-468b-9397-faed3c5058dc (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/b940d2b2-8ba7-4840-9241-2e9697667840 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/43b9e221-6f90-4376-b75e-7e2a57a3a9dc (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/4d51de6d-e612-4088-b3a6-ebc1979a445c (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/47d8291a-d66e-451e-babc-b2bc7ad4fb1c (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/f6f24212-c13a-41b8-b8eb-50867bb5a255 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/1ae8ceeb-7d9e-4500-aabd-ecabd9e32451 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/7b13bcee-c76e-40c9-b9c9-d7d421b98a47 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/32f09653-d2f4-4455-b65d-78e7150256a8 (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/b86601fc-0eb8-4d38-9314-2f91592395ea (session archived)\n2026-06-19 15:21:23.040 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/5fa025ed-8afe-4301-b0ef-46a7ff7a8549 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/b6c91ed8-f79d-418f-a4a5-ef93dfcb6edd (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/1bf23b0b-9f0d-476f-95d3-2e67e1a1a09b (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/fee0d0d2-204a-47bf-b396-493c4eb49cf0 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/41694f0e-e6fb-47a3-b518-0edea91b467c (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/4eb5d26a-fc8e-4674-a1e4-5d79f182b298 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/0adbd639-9fb7-4f35-a4de-1e1f3daf97e3 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/9dae6bff-ab69-43e3-8572-df0ec23c2773 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/12f0e187-6eca-48d3-ba53-d2615a22112b (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/1fab4366-d3a0-411d-8efc-37ad34a5ac0b (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/e7c433b7-c5ac-4964-8f6b-e068efbc657b (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/ff896be1-3aca-41cd-86f2-27d6c4e0bf49 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/182a0e40-6e1c-48ef-bb7c-492e20f5c57b (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/96737980-d48e-4e41-83b0-5a742e976eb5 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/1e0f4f80-d232-4553-9869-0f7c63fa9bea (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/d73ee645-0fef-45a0-b1c8-50e8e03f6d2b (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/ed623d52-fe2d-421a-814b-948f975f5397 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/7447b95b-d142-4a40-a7ab-ecca75030868 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/99b5adec-0622-4762-bab4-5e56686a7bfd (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/68c64ee1-0a3e-4400-82fe-96ede5b36294 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/a265ca84-aedf-436a-948b-ad79f0663f00 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/3972eaa4-0c04-440a-aec9-0fcbfd6b3f56 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/e6fad9f8-3929-434e-8950-c6818519f387 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/c6285b5a-412b-4134-a8c0-b46879558251 (session archived)\n2026-06-19 15:21:23.041 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/983fb1c8-3d22-49a0-87e5-eb7bf7792c34 (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/4aa1227b-e930-4962-949c-aef98801bad7 (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/38fb17d3-b938-4202-bfb3-b259ec9ac3fd (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/944c6bd9-457f-4a9d-9f2b-9917f8f26384 (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/c1f0cac0-6c92-43cf-aa69-3c3862a70475 (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/0b01b00a-4515-4d08-bdd6-2abcea384b3d (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/0ca406e0-ea2f-4f72-bcc1-faef17e6d117 (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/29e248cd-a408-4baa-9a89-9c770416532a (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/f0be05e2-4ef8-41b3-abf8-1b6571512383 (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/e97487d9-6abc-4751-b4d4-b98f77894089 (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/9b05c9d6-aab4-4d9f-a9c4-9d545c59e470 (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/7c9ba8cf-41c5-4bb0-928c-e07d5139d9ed (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/1e728048-0884-49b7-8fe6-30abac07743d (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/2a7030e7-05d5-42e9-84f8-5b289f8410c2 (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/adf8bb85-92ec-4b7b-b2dd-8b9a0357eb6a (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/a4cf0ca9-be73-42e4-a1ba-9217e56a853b (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/74a05eb7-eacc-429d-b47c-5d056f4752c0 (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/48fa5362-b12d-4152-98b6-88cce4afffdf (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/cb0c1739-8c29-4359-a799-4d618b075cfe (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/e3bfe095-f767-4011-be91-4dd7c3d1f857 (session archived)\n2026-06-19 15:21:23.042 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/ad148b02-29b7-458a-92d3-70e8da981a7a (session archived)\n2026-06-19 15:21:23.043 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/22c21a88-7a28-4d01-82a0-e8f49bbe8554 (session archived)\n2026-06-19 15:21:23.043 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/82414c90-3c49-40e1-ad24-0130d1f68202 (session archived)\n2026-06-19 15:21:23.043 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/691cf8ec-aa3e-4d20-8850-67b3359d0916 (session archived)\n2026-06-19 15:21:23.043 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/dacba266-6dfd-4d53-a475-5582306d2954 (session archived)\n2026-06-19 15:21:23.043 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/14984d82-7253-4c80-b1ec-884543bbabb9 (session archived)\n2026-06-19 15:21:23.043 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/e0b7b5c7-a367-4ea9-b273-c25762825249 (session archived)\n2026-06-19 15:21:23.043 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/b2f10d71-5589-4f22-8b72-fbaa94166dc6 (session archived)\n2026-06-19 15:21:23.043 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/ce4292bd-ba08-47aa-bb3c-133114f3ee4f (session archived)\n2026-06-19 15:21:23.043 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/de8ace1c-a56e-4e32-8183-b501b40a74ba (session archived)\n2026-06-19 15:21:23.043 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/be796a2d-16df-47b0-a4a1-1cc99853564a (session archived)\n2026-06-19 15:21:23.043 [info] [Window] [SessionsTerminal] Hiding terminals for session agenthost-ssh__macbook-air:remote-ssh__macbook-air-copilotcli:/0f4a617d-a66e-4679-affd-b584f9768bc9 (session archived)\n...\n2026-06-19 15:36:47.593 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/308921 (session removed)\n2026-06-19 15:36:47.593 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/4239 (session removed)\n2026-06-19 15:36:47.593 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/283973 (session removed)\n2026-06-19 15:36:47.593 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/29 (session removed)\n2026-06-19 15:36:47.593 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/28 (session removed)\n2026-06-19 15:36:47.593 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/289532 (session removed)\n2026-06-19 15:36:47.593 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/24 (session removed)\n2026-06-19 15:36:47.594 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/23 (session removed)\n2026-06-19 15:36:47.594 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/22 (session removed)\n2026-06-19 15:36:47.594 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/21 (session removed)\n2026-06-19 15:36:47.594 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/20 (session removed)\n2026-06-19 15:36:47.594 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/18 (session removed)\n2026-06-19 15:36:47.594 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/17 (session removed)\n2026-06-19 15:36:47.594 [info] [Window] [SessionsTerminal] Closing terminals for session default-copilot:copilot-cloud-agent:/261134 (session removed)\n```",
     "labels": [
       "bug",
+      "verified",
       "debt",
       "insiders-released"
     ],
@@ -1353,6 +1735,7 @@
     "description": "<img width=\"235\" height=\"214\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/cd3b0578-b072-4a0e-aa7f-05db5f3bb26c\" />\n\nShouldn't fall below other",
     "labels": [
       "bug",
+      "verified",
       "insiders-released",
       "auto-model"
     ],
@@ -1368,6 +1751,7 @@
     "description": "Context:\n`chat.tools.terminal.enableAutoApprove`  Probably over-stepping if this leads to enabling all other tool. \n\nWe should consider bringing chat.tools.terminal.autoApprove over as well, especially if it's running outside of sandbox. Potentially another step we'd want runtime to go through before they call their built-in shell tool.\n\nThis is lot intuitive with our custom terminal tool for AH, but I need to look into how the flow will work with shell tool from CLI SDK.\n",
     "labels": [
       "bug",
+      "verified",
       "insiders-released",
       "agent-host",
       "terminal-auto-approve"
@@ -1677,6 +2061,7 @@
     "description": " - start without any plugins installed\n - got to the plugns tab on the customization diallog\n - click on 'Browse Marketplace`: this will show a list of plugins to install\n - now click 'Install Plugin from Source`, enter `https://github.com/microsoft/vscode-team-kit` and pick a plugin\n\n:bug: \n- No information that the plugin has been installed\n- The overview did not increase the counter: should show that 1 plugin is installed\n- the plugin page still shows the marketplace plugins. I don't find a way to go back to the view of installed plugins\n",
     "labels": [
       "bug",
+      "verified",
       "insiders-released",
       "agent-host"
     ],
@@ -1739,7 +2124,7 @@
     "description": "<img width=\"726\" height=\"433\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/adffb11b-1153-4030-b825-90c0dfbf78c3\" />\n\nThe context widget has a \"Compact Conversation\" action that is inoperable in the AH sessions. Clicking on it doesn't do anything ",
     "labels": [
       "bug",
-      "verification-found",
+      "unreleased",
       "context-widget",
       "agent-host"
     ],
@@ -1769,6 +2154,8 @@
     "description": "<!-- ⚠️⚠️ Do Not Delete This! feature_request_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- Please search existing issues to avoid creating duplicates. -->\n\n<!-- Describe the feature you'd like. -->\nFrom https://github.com/microsoft/vscode/issues/319764#issuecomment-4734066705, I'm now getting `Error: (sendFailed) Error: git worktree exited with code 128: fatal: Could not reset index file to revision 'HEAD'.` in the Agents window.",
     "labels": [
       "bug",
+      "verified",
+      "insiders-released",
       "agents-window",
       "agent-host"
     ],
@@ -1798,6 +2185,7 @@
     "description": "<!-- ⚠️⚠️ Do Not Delete This! feature_request_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- Please search existing issues to avoid creating duplicates. -->\n\n<!-- Describe the feature you'd like. -->\n- `code-insiders --transient`\n- Don't sign in\n- ❓ I see Copilot CLI via AH in the dropdown\n\n<img width=\"1791\" height=\"1149\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1689a7da-4a4c-43ae-badd-f9fb1bc7cf6e\" />",
     "labels": [
       "bug",
+      "verified",
       "authentication",
       "insiders-released",
       "model-byok",
@@ -2536,6 +2924,23 @@
     "ground_truth_team": "manual_label_needed"
   },
   {
+    "id": "microsoft -- vscode -- 321426",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/321426",
+    "title": "No cost info in agent host model hovers",
+    "description": "![Image](https://github.com/user-attachments/assets/8fc934ce-98b3-40be-9d05-13918ab2039f)\n\nCompared to the model picker for local sessions \n\n![Image](https://github.com/user-attachments/assets/c82b11ca-a88d-4430-a994-a0f43a47efed)\n\n",
+    "labels": [
+      "bug",
+      "insiders-released",
+      "model-picker",
+      "agent-host",
+      "UBB"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
     "id": "microsoft -- vscode -- 321418",
     "source": "github",
     "repo": "microsoft/vscode",
@@ -3056,7 +3461,8 @@
     "description": "- press the verbosity hover button to increase the hover verbosity\n- the copy button inside the hover disappears",
     "labels": [
       "bug",
-      "editor-hover"
+      "editor-hover",
+      "unreleased"
     ],
     "ground_truth_severity": "manual_label_needed",
     "ground_truth_team": "manual_label_needed"
@@ -3185,6 +3591,22 @@
     "ground_truth_team": "manual_label_needed"
   },
   {
+    "id": "microsoft -- vscode -- 321037",
+    "source": "github",
+    "repo": "microsoft/vscode",
+    "url": "https://github.com/microsoft/vscode/issues/321037",
+    "title": "Model picker is resetting on first launch to BYOK models",
+    "description": "Everytime I reboot VS Code it resets my model to a byok model\n\n[copilot-chat-log.txt](https://github.com/user-attachments/files/28857177/copilot-chat-log.txt)\n[window-logs.txt](https://github.com/user-attachments/files/28857178/window-logs.txt)",
+    "labels": [
+      "bug",
+      "insiders-released",
+      "model-byok",
+      "model-picker"
+    ],
+    "ground_truth_severity": "manual_label_needed",
+    "ground_truth_team": "manual_label_needed"
+  },
+  {
     "id": "microsoft -- vscode -- 321034",
     "source": "github",
     "repo": "microsoft/vscode",
@@ -3208,6 +3630,8 @@
     "description": "![Image](https://github.com/user-attachments/assets/34d6e4ee-80d2-4749-ab29-dafbdd0520cd)\n\n- select Agent Host\n- Select Auto \n- Run a request\n- Upon completion, I do not see the model that was selected \n\n\nThis is what I see in Local sessions \n\n![Image](https://github.com/user-attachments/assets/1c5a92d7-9f3e-4631-947e-424523fb6045)\n\n",
     "labels": [
       "bug",
+      "verified",
+      "insiders-released",
       "auto-model",
       "agent-host"
     ],
@@ -3240,6 +3664,7 @@
     "description": "https://github.com/user-attachments/assets/58a6d5f4-bd69-4356-b3ff-34d3adfb9e25",
     "labels": [
       "bug",
+      "verified",
       "workbench-tabs",
       "agents-window"
     ],
@@ -3395,6 +3820,7 @@
     "labels": [
       "bug",
       "upstream",
+      "verified",
       "copilot-cli-agent"
     ],
     "ground_truth_severity": "manual_label_needed",
@@ -4228,419 +4654,6 @@
     "url": "https://github.com/microsoft/vscode/issues/320389",
     "title": "VSCode seems it does not respect my profiles when starting some extensions",
     "description": "\nType: <b>Bug</b>\n\nHello there,\n\nI recently posted a similar issue for new Agents window. In that task I explained that I disabled many features in the \"Default\" profile, including all AI, and the profile I am starting agent window is fully decorated for AI works. Yet, agents window tries to use \"Default\" profile to connect agents, and fails miserably to do so becuause of changes I made to \"Default\" profile.\n\nThe same is now happenning with Remote Explorer.\n\nI also removed Remote Explorer from \"Default\" profile. And now I am not able to connect WSL containers, and vscode complains saying \"Extension 'WSL' is required. And it says this after I started this connection from within Remote Explorer, just from another profile set for this purpose.\n\nHow can you recreate the issue? follow these steps:\n1- Open \"Default\" profile and remove WSL, and maybe Remote Explorer(?!)\n2- Create a new profile, from scratch or using default\n3- switch to new profile, find and install WSL\n4- open Remote explorer window and try to connect a WSL container (current or new windows, wont matter)\n5- Now witness: VSCode switches to \"Default\" profile immediately before trying to connect, and it fails because there is no WSL in \"Default\" profile.\n6- Bonus: open File menu, and then \"Close Remote Connection\". The profile stays in \"Default\".\n\nOne exception I saw so far is this:\nIf I enable WSL in \"Default\" profile, open a remote folder, and switch to another profile that has WSL enabled within that folder, then next time I try to connect from non-Default profile, it reopens the folder in that profile without a problem.\n\nEverything I use in VSCode should be contained within the profile I am working in. The exception clearly shows that my profiles are respected in the workspace level, but not in global level. \n\nI hope you fix this issue and bring balance and peace to the use of profiles.\n\nVS Code version: Code 1.123.0 (6a44c352bd24569c417e530095901b649960f9f8, 2026-06-03T11:29:03+02:00)\nOS version: Windows_NT x64 10.0.26100\nModes:\nConnection to 'WSL: AgenticTraining' could not be established  No remote extension installed to resolve wsl.\n\n<details>\n<summary>System Info</summary>\n\n|Item|Value|\n|---|---|\n|CPUs|Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz (8 x 2195)|\n|GPU Status|2d_canvas: enabled<br>GPU0: VENDOR= 0x8086, DEVICE=0x0d26 [Intel(R) Iris(TM) Pro Graphics 5200], DRIVER_VENDOR=Intel, DRIVER_VERSION=20.19.15.4531 *ACTIVE*<br>GPU1: VENDOR= 0x1414, DEVICE=0x008c [Microsoft Basic Render Driver], DRIVER_VERSION=10.0.26100.8521<br>Machine model name: <br>Machine model version: <br>direct_rendering_display_compositor: disabled_off_ok<br>gpu_compositing: enabled<br>multiple_raster_threads: enabled_on<br>opengl: enabled_on<br>rasterization: enabled<br>raw_draw: disabled_off_ok<br>skia_graphite: disabled_off<br>trees_in_viz: disabled_off<br>video_decode: enabled<br>video_encode: enabled<br>webgl: enabled<br>webgpu: enabled<br>webnn: disabled_off|\n|Load (avg)|undefined|\n|Memory (System)|15.91GB (2.07GB free)|\n|Process Argv|--crash-reporter-id 1e1cd08e-d950-4c1a-a30a-00ed7b58646a|\n|Screen Reader|no|\n|VM|0%|\n\nConnection to 'WSL: AgenticTraining' could not be established  No remote extension installed to resolve wsl.\n</details><details><summary>Extensions (1)</summary>\n\nName|Identifier|Author|Version\n---|---|---|---\nExtensions not loaded|extensions-load-error|N/A|\n\n</details><details>\n<summary>A/B Experiments</summary>\n\n```\nvsliv368cf:30146710\nbinariesv615:30325510\nnativeloc1:31344060\ndwcopilot:31170013\ndwoutputs:31242946\ncopilot_t_ci:31333650\ne5gg6876:31282496\npythonrdcb7:31342333\n6518g693:31463988\naj953862:31281341\nb6b4d950:31327385\n6abeh943:31336334\nenvsdeactivate2:31505458\ncloudbuttont:31379625\n3efgi100_wstrepl:31403338\n839jf696:31457053\nec5jj548:31422691\ncp_cls_t_966_ss:31526232\ninlinechat_v2_hd992725:31505030\n4je02754:31466945\nc3h7c220:31478652\n38bie571_auto:31426784\ncp_cls_t_1081:31454832\nconptydll_true:31498968\ne9c30283:31461165\ntest_treatment2:31471001\n46204921:31447328\nidci7584:31464702\ne3e4d672:31494082\nei9d7968:31496641\nchat:31457767\n7e187181:31503455\nghj88844:31499326\nec1eg703:31520046\nddid_c:31478207\nhmra_i5g22:31518061\ngetcmakediagnosticsoff:31489825\n7df3h592:31512476\ncp_cls_t_1082:31516087\nlogging_enabled_new:31498466\nj0d79568:31499440\njb_cp_cls_c_632:31524806\n748c7209:31512887\n32d76977:31512328\nha629193:31508444\ncdk-lw-on:31524445\n31fi7170_t:31522396\njh5f2457_c:31515489\n61138546:31518536\ngf14b233:31526830\n\n```\n\n</details>\n\n<!-- generated by issue reporter -->",
-    "labels": [
-      "bug",
-      "user-profiles"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320385",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320385",
-    "title": "Simple file dialog - cancel the folder creation does not restore the file list",
-    "description": "Testing #320081\n\n* Try to open a folder that does not exist. Notice that when you enter the name of the folder that does not exist, you see the list of files/folders that do exist.\n* Click the \"Cancel\" action or ESC on the folder creation quick input\n* Now you are brought back to the previous input, but the files/folders are not shown",
-    "labels": [
-      "bug",
-      "verified",
-      "simple-file-dialog"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320384",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320384",
-    "title": "Simple file dialog - change the name when creating a new folder",
-    "description": "Testing #320081\n* Try to open a folder that does not exist\n    <img src=\"https://github.com/user-attachments/assets/2e43e661-7534-41ca-861a-c17b94511522\" alt=\"Image\" width=\"616\" height=\"84\">\n* Press any key, nothing happens, just the cursor is moved. It looks like we are just going back to the previous state.\n    <img width=\"618\" height=\"88\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/51da656c-0ef1-447c-87e3-b5e3c72dea27\" />",
-    "labels": [
-      "bug",
-      "simple-file-dialog"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320383",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320383",
-    "title": "Browser history has duplicated entries",
-    "description": "Testing #320233\n\n<img width=\"752\" height=\"458\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/bc7d6158-ee23-4215-9fe9-07bb2327fd99\" />\n\n",
-    "labels": [
-      "bug",
-      "verified",
-      "insiders-released",
-      "browser-integration"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320371",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320371",
-    "title": "implicit PR attachment shows when PR is already attached",
-    "description": "1. open PR view\n2. attach the PR using implicit PR attachment\n3. :bug: After a couple of seconds the implicit PR attachment shows again\n\n(Clicking the implicit attachment is a no-op)\n\n<img width=\"469\" height=\"213\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/c9c3a322-b295-4e21-a179-dd19e652f8d1\" />",
-    "labels": [
-      "bug",
-      "chat"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320367",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320367",
-    "title": "Terminal font rendering",
-    "description": "Yet another weird issue with terminal font rendering:\n\n<img width=\"1789\" height=\"414\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e21df64c-6ce7-4771-bd6c-cad868f7f2b3\" />\n\n\nIt looks like it temporarily switched to a completely different font? I have no idea what's going on here.\n\nI can't give you steps to reproduce, because font rendering in the terminal is just super unpredictable and random - I have weird aliasing issues and blurry fonts (as reported by many) on the daily, but this one was new to me.\n\nThere are many issues with terminal font rendering - to name a few that might be related:\n\n* https://github.com/microsoft/vscode/issues/288830\n* https://github.com/microsoft/vscode/issues/288121\n* https://github.com/microsoft/vscode/issues/286989\n\nDo a search for [terminal font](https://github.com/microsoft/vscode/issues?q=is%3Aissue%20state%3Aopen%20terminal%20font), it's kind of wild.\n\nText is arguably the most important feature in a text editor, I can't understand why this isn't treated like a serious issue? At what point do you give up, just tear it down and rewrite the thing? It's been broken for a *way* too long. 😐\n",
-    "labels": [
-      "bug",
-      "verified",
-      "regression",
-      "insiders-released",
-      "terminal-rendering"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320352",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320352",
-    "title": "Editor broken with error code -2147483645",
-    "description": "\nType: <b>Bug</b>\n\nOpen anyone code file, chose anything and ctrl+c, open another file, input anything characters, the character showed with a bottom line, and then the editor will broken and a window shows something wrong with error code -2147483645.\nI've reinstalled the editor but the problem still exist.\n\nVS Code version: Code 1.123.0 (6a44c352bd24569c417e530095901b649960f9f8, 2026-06-03T11:29:03+02:00)\nOS version: Windows_NT x64 10.0.22621\nModes:\n\n<details>\n<summary>System Info</summary>\n\n|Item|Value|\n|---|---|\n|CPUs|12th Gen Intel(R) Core(TM) i7-12700 (20 x 2112)|\n|GPU Status|2d_canvas: enabled<br>GPU0: VENDOR= 0x10de, DEVICE=0x2487 [NVIDIA GeForce RTX 3060], DRIVER_VENDOR=NVIDIA, DRIVER_VERSION=32.0.16.1047 *ACTIVE*<br>GPU1: VENDOR= 0x8086, DEVICE=0x4680 [Intel(R) UHD Graphics 770], DRIVER_VERSION=32.0.101.6129<br>GPU2: VENDOR= 0x8086, DEVICE=0x4680 [Intel(R) UHD Graphics 770], DRIVER_VERSION=32.0.101.6129<br>GPU3: VENDOR= 0x8086, DEVICE=0x4680 [Intel(R) UHD Graphics 770], DRIVER_VERSION=32.0.101.6129<br>GPU4: VENDOR= 0x1414, DEVICE=0x008c [Microsoft Basic Render Driver], DRIVER_VERSION=10.0.22621.5415<br>Machine model name: <br>Machine model version: <br>direct_rendering_display_compositor: disabled_off_ok<br>gpu_compositing: enabled<br>multiple_raster_threads: enabled_on<br>opengl: enabled_on<br>rasterization: enabled<br>raw_draw: disabled_off_ok<br>skia_graphite: disabled_off<br>trees_in_viz: disabled_off<br>video_decode: enabled<br>video_encode: enabled<br>webgl: enabled<br>webgpu: enabled<br>webnn: disabled_off|\n|Load (avg)|undefined|\n|Memory (System)|47.77GB (27.81GB free)|\n|Process Argv|--crash-reporter-id f9e38c2e-c26c-4368-987d-f046df328b6e|\n|Screen Reader|no|\n|VM|0%|\n</details><details><summary>Extensions (1)</summary>\n\nName|Identifier|Author|Version\n---|---|---|---\nChinese (Simplified) (简体中文) Language Pack for Visual Studio Code|ms-ceintl.vscode-language-pack-zh-hans|MS-CEINTL|1.123.2026060618\n\n</details><details>\n<summary>A/B Experiments</summary>\n\n```\nvsliv368cf:30146710\nbinariesv615:30325510\nnativeloc1:31344060\ndwcopilot:31170013\ndwoutputs:31242946\ncopilot_t_ci:31333650\ne5gg6876:31282496\npythonrdcb7:31342333\n6518g693:31463988\naj953862:31281341\n82j33506:31327384\n63221493:31336333\nenvsdeactivate2:31505458\ncloudbuttont:31379625\n3efgi100_wstrepl:31403338\nddidt:31399633\nec5jj548:31422691\ncp_cls_t_966_ss:31526232\ninlinechat_v2_hd992725:31505030\n4je02754:31466945\nc3h7c220:31478652\n38bie571_auto:31426784\ncp_cls_t_1081:31454832\nconptydll_true:31498968\nia-use-proxy-models-svc:31452481\ne9c30283:31461165\ntest_treatment2:31471001\n46204921:31447328\nidci7584:31464702\ne3e4d672:31494082\nei9d7968:31496641\nchat:31457767\n8hig5102:31480529\n89g7j272:31518289\n7e187181:31503455\ni2gc6536:31499202\n52612955:31516516\nghj88844:31499326\n23c7c724:31520045\nddid_t:31478206\nhmra_i5g22:31518061\ngetcmakediagnosticson:31489824\n7df3h592:31512476\ncp_cls_t_1082:31516087\nlogging_enabled_new:31498466\ndb5d2638:31499441\nnes-extended-cfe-himalia-004:31500446\njb_cp_cls_c_632:31524806\n56dj4588:31512888\n32d76977:31512328\nha629193:31508444\ncdk-lw-on:31524445\nnes-charagree-3:31521372\n2cfga817_c:31522397\njh5f2457_c:31515489\n95db8703:31523165\n61138546:31518536\njf4hg949:31526829\n\n```\n\n</details>\n\n<!-- generated by issue reporter -->",
-    "labels": [
-      "bug",
-      "info-needed",
-      "editor-input"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320342",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320342",
-    "title": "Allow users to hide extension-contributed `viewsWelcome` content (welcome view)",
-    "description": "<!-- ⚠️ Feature request -->\n\n### Does this issue occur when all extensions are disabled?: No (it is caused by extension contributions)\n\n## Summary\n\nThere is currently no user-facing way to hide or suppress the welcome content that extensions contribute via the `viewsWelcome` contribution point, short of disabling/uninstalling the extension entirely.\n\n## Steps to reproduce\n\n1. Install an extension that contributes `viewsWelcome` to a built-in view. For example, the **TypeSpec** extension contributes:\n   ```jsonc\n   {\n     \"view\": \"explorer\",\n     \"contents\": \"You may [open a folder]... [Create TypeSpec Project]...\",\n     \"when\": \"!workspaceFolderCount\"\n   }\n   ```\n2. Open an empty window (no folder open).\n3. The \"Create TypeSpec Project\" welcome content is rendered inside the built-in **Explorer** view, even for users who do not use TypeSpec.\n\n## Problem\n\n- The welcome content attaches to a **built-in view** (e.g. `explorer`), not to a contributed view. So the existing \"hide a view\" gesture from #35462 does **not** apply.\n- Visibility is controlled solely by the extension author's `when` clause. The end user has no override.\n- The only workarounds are disabling the extension or editing its `package.json` (reverts on update).\n\nThis is a distinct gap from #35462, which addressed hiding contributed **views/panels**, not `viewsWelcome` **content**.\n\n## Proposed solutions (any one would help)\n\n1. A context-menu action (\"Hide welcome content\") on contributed `viewsWelcome` items, persisted globally.\n2. A setting to suppress `viewsWelcome` by extension id, e.g. `workbench.view.welcome.disabled: [\"typespec.typespec-vscode\"]`.\n3. A general toggle to hide all extension-contributed welcome content on built-in views.\n\n## Why core, not per-extension\n\nIf N extensions contribute welcome content, each would have to implement its own opt-out (most do not). Solving it once in VS Code covers all of them.\n",
-    "labels": [
-      "bug",
-      "workbench-views"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320341",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320341",
-    "title": "Windows 微软双拼输入法在EditContext API启用时只能输入拼音，无法转换为汉字",
-    "description": "\nType: <b>Bug</b>\n\n### 问题描述\n在Windows系统上使用微软拼音输入法的双拼模式时，当VSCode启用了\"Editor: Edit Context\"选项（默认启用），输入中文只能显示原始拼音字符，无法转换为汉字。关闭该选项后恢复正常。\n\n### 复现步骤\n1. 打开Windows系统设置，添加微软拼音输入法并切换到双拼模式\n2. 打开VSCode 1.89及以上版本\n3. 确保设置中\"Editor: Edit Context\"选项已勾选（默认状态）\n4. 在编辑器中切换到微软双拼输入法，输入任意中文拼音\n\n### 预期结果\n输入拼音后应该显示汉字候选框，按空格可以上屏汉字\n\n### 实际结果\n只能输入原始拼音字符，没有汉字候选框，按空格直接上屏拼音\n\n### 系统信息\n- VSCode版本：（VSCode会自动填写）\n- 操作系统版本：Windows 11 22H2 / Windows 10 22H2（根据你的实际情况修改）\n- 微软拼音版本：（可以在微软拼音设置->关于中查看）\n\n### 已尝试的解决方法\n- 关闭硬件加速：无效\n- 禁用msUseImeApi：无效\n- 重启TextInputHost.exe：无效\n- 启用微软拼音旧版兼容模式：无效\n- 关闭EditContext API：有效\n\n### 附加信息\n这个问题只影响微软拼音的双拼模式，全拼模式正常。其他第三方输入法（如搜狗、百度）也正常。\n\nVS Code version: Code 1.122.1 (8761a5560cfd65fdd19ce7e2bd18dab5c0a4d84e, 2026-05-29T09:25:37+02:00)\nOS version: Windows_NT x64 10.0.17763\nModes:\n\n<details>\n<summary>System Info</summary>\n\n|Item|Value|\n|---|---|\n|CPUs|13th Gen Intel(R) Core(TM) i7-13700T (24 x 1382)|\n|GPU Status|2d_canvas: enabled<br>GPU0: VENDOR= 0x8086, DEVICE=0xa780 [Intel(R) UHD Graphics 770], DRIVER_VENDOR=Intel, DRIVER_VERSION=31.0.101.5186 *ACTIVE*<br>GPU1: VENDOR= 0x1414, DEVICE=0x008c [Microsoft Basic Render Driver], DRIVER_VERSION=10.0.17763.8641<br>GPU2: VENDOR= 0x1414, DEVICE=0x008c [Microsoft Basic Render Driver], DRIVER_VERSION=10.0.17763.8641<br>Machine model name: <br>Machine model version: <br>direct_rendering_display_compositor: disabled_off_ok<br>gpu_compositing: enabled<br>multiple_raster_threads: enabled_on<br>opengl: enabled_on<br>rasterization: enabled<br>raw_draw: disabled_off_ok<br>skia_graphite: disabled_off<br>trees_in_viz: disabled_off<br>video_decode: enabled<br>video_encode: enabled<br>webgl: enabled<br>webgl2: enabled<br>webgpu: enabled<br>webnn: disabled_off|\n|Load (avg)|undefined|\n|Memory (System)|15.70GB (8.85GB free)|\n|Process Argv|--crash-reporter-id 81bfcc07-8651-4ed7-bf9d-507feafaed56|\n|Screen Reader|no|\n|VM|0%|\n</details><details><summary>Extensions (36)</summary>\n\nName|Identifier|Author|Version\n---|---|---|---\nIconify IntelliSense|antfu.iconify|antfu|1.0.0\nGit Easy|bibhasdn.git-easy|bibhasdn|1.11.0\nRemove Console Log|c0der-himel.remove-console-log|c0der-himel|1.5.0\nPath Intellisense|christian-kohler.path-intellisense|christian-kohler|2.10.0\nESLint|dbaeumer.vscode-eslint|dbaeumer|3.0.24\nDocker DX|docker.docker|docker|0.18.0\nGit History|donjayamanne.githistory|donjayamanne|0.6.20\nGitLens — Git supercharged|eamodio.gitlens|eamodio|18.0.0\nHTML CSS Support|ecmel.vscode-html-css|ecmel|2.0.14\nPrettier - Code formatter|esbenp.prettier-vscode|esbenp|12.4.0\nAuto Close Tag|formulahendry.auto-close-tag|formulahendry|0.5.15\nAuto Rename Tag|formulahendry.auto-rename-tag|formulahendry|0.1.10\nCode Runner|formulahendry.code-runner|formulahendry|0.12.2\ni18n Ally|lokalise.i18n-ally|lokalise|2.13.1\nTRAE AI: Coding Assistant|marscode.marscode-extension|MarsCode|1.6.30\nGit Graph|mhutchie.git-graph|mhutchie|1.30.0\nChinese (Simplified) (简体中文) Language Pack for Visual Studio Code|ms-ceintl.vscode-language-pack-zh-hans|MS-CEINTL|1.122.2026060118\nGitHub Copilot modernization for .NET|ms-dotnettools.vscode-dotnet-modernize|ms-dotnettools|1.0.1152\n.NET Install Tool|ms-dotnettools.vscode-dotnet-runtime|ms-dotnettools|3.0.2\nJupyter Notebook Renderers|ms-toolsai.jupyter-renderers|ms-toolsai|1.3.0\nThunder Client|rangav.vscode-thunder-client|rangav|2.40.15\nRemove Vue Comment|removevuecomment.remove-vue-comments|RemoveVueComment|0.0.5\nLive Server|ritwickdey.liveserver|ritwickdey|5.7.10\nES7 React/Redux/GraphQL/React-Native snippets|rodrigovallades.es7-react-js-snippets|rodrigovallades|1.9.3\nany-rule|russell.any-rule|russell|0.3.18\nVue VSCode Snippets|sdras.vue-vscode-snippets|sdras|3.2.0\nGuides|spywhere.guides|spywhere|0.9.3\nStylelint|stylelint.vscode-stylelint|stylelint|2.2.1\nError Lens|usernamehw.errorlens|usernamehw|3.28.0\nGitHub Copilot modernization|vscjava.migrate-java-to-azure|vscjava|1.21.26060501\nGitHub Copilot modernization - upgrade for Java|vscjava.vscode-java-upgrade|vscjava|2.1.2\nvscode-icons|vscode-icons-team.vscode-icons|vscode-icons-team|12.18.0\nVue (Official)|vue.volar|Vue|3.3.3\nJavaScript (ES6) code snippets|xabikos.javascriptsnippets|xabikos|1.8.0\nMarkdown All in One|yzhang.markdown-all-in-one|yzhang|3.6.3\nOne Dark Pro|zhuangtongfa.material-theme|zhuangtongfa|3.19.0\n\n</details><details>\n<summary>A/B Experiments</summary>\n\n```\nvsliv368cf:30146710\nbinariesv615:30325510\nnativeloc1:31344060\ndwcopilot:31170013\ndwoutputs:31242946\ncopilot_t_ci:31333650\ne5gg6876:31282496\npythonrdcb7:31342333\n6518g693:31463988\naj953862:31281341\n6abeh943:31336334\nenvsdeactivate2:31505458\ncloudbuttont:31379625\n3efgi100_wstrepl:31403338\nddidtcf:31399634\nec5jj548:31422691\ncp_cls_t_966_ss:31526232\ninlinechat_v2_hd992725:31505030\n4je02754:31466945\nc3h7c220:31478652\n38bie571_auto:31426784\ncp_cls_c_1081:31454833\nconptydll_true:31498968\nia-use-proxy-models-svc:31452481\ne9c30283:31461165\ntest_treatment2:31471001\n46204921:31447328\nidci7584:31464702\ne3e4d672:31494082\nei9d7968:31496641\nchat:31457767\n8hig5102:31480529\n89g7j272:31518289\n7e187181:31503455\ni2gc6536:31499202\n52612955:31516516\nghj88844:31499326\nddid_c:31478207\nhmra_i5g22:31518061\ngetcmakediagnosticson:31489824\n7df3h592:31512476\ncp_cls_t_1082:31516087\nlogging_enabled_new:31498466\nj0d79568:31499440\nnes-extended-cfe-himalia-004:31500446\njb_cp_cls_c_632:31524806\nb1ei0813:31506238\n56dj4588:31512888\n32d76977:31512328\nha629193:31508444\ncdk-lw-on:31524445\nnes-charagree-1:31521370\n31fi7170_t:31522396\njh5f2457_c:31515489\n61138546:31518536\ngf14b233:31526830\n\n```\n\n</details>\n\n<!-- generated by issue reporter -->",
-    "labels": [
-      "bug",
-      "editor-edit-context",
-      "ai-translated"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320317",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320317",
-    "title": "Hidden secondary side bar should stay hidden when switching back to a session",
-    "description": "Fixed via #320075.\n\n## Bug\n\nIn the Agents window, when a user hides the secondary side bar (auxiliary bar) for a session, switching away and back to that session would re-reveal the side bar, overriding the session's saved \"hidden\" state. This happened because restoring the session's editor working set reveals the editor part programmatically, which re-triggered the \"editor implies auxiliary bar\" invariant.\n\n## Verification steps\n\n1. Open the Agents window with at least two sessions, each having a file/editor open (e.g. open a file from files view so the editor + secondary side bar both show).\n2. In session A, **hide** the secondary side bar (auxiliary bar).\n3. Switch to session B, then switch **back** to session A.\n   - ✅ The secondary side bar should remain **hidden** in session A.\n4. In session B, keep the secondary side bar **visible**, switch to A and back to B.\n   - ✅ The secondary side bar should remain **visible** in session B.\n5. Open a file from files view in any session.\n   - ✅ The editor and the secondary side bar should both be shown (invariant preserved for genuine editor reveals).",
-    "labels": [
-      "bug",
-      "verification-needed",
-      "insiders-released",
-      "agents-window"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320310",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320310",
-    "title": "Tab bar is not aligned with the session header",
-    "description": "**Describe the bug**\nThe tab strip is not horizontally aligned with the session header above it.\n\n**Observed behavior**\nThe session header title (\"Session type not retained on reload\") and its metadata (vscode · main) start at a left indent, but the tabs below them (\"Session type not retained on rel...\" / \"Feature request and verifica...\") start at a different, further-left horizontal position. As a result, the tabs do not line up with the header content above them.\n\n**Expected behavior**\nThe tab bar should be left-aligned consistently with the session header above it.\n\n**Steps to reproduce**\n1. Open a window/view with a session header and a tab strip.\n2. Observe the left edge of the tabs versus the left edge of the session header.\n\n**Screenshot**\n\n<img src=\"https://github.com/user-attachments/assets/c99df73e-97a6-4fce-afd8-e1c5148d19c0\" alt=\"Image\" width=\"1124\" height=\"149\">\n\n",
-    "labels": [
-      "bug",
-      "verified",
-      "insiders-released",
-      "agents-window"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320309",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320309",
-    "title": "Retain selected session type in the agents window across window reload",
-    "description": "## Feature\n\nRetain the previously selected **session type** in the agents window across window reloads. Previously, reloading the window always reverted the session type to **Copilot CLI from the Copilot Chat provider**, regardless of what the user had last used (e.g. the Local Agent Host's `copilotcli`).\n\nImplemented in #320084.\n\n## What changed\n\n- The session type picker now persists `{ providerId, sessionTypeId }` on **every** effective change of the active session's type (not just on manual dropdown picks), so an auto-selected/defaulted type survives reload. `providerId` disambiguates providers that advertise the same session type id.\n- `NewChatWidget` no longer pre-validates the stored pick against the folder's currently-available types (which discarded a valid preference whose provider had not yet registered). It now creates the draft immediately with the best available provider and **upgrades it in place** once the preferred provider registers (driven by `onDidChangeSessionTypes`), with no timeout — agent hosts can connect arbitrarily late.\n\n## Verification steps\n\n1. Open the agents window and start a new session using the **Local Agent Host → Copilot CLI** session type (the agent host, not the Copilot Chat provider).\n2. Reload the window (`Developer: Reload Window`).\n3. ✅ Verify the new-session view still shows **Copilot CLI from the Local Agent Host** — not Copilot CLI from the Copilot Chat provider.\n4. Manually switch the session type to a different one (e.g. Copilot Chat), reload again.\n5. ✅ Verify the last manually-selected type is retained after reload.\n6. Select other harnesses offered by the **Copilot Chat provider** (e.g. the various session types it advertises), reloading the window after each selection.\n7. ✅ Verify each selected Copilot Chat provider harness is retained across reload.\n",
-    "labels": [
-      "bug",
-      "verified",
-      "agents-window"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320303",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320303",
-    "title": "Switching sessions is too slow",
-    "description": "One problem is that we do `listSessions` way too often, and this is slow and blocks `resumeSession`. \n\nWhen we open a session for the first time, we add it as a workspace folder, and this triggers multiple refreshes\n\nhttps://github.com/microsoft/vscode/blob/6a335631e0ecccb86591de56bb364f74da69db61/src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSessionListController.ts#L169-L172\n\nhttps://github.com/microsoft/vscode/blob/6a335631e0ecccb86591de56bb364f74da69db61/src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsModel.ts#L534",
-    "labels": [
-      "bug",
-      "perf",
-      "agent-host"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320297",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320297",
-    "title": "Browser context doesn't update with page navigations",
-    "description": "1. Open a page (e.g. Google) in the integrated browser and share it with the agent\n2. Ask the agent what page is being shared (without using tool calls)\n   - ✅ it sees `Google`\n3. Navigate the page somewhere else (e.g. Wikipedia)\n4. Ask the agent again what the page is without using tools\n   - ❌ it still sees `Google`",
-    "labels": [
-      "bug",
-      "verified",
-      "insiders-released",
-      "browser-integration"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320293",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320293",
-    "title": "No audio when playing video in Integrated Browser",
-    "description": "<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- 🕮 Read our guide about submitting issues: https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions -->\n<!-- 🔎 Search existing issues to avoid creating duplicates. -->\n<!-- 🧪 Test using the latest Insiders build to see if your issue has already been fixed: https://code.visualstudio.com/insiders/ -->\n<!-- 💡 Instead of creating your report here, use 'Report Issue' from the 'Help' menu in VS Code to pre-fill useful information. -->\n<!-- 🔧 Launch with `code --disable-extensions` to check. -->\nDoes this issue occur when all extensions are disabled?: Yes\n\n<!-- 🪓 If you answered No above, use 'Help: Start Extension Bisect' from Command Palette to try to identify the cause. -->\n<!-- 📣 Issues caused by an extension need to be reported directly to the extension publisher. The 'Help > Report Issue' dialog can assist with this. -->\n## Description\nAudio is not playing when watching videos in VS Code's integrated browser with the `<video>` HTML tag.\n\n## Steps to Reproduce\n1. Open a web page with a video in the integrated browser\n2. Click play on the video\n3. Notice that the video plays but there is no audio and the audio function is greyed out.\n\n## Expected Behavior\nBoth video and audio should play in the integrated browser, just as they do in a standalone browser.\n\n## Actual Behavior\nVideo plays but audio is not there. There is definitely audio in the video, as it plays in another browser.\n\n## Screenshots\nVideo in VS Code browser:\n\n<img width=\"127\" height=\"42\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/9635674d-65dc-4a4c-9c2d-c1e4b99ee347\" />\n\nVideo in Chromium browser:\n\n<img width=\"133\" height=\"35\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ae51bf22-6d95-4864-9505-a1e91fbea0d7\" />\n\n## Environment\n- VS Code Version: 1.123.0\n- OS: Raspberry Pi OS (Based on Debian 13)\n",
-    "labels": [
-      "bug",
-      "browser-integration"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320280",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320280",
-    "title": "Incorrect autolink in JSON schema description",
-    "description": "<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n- VS Code Version: 1.123.0\n- OS Version: Windows_NT x64 10.0.26200\n\nSteps to Reproduce:\n\n1. Create and open a `package.json`, write:\n\n    ```json\n    {\n      \"engines\": {\n        \"runtime\": []\n      }\n    }\n    ```\n\n2. Hover on `runtime`:\n\n    <img width=\"876\" height=\"218\" src=\"https://github.com/user-attachments/assets/85b4e124-d90c-4bbf-9756-b1b183241021\" />\n\n    The autolink unexpectedly includes trailing `)/`, which actually breaks the link. Since `.org/)/` is not a valid LTD, VS Code should not recognise that as part of the link. I tried with other Markdown Editors, all of them can handle that.",
-    "labels": [
-      "bug",
-      "editor-hover",
-      "markdown-core"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320270",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320270",
-    "title": "Browser tools have trouble when page is in emulation mode",
-    "description": "1. Open any page in the integrated browser -- e.g. https://code.visualstudio.com/\n2. Toggle device emulation and resize the page a bit\n3. Ask the agent to click something in the page\n4. 🐛 it often fails, with Playwright failing to find the correct element\n\nPossibly due to some incorrect coordinate logic when Playwright does actionability checks",
-    "labels": [
-      "bug",
-      "verified",
-      "insiders-released",
-      "browser-integration"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320266",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320266",
-    "title": "Browser renders in the wrong place after dragging into a split view",
-    "description": "1. Open integrated browser and any other editor in the same group\n2. Drag the browser tab to the side so it opens in a split panel\n3. 🐛 the browser view renders in the wrong place\n\n<img width=\"779\" height=\"564\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/aff4408f-9933-482d-a4d2-1259be317c47\" />",
-    "labels": [
-      "bug",
-      "verified",
-      "insiders-released",
-      "browser-integration"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320248",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320248",
-    "title": "The harness picker keeps going back to Chat Copilot CLI",
-    "description": "When I hit New Session, my picker keeps going back to `Chat Copilot CLI` instead of `AHP Copilot CLI`\n\n<img width=\"1600\" height=\"530\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/2e09e1bc-8e64-4d15-89d8-4567af684b4f\" />",
-    "labels": [
-      "bug",
-      "agents-window"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320247",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320247",
-    "title": "Redundant 'cd' prefixes not stripped from view",
-    "description": "The SDK bash tool likes to do multiline commands starting with a redundant cd. We have code to strip this, but it only handles `cd ... &&` patterns\n\n<img width=\"971\" height=\"233\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/4e3aa1f1-3ebe-4444-ba74-ccde3088becf\" />",
-    "labels": [
-      "bug",
-      "verified",
-      "insiders-released",
-      "agent-host"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320245",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320245",
-    "title": "Agent host: \"Trying to add a disposable to a DisposableStore that has already been disposed of\" from in-process node.js file watcher",
-    "description": "Seeing this error in the Main process output today, I think it shows when the window starts. Copilot flagged https://github.com/microsoft/vscode/pull/320038 as related cc @DonJayamanne. I think it's harmless but just cleaning it up by fixing the disposable tracking. I'm just wondering whether the watcher churn can be reduced, I don't know anything about the area though.\n\nCopilot text below:\n\n## Problem\n\nThe agent host logs the following warning repeatedly:\n\n```\nError: Trying to add a disposable to a DisposableStore that has already been disposed of. The added object will be leaked!\n    at r.add (.../agentHostMain.js)\n    at r._register (.../agentHostMain.js)\n    at r.watch (.../agentHostMain.js)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n```\n\n## Root cause\n\nIn `NodeJSFileWatcherLibrary.watch()` (`src/vs/platform/files/node/watcher/nodejs/nodejsWatcherLib.ts`):\n\n```ts\nthis._register(await this.doWatch(stat.isDirectory()));\n```\n\n`doWatch()` is async. If the watcher instance is disposed while that promise is in flight, `_store` is already disposed by the time `this._register(...)`  producing the warning and leaking the underlying `fs.watch` handle.runs \n\n## Why it shows up \"a lot\" in the agent host\n\n- The agent host runs the non-recursive node.js watcher **in-process** (`NodeJSWatcherClient` instantiates `NodeJSWatcher` directly inside `agentHostMain.js`), so the warning surfaces directly in agent host logs instead of a separate watcher process.\n- `SessionCustomizationDiscovery` watches well-known customization roots (workspace root, `.github`, `.claude`, `.copilot`, user home, agents/skills dirs) non-recursively and, on any relevant file change, tears down all those watchers and recreates them on the same paths (debounced). During an active session, files in the workspace root change frequently, so watchers are disposed and recreated  exposing the race above.rapidly \n\nThe watcher churn itself is by design (rescans pick up directories that appear later). The warning + leaked handle is the actual bug.\n\n## Fix\n\nUse the existing `thenRegisterOrDispose` helper so the resolved watch handle is disposed (instead of registered and leaked) when the watcher was disposed during the async `doWatch()`.\n\n## Possible follow-up (optional)\n\n`SessionCustomizationDiscovery.refresh()` disposes *all* watchers on every relevant change and rebuilds them, even for roots that didn't change. Diffing the root set would reduce the churn.\n",
-    "labels": [
-      "bug",
-      "verified",
-      "insiders-released",
-      "agent-host"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320243",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320243",
-    "title": "Changes are missing sometimes",
-    "description": "I see this in different sessions at different times, there is some randomness, not sure how to characterize it. Here, there are a bunch of uncommitted changes that don't show up in \"Branch changes\" but do show in other changesets. I have seen cases where committed changes are also missing or they are missing from all changesets.\n\n<img width=\"2552\" height=\"1376\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/8b6b3bf9-19e2-49a5-9efb-313ce57ad857\" />\n\n<img width=\"957\" height=\"523\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/0d8e3275-4d83-4f28-95c5-5cec790b258f\" />\n\nhttps://github.com/user-attachments/assets/5e93ca82-87e5-412b-be63-0bd340350955\n\n[ah-logs-vsckb-implement-I'd-like-you-to-simplify.zip](https://github.com/user-attachments/files/28668934/ah-logs-vsckb-implement-I.d-like-you-to-simplify.zip)",
-    "labels": [
-      "bug",
-      "agents-window"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320231",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320231",
-    "title": "Execution subagent setting completely ignored",
-    "description": "<!-- Please search existing issues to avoid creating duplicates -->\n<!-- Please attach logs to help us diagnose your issue -->\n\n- Copilot Chat Extension Version:  0.48.1\n- VS Code Version: 1.124.0-insider (0035c783eccf8a2efbdb972dfe62becb51f11fc6)\n- OS Version: Windows_NT x64 10.0.26200\n- Feature (e.g. agent/edit/ask mode): Execution Subagent\n- Selected model (e.g. GPT 4.1, Claude 3.7 Sonnet): Applicable for all (tested with GPT-5 mini and GPT-5.4 mini primarily)\n\nThe github.copilot.chat.executionSubagent.model setting is ignored completely. It default to gemini-3-flash, but even with the default setting, it always uses the model of the parent task.\n\nI have tested with both potential formats based on #319131 (\"GPT-5 mini (copilot)\" and \"gpt-5-mini\") with no luck.\n\nSteps to Reproduce:\n\n1. Get Copilot to run the execution subagent ie. \"test running the execution subagent tool\"\n2. Observe agent debug logs showing incorrect model usage\n\n\n<img width=\"1445\" height=\"205\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/4827ddd5-5823-4790-992e-9d717ae8f3c8\" />\n\n<img width=\"821\" height=\"94\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/9febb813-0636-4e7f-a896-d6dfc5daaca4\" />",
-    "labels": [
-      "bug",
-      "verified",
-      "insiders-released",
-      "chat"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320220",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320220",
-    "title": "Integrated terminal freezes when pasting plain text copied from LibreOffice on Linux",
-    "description": "<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- 🕮 Read our guide about submitting issues: https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions -->\n<!-- 🔎 Search existing issues to avoid creating duplicates. -->\n<!-- 🧪 Test using the latest Insiders build to see if your issue has already been fixed: https://code.visualstudio.com/insiders/ -->\n<!-- 💡 Instead of creating your report here, use 'Report Issue' from the 'Help' menu in VS Code to pre-fill useful information. -->\n<!-- 🔧 Launch with `code --disable-extensions` to check. -->\nDoes this issue occur when all extensions are disabled?: Yes/No\n\n<!-- 🪓 If you answered No above, use 'Help: Start Extension Bisect' from Command Palette to try to identify the cause. -->\n<!-- 📣 Issues caused by an extension need to be reported directly to the extension publisher. The 'Help > Report Issue' dialog can assist with this. -->\n- VS Code Version:  1.123.0\n- OS Version:  Kubuntu 26.04 LTS\n\nAfter updating VS Code, the integrated terminal freezes when pasting text copied from LibreOffice.\n\nThe paste target in LibreOffice was plain text, but the issue still occurs.\nIf the text contains line breaks, the freeze is 100% reproducible.\nIf I paste the same content into Kate and copy it again, VS Code no longer freezes.\nSome single-line text copied from LibreOffice can also trigger the issue.\n\nThis only happens in the integrated terminal, not necessarily in the editor.\n",
-    "labels": [
-      "bug",
-      "info-needed",
-      "freeze-slow-crash-leak",
-      "linux",
-      "terminal"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320197",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320197",
-    "title": "Browser: URL \"...\" overflow glitch",
-    "description": "1. Select some text in the URL bar, when it's in a state where it overflows with \"...\"\n2. Press the Right arrow a few times\n3. Somehow you're able to select past the text\n\nhttps://github.com/user-attachments/assets/cd34a2c3-dd86-4f84-b89b-c761c2659c98",
-    "labels": [
-      "bug",
-      "verified",
-      "insiders-released",
-      "browser-integration"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320158",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320158",
-    "title": "Lock CCA on Free/EDU with prompt to upgrade",
-    "description": "Repro:\n- sign in with a free/edu account that only has auto available\n- Delegate via cloud agent from VS Code \n- The PR gets drafted but actual execution fails \n\n![Image](https://github.com/user-attachments/assets/fe46724f-8540-4717-ab74-89b1843b64be)\n\n> [cca-engine] Fatal: Error: Request session.create failed with message: Model \"gpt-5.3-codex\" is not available.\n> Stack trace: Error: Request session.create failed with message: Model \"gpt-5.3-codex\" is not available.\n>     at handleResponse (/home/runner/work/_temp/***-action-main/dist-cca-v3/node_modules/vscode-jsonrpc/lib/common/connection.js:565:48)\n>     at handleMessage (/home/runner/work/_temp/***-action-main/dist-cca-v3/node_modules/vscode-jsonrpc/lib/common/connection.js:345:13)\n>     at processMessageQueue (/home/runner/work/_temp/***-action-main/dist-cca-v3/node_modules/vscode-jsonrpc/lib/common/connection.js:362:17)\n>     at Immediate.<anonymous> (/home/runner/work/_temp/***-action-main/dist-cca-v3/node_modules/vscode-jsonrpc/lib/common/connection.js:334:13)\n>     at process.processImmediate (node:internal/timers:504:21)\n> [FALLBACK ERROR] Copilot has encountered an unexpected error: [runtime:-32603] Request session.create failed with message: Model \"gpt-5.3-codex\" is not available.\n> [cca-engine] Emitted fallback error annotation for fatal error\n> forceExit is shutting down the process\n> ::***::\n> Error: Copilot has encountered an unexpected error: [runtime:-32603] Request session.create failed with message: Model \"gpt-5.3-codex\" is not available.\n> Error: Process completed with exit code 1.",
-    "labels": [
-      "bug",
-      "verified",
-      "UBB"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320157",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320157",
-    "title": "Bug: Integrated Browser Dev Tools Network panel missing most requests",
-    "description": "<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- 🕮 Read our guide about submitting issues: https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions -->\n<!-- 🔎 Search existing issues to avoid creating duplicates. -->\n<!-- 🧪 Test using the latest Insiders build to see if your issue has already been fixed: https://code.visualstudio.com/insiders/ -->\n<!-- 💡 Instead of creating your report here, use 'Report Issue' from the 'Help' menu in VS Code to pre-fill useful information. -->\n<!-- 🔧 Launch with `code --disable-extensions` to check. -->\nDoes this issue occur when all extensions are disabled?: **YES**\n\n<!-- 🪓 If you answered No above, use 'Help: Start Extension Bisect' from Command Palette to try to identify the cause. -->\n<!-- 📣 Issues caused by an extension need to be reported directly to the extension publisher. The 'Help > Report Issue' dialog can assist with this. -->\n\nSteps to Reproduce:\n\n1. Open integrated browser\n2. Open dev tools, go to network tab\n3. Open any page\n\nMost requests will be missing. The files are there in the Sources tab, but their requests dont get tracked. \n\n<img width=\"809\" height=\"762\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/31e4063f-8639-4570-94c1-c2e41ab63097\" />\n\nI have narrowed the issue down to apt package 1.122.0-1779939022, which seems to be when electron 42, Chromium 148, etc... were implemented. \n\nHeres the VS Code info for it\n\nThe copy button isnt working in the About modal, heres a screenshot:\n<img width=\"534\" height=\"351\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/88916689-ec34-4705-bd8b-a936d584e90a\" />\n\n1.122.0-insider\n3cb23da891f869ee2cb57bdf785df72323fe2d0e\nx64\n\n\nIf I install the previous release (`sudo apt install code-insiders=1.122.0-1779874041`), it works as expected\n\n1.122.0-insider\n7090241a056cb49cfe90f58da9a8cc44df9262a9\nx64\n\n<img width=\"809\" height=\"762\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/8f99999f-9afa-416e-a27c-510293718b9c\" />",
-    "labels": [
-      "bug",
-      "electron",
-      "chrome-devtools",
-      "electron-42-update"
-    ],
-    "ground_truth_severity": "manual_label_needed",
-    "ground_truth_team": "manual_label_needed"
-  },
-  {
-    "id": "microsoft -- vscode -- 320154",
-    "source": "github",
-    "repo": "microsoft/vscode",
-    "url": "https://github.com/microsoft/vscode/issues/320154",
-    "title": "Can't create new profile from import and/or template",
-    "description": "\nType: <b>Bug</b>\n\nTry to create a new template from import or template. \nClick the create button \nNo data is stored. \nThe profile is not saved.\n\n\n\nVS Code version: Code 1.123.0 (6a44c352bd24569c417e530095901b649960f9f8, 2026-06-03T11:29:03+02:00)\nOS version: Windows_NT x64 10.0.26100\nModes:\n\n<details>\n<summary>System Info</summary>\n\n|Item|Value|\n|---|---|\n|CPUs|Intel(R) Core(TM) Ultra 7 165H (22 x 3072)|\n|GPU Status|2d_canvas: enabled<br>GPU0: VENDOR= 0x8086, DEVICE=0x7dd5 [Intel(R) Graphics], DRIVER_VENDOR=Intel, DRIVER_VERSION=32.0.101.8306 *ACTIVE*<br>GPU1: VENDOR= 0x10de, DEVICE=0x28ba [NVIDIA RTX 500 Ada Generation Laptop GPU], DRIVER_VERSION=32.0.15.9571<br>GPU2: VENDOR= 0x1414, DEVICE=0x008c [Microsoft Basic Render Driver], DRIVER_VERSION=10.0.26100.8246<br>Machine model name: <br>Machine model version: <br>direct_rendering_display_compositor: disabled_off_ok<br>gpu_compositing: enabled<br>multiple_raster_threads: enabled_on<br>opengl: enabled_on<br>rasterization: enabled<br>raw_draw: disabled_off_ok<br>skia_graphite: disabled_off<br>trees_in_viz: disabled_off<br>video_decode: enabled<br>video_encode: enabled<br>webgl: enabled<br>webgpu: enabled<br>webnn: disabled_off|\n|Load (avg)|undefined|\n|Memory (System)|31.45GB (5.59GB free)|\n|Process Argv||\n|Screen Reader|no|\n|VM|0%|\n</details>Extensions: none<details>\n<summary>A/B Experiments</summary>\n\n```\nvsliv368:30146709\nbinariesv615:30325510\nnativeloc1:31344060\ndwcopilot:31170013\ndwoutputs:31242946\ncopilot_t_ci:31333650\ne5gg6876:31282496\npythonrdcb7:31342333\n6518g693:31463988\naj953862:31281341\n6abeh943:31336334\nenvsactivate1:31505457\ncloudbuttont:31379625\n3efgi100_wstrepl:31403338\nec5jj548:31422691\ncp_cls_t_966_ss:31526232\ninlinechat_v2_hd992725:31505030\n4je02754:31466945\n8hhj4413:31478653\nge8j1254_inline_auto_hint_haiku:31490510\n38bie571_auto:31478678\ncp_cls_t_1081:31454832\nconptydll_true:31498968\nia-use-proxy-models-svc:31452481\ne9c30283:31461165\ntest_treatment2:31471001\nc9b86496:31447327\nidci7584:31464702\ne3e4d672:31494082\nei9d7968:31496641\nnes-extended-on:31455476\nchat:31457767\n8hig5102:31480529\n89g7j272:31518289\n7e187181:31503455\ni2gc6536:31499202\n52612955:31516516\nghj88844:31499326\nddid_c:31478207\nhmra_i5g22:31518061\ngetcmakediagnosticsoff:31489825\n7df3h592:31512476\npro_large_t:31499376\ncp_cls_t_1082:31516087\nlogging_enabled_new:31498466\ndb5d2638:31499441\njb_cp_cls_c_632:31524806\n748c7209:31512887\n32d76977:31512328\nha629193:31508444\ncdk-lw-on:31524445\nnes-charagree-2:31521371\n31fi7170_t:31522396\na1ije391_t:31515488\ng4a0e106:31517209\nprpt_lrg:31518466\n61138546:31518536\nd7b18187:31526828\n\n```\n\n</details>\n\n<!-- generated by issue reporter -->",
     "labels": [
       "bug",
       "user-profiles"
