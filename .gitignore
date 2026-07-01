@@ -26,4 +26,4 @@ chroma_data/
 *.log
 .DS_Store
 Thumbs.db
-.md
+*.md

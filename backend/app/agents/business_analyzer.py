@@ -1,8 +1,8 @@
-﻿# tackling here is to tackle is a bug from a business(money) perspective too
-from groq import Groq
-from backend.app.config import get_settings
+# tackling here is to tackle is a bug from a business(money) perspective too
 from backend.app.models.bug import BugReport
 from backend.app.models.triage_result import AgentOutput
+from backend.app.config import get_settings
+from backend.app.services.groq_client import GroqClientUnavailable, get_groq_client
 # 3 things to tackle here are
 # how many users have been affected
 # what's the revenue and user impact
@@ -34,24 +34,35 @@ Where:
 
 class BusinessAnalyzer:
     def __init__(self):
+        self.client = get_groq_client()
         settings = get_settings()
-        self.client = Groq(api_key=settings.groq_api_key)
-        self.model = "llama-3.3-70b-versatile"
+        self.model = settings.groq_model
+        self.max_tokens = settings.groq_max_completion_tokens
+        self.max_desc_chars = settings.groq_prompt_description_chars
 
     def analyze(self, bug: BugReport) -> AgentOutput:
+        desc = bug.description[:self.max_desc_chars] if bug.description else ""
         prompt = BUSINESS_PROMPT.format(
             title=bug.title,
-            description=bug.description,
+            description=desc,
             severity_hint=bug.severity_hint.value if bug.severity_hint else "not specified",
             reporter=bug.reporter or "unknown",
         )
 
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.1,
-        )
-        result = self._parse_response(response.choices[0].message.content)
+        try:
+            response = self.client.chat_completions_create(
+                model=self.model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.1,
+                max_tokens=self.max_tokens,
+            )
+            result = self._parse_response(response.choices[0].message.content)
+        except GroqClientUnavailable as e:
+            print(f"  [BusinessAnalyzer] Groq unavailable: {e}")
+            result = {"priority": "p2", "business_rationale": "Business analysis unavailable (Groq API down)", "signals": []}
+        except Exception as e:
+            print(f"  [BusinessAnalyzer] Analysis failed: {e}")
+            result = {"priority": "p2", "business_rationale": "Business analysis failed; using safe default", "signals": []}
 
         priority_map = {"p0": "critical", "p1": "high", "p2": "medium", "p3": "low"}
         return AgentOutput(
