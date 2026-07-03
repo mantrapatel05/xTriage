@@ -51,6 +51,8 @@ class Settings:
 		"http://localhost:3000",
 	)
 	groq_api_keys: tuple[str, ...] = ()
+	groq_multi_api_keys: tuple[str, ...] = ()
+	groq_single_api_keys: tuple[str, ...] = ()
 	groq_model: str = "llama-3.1-8b-instant"
 	groq_max_completion_tokens: int = 220
 	groq_prompt_description_chars: int = 2500
@@ -71,6 +73,15 @@ def get_settings() -> Settings:
 		single = os.getenv("GROQ_API_KEY")
 		if single:
 			keys.append(single.strip())
+	all_keys = unique(keys)
+
+	multi_keys = parse_csv(os.getenv("GROQ_MULTI_API_KEYS"), default=())
+	if not multi_keys:
+		multi_keys = all_keys[:3] if len(all_keys) >= 3 else all_keys
+
+	single_keys = parse_csv(os.getenv("GROQ_SINGLE_API_KEYS"), default=())
+	if not single_keys:
+		single_keys = all_keys[-2:] if len(all_keys) >= 2 else all_keys
 
 	return Settings(
 		app_name=os.getenv("APP_NAME", "Bug Triage Agent"),
@@ -88,7 +99,9 @@ def get_settings() -> Settings:
 				"http://localhost:3000",
 			),
 		),
-		groq_api_keys=unique(keys),
+		groq_api_keys=all_keys,
+		groq_multi_api_keys=unique(list(multi_keys)),
+		groq_single_api_keys=unique(list(single_keys)),
 		groq_model=os.getenv("GROQ_MODEL", "llama-3.1-8b-instant"),
 		groq_max_completion_tokens=parse_int(os.getenv("GROQ_MAX_COMPLETION_TOKENS"), 220),
 		groq_prompt_description_chars=parse_int(os.getenv("GROQ_PROMPT_DESCRIPTION_CHARS"), 2500),
