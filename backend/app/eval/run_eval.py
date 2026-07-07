@@ -11,15 +11,15 @@ import requests
 EVAL_FILE = Path(__file__).resolve().parent / "eval" / "bugs.json"
 TRIAGE_URL = os.getenv("TRIAGE_URL", "http://localhost:8000/triage")
 REQUEST_TIMEOUT = int(os.getenv("EVAL_REQUEST_TIMEOUT", "300"))
-SLEEP_SECONDS = float(os.getenv("EVAL_SLEEP_SECONDS", "5"))
+SLEEP_SECONDS = float(os.getenv("EVAL_SLEEP_SECONDS", "10"))
 SEVERITY_ORDER = ["low", "medium", "high", "critical"]
 
 
 def _payload_from_bug(bug: dict) -> dict:
     return {
         "bug_id": bug.get("id"),
-        "title": bug["title"][:200],  # model enforces max 200 chars
-        "description": bug["description"][:2500],  # model enforces max via config
+        "title": bug["title"][:200],
+        "description": bug["description"][:2500],
         "repository": bug.get("repo"),
         "issue_url": bug.get("url"),
         "labels": bug.get("labels", []),
@@ -64,6 +64,9 @@ def compute_report(results: list[dict]) -> dict:
     majority_label, majority_count = Counter(truths).most_common(1)[0]
     majority_baseline = majority_count / len(truths) if truths else 0.0
 
+    # Count fallbacks
+    total_fallbacks = sum(r.get("fallback_calls", 0) for r in results)
+
     return {
         "confusion": confusion,
         "per_class": per_class,
@@ -71,6 +74,7 @@ def compute_report(results: list[dict]) -> dict:
         "macro_f1": macro_f1,
         "majority_baseline": majority_baseline,
         "majority_label": majority_label,
+        "total_fallbacks": total_fallbacks,
     }
 
 
@@ -91,6 +95,7 @@ def print_report(report: dict):
     print(f"Majority baseline:  {report['majority_baseline']*100:.1f}% "
           f"(always guessing '{report['majority_label']}')")
     print(f"Lift over baseline: {(report['accuracy']-report['majority_baseline'])*100:+.1f} points")
+    print(f"Total fallback calls: {report['total_fallbacks']}")
     print("=" * 55)
 
 
@@ -100,31 +105,55 @@ def main():
         sys.exit(1)
 
     bugs = json.loads(EVAL_FILE.read_text(encoding="utf-8"))
+
+    # Resume from saved progress if available
+    out_path = EVAL_FILE.parent / "predictions.json"
     results = []
+    if out_path.exists():
+        results = json.loads(out_path.read_text(encoding="utf-8"))
+        processed_ids = {r["id"] for r in results}
+        print(f"Resuming from {len(results)} already-processed bugs...")
+    else:
+        processed_ids = set()
 
     for i, bug in enumerate(bugs):
+        bug_id = bug.get("id", "")
+        if bug_id in processed_ids:
+            continue
+
         predicted = None
+        fallback_calls = 0
         try:
             resp = requests.post(TRIAGE_URL, json=_payload_from_bug(bug), timeout=REQUEST_TIMEOUT)
             if resp.status_code == 200:
-                predicted = resp.json().get("severity", "").strip().lower()
+                data = resp.json()
+                predicted = data.get("severity", "").strip().lower()
+                agent_outputs = data.get("agent_outputs", [])
+                fallback_calls = sum(1 for ao in agent_outputs if ao.get("used_fallback", False))
             else:
-                print(f"  Backend {resp.status_code} for {bug['id']}: {resp.text[:200]}")
+                print(f"  Backend {resp.status_code} for {bug_id}: {resp.text[:200]}")
         except requests.RequestException as e:
-            print(f"  Exception for {bug['id']}: {e}")
+            print(f"  Exception for {bug_id}: {e}")
 
         truth = bug.get("ground_truth_severity", "").strip().lower()
-        results.append({"id": bug["id"], "truth": truth, "predicted": predicted})
+        results.append({
+            "id": bug_id,
+            "truth": truth,
+            "predicted": predicted,
+            "fallback_calls": fallback_calls,
+        })
+
+        # Save incrementally after every bug
+        out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
+
         status = "OK" if predicted == truth else f"MISS (got {predicted}, expected {truth})"
-        print(f"[{i+1}/{len(bugs)}] {status} - {bug['id']}")
+        fwarn = f" [FALLBACK x{fallback_calls}]" if fallback_calls else ""
+        print(f"[{len(results)}/{len(bugs)}] {status} - {bug_id}{fwarn}")
 
         if SLEEP_SECONDS > 0:
             time.sleep(SLEEP_SECONDS)
 
-    out_path = EVAL_FILE.parent / "predictions.json"
-    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\nSaved raw predictions to {out_path}")
-
     print_report(compute_report(results))
 
 

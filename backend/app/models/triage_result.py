@@ -11,6 +11,7 @@ class AgentOutput(BaseModel):
     rationale: str
     confidence: float = Field(ge=0, le=1)
     signals: list[str] = Field(default_factory=list)
+    used_fallback: bool = False
 
 
 class DuplicateMatch(BaseModel):

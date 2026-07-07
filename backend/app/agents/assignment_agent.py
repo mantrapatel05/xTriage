@@ -53,19 +53,24 @@ class AssignmentAgent:
             business_analysis=business_analysis or "pending",
         )
 
+        used_fallback = False
         try:
             response = self.client.chat_completions_create(
                 model=self.model,
                 messages=[{"role": "user", "content": prompt}],
-                temperature=0.1,
+                temperature=0,
                 max_tokens=self.max_tokens,
             )
             result = self._parse_response(response.choices[0].message.content)
+            if result.get("_parse_failed"):
+                used_fallback = True
         except GroqClientUnavailable as e:
             print(f"  [AssignmentAgent] Groq unavailable: {e}")
+            used_fallback = True
             result = {"assigned_team": "triage-team", "rationale": "Assignment unavailable (Groq API down)", "signals": []}
         except Exception as e:
             print(f"  [AssignmentAgent] Assignment failed: {e}")
+            used_fallback = True
             result = {"assigned_team": "triage-team", "rationale": "Assignment failed; using triage-team fallback", "signals": []}
 
         return AgentOutput(
@@ -74,6 +79,7 @@ class AssignmentAgent:
             rationale=result.get("rationale", "Assignment recommendation completed"),
             confidence=self._calculate_confidence(result),
             signals=result.get("signals", [bug.repository or "unknown"]),
+            used_fallback=used_fallback,
         )
 
     def _parse_response(self, text: str) -> dict:
@@ -82,7 +88,12 @@ class AssignmentAgent:
         try:
             return json.loads(cleaned)
         except json.JSONDecodeError:
-            return {"assigned_team": "triage-team", "rationale": "Failed to parse AI response", "signals": []}
+            return {
+                "assigned_team": "triage-team",
+                "rationale": "Failed to parse AI response",
+                "signals": [],
+                "_parse_failed": True,
+            }
 
     def _calculate_confidence(self, result: dict) -> float:
         team = result.get("assigned_team", "")

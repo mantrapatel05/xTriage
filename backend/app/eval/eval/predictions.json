@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "bugzilla -- 108010",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 378046",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 454770",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 326181",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 228646",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 1401218",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 477799",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 339805",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 176238",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 1
+  },
+  {
+    "id": "bugzilla -- 115206",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 400043",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 64363",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 372425",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 102030",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 222344",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 218258",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 18219",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 345930",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 136782",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 96972",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 65121",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 326922",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 314213",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 307672",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 362987",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 21521",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 326303",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 188988",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 8648",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 62907",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 486947",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 38227",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 71931",
+    "truth": "low",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 172326",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 23926",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 386306",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 366373",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 250706",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 495404",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 454263",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 359527",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 261419",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 231923",
+    "truth": "critical",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 482665",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 38487",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 380489",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 316765",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 131176",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 154317",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 397875",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 222485",
+    "truth": "critical",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 442908",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 499274",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 507929",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 74632",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 288465",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 232047",
+    "truth": "critical",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 198547",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 501851",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 61430",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 263142",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 380399",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 248786",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 211826",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 69170",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 462156",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 153533",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 31144",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 288185",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 454589",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 355142",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 178003",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 24957",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 391190",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 1606021",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 394316",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 9203",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 243184",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 338761",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 217310",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 234547",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 26353",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 101836",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 114005",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 441710",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 367801",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 32641",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 243721",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 128369",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 19454",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 530608",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 470062",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 24625",
+    "truth": "medium",
+    "predicted": "low",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 73222",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 356535",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 352333",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 23514",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 186834",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 13025",
+    "truth": "medium",
+    "predicted": "low",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 139686",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 147191",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 391263",
+    "truth": "critical",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 24069",
+    "truth": "medium",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 89034",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 83475",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 141491",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 36341",
+    "truth": "medium",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 219181",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 457605",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 235385",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 398151",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 506478",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 132393",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 180997",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 17199",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 159446",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 328714",
+    "truth": "critical",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 197439",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 153677",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 135560",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 442110",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 84542",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 38521",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 83412",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 86261",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 392510",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 92257",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 316941",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 343851",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 354935",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 12926",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 379849",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 213911",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 98674",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 63673",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 97031",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 158581",
+    "truth": "low",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 274330",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 276991",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 531088",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 383718",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 136393",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 36843",
+    "truth": "medium",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 101715",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 62510",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 20152",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 22474",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 367689",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 14156",
+    "truth": "medium",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 38114",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 122176",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 148376",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 25087",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 30896",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 170206",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 154014",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 94251",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 150676",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 234411",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 255745",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 284030",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 35601",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 101576",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 35281",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 16717",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 35268",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 92269",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 200031",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 120795",
+    "truth": "low",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 92939",
+    "truth": "low",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 20417",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 157859",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 21342",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 228978",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 168822",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 155824",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 9468",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 103142",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 108055",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 170909",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 10080",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 80706",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 57578",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 100114",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 366789",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 41994",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 138631",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 11521",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 473966",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 65453",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 33523",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 71402",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 487498",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 31907",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 54832",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 210943",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 67605",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 33583",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 176473",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 28769",
+    "truth": "medium",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 73637",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 27338",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 1108821",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 102418",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 85712",
+    "truth": "low",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 137606",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 195737",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 35467",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 150317",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 11387",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 367896",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 13383",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 131307",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 148280",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 303310",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 15322",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 23419",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 135105",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 65613",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 145877",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 20104",
+    "truth": "medium",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 15781",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 136879",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 79998",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 148957",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 72798",
+    "truth": "low",
+    "predicted": "low",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 106834",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 25141",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 128679",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 953273",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 37990",
+    "truth": "medium",
+    "predicted": "low",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 23114",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 85505",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 142564",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 87515",
+    "truth": "low",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 35550",
+    "truth": "medium",
+    "predicted": "low",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 146289",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 103400",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 26943",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 95507",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 16255",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 57162",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 110904",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 235312",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 72607",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 21263",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 78619",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 82676",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 164238",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 14988",
+    "truth": "medium",
+    "predicted": "low",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 19260",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 640702",
+    "truth": "critical",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 23756",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 9410",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 5599",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 16909",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 406022",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 89822",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 149870",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 289644",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 126694",
+    "truth": "low",
+    "predicted": "low",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 1347753",
+    "truth": "critical",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 17888",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 147474",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 34146",
+    "truth": "medium",
+    "predicted": "low",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 140780",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 64294",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 9940",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 33340",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 103247",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 93952",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 16647",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 13013",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 72006",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 58979",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 72824",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 38454",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 103540",
+    "truth": "high",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 184540",
+    "truth": "high",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 132121",
+    "truth": "critical",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 94537",
+    "truth": "low",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 10709",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 85600",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 16359",
+    "truth": "medium",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 133481",
+    "truth": "low",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 27820",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 13818",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 11875",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 70183",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 128694",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 78484",
+    "truth": "high",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 9403",
+    "truth": "medium",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 130646",
+    "truth": "low",
+    "predicted": "low",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 71128",
+    "truth": "low",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 11050",
+    "truth": "critical",
+    "predicted": "high",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 35435",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 16979",
+    "truth": "medium",
+    "predicted": "critical",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 100239",
+    "truth": "low",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 34925",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  },
+  {
+    "id": "bugzilla -- 24088",
+    "truth": "medium",
+    "predicted": "medium",
+    "fallback_calls": 0
+  }
+]

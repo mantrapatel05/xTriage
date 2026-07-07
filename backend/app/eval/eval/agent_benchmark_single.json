@@ -1,0 +1,2102 @@
+[
+  {
+    "id": "bugzilla -- 108010",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 796.4310001116246,
+    "tokens": 890
+  },
+  {
+    "id": "bugzilla -- 378046",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 1010.238999966532,
+    "tokens": 779
+  },
+  {
+    "id": "bugzilla -- 454770",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 460.85610007867217,
+    "tokens": 1077
+  },
+  {
+    "id": "bugzilla -- 326181",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 344.8312000837177,
+    "tokens": 798
+  },
+  {
+    "id": "bugzilla -- 228646",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 366.9183000456542,
+    "tokens": 802
+  },
+  {
+    "id": "bugzilla -- 1401218",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 320.5478999298066,
+    "tokens": 1225
+  },
+  {
+    "id": "bugzilla -- 477799",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 399.218900129199,
+    "tokens": 993
+  },
+  {
+    "id": "bugzilla -- 339805",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 342.54140011034906,
+    "tokens": 764
+  },
+  {
+    "id": "bugzilla -- 176238",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 427.96480003744364,
+    "tokens": 762
+  },
+  {
+    "id": "bugzilla -- 115206",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 320.43969980441034,
+    "tokens": 737
+  },
+  {
+    "id": "bugzilla -- 400043",
+    "truth": "critical",
+    "predicted": "critical",
+    "latency_ms": 190.66440011374652,
+    "tokens": 768
+  },
+  {
+    "id": "bugzilla -- 64363",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 350.48929997719824,
+    "tokens": 697
+  },
+  {
+    "id": "bugzilla -- 372425",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 427.61499993503094,
+    "tokens": 792
+  },
+  {
+    "id": "bugzilla -- 102030",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 320.0630999635905,
+    "tokens": 682
+  },
+  {
+    "id": "bugzilla -- 222344",
+    "truth": "high",
+    "predicted": "critical",
+    "latency_ms": 321.3154999539256,
+    "tokens": 694
+  },
+  {
+    "id": "bugzilla -- 218258",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 322.7524000685662,
+    "tokens": 851
+  },
+  {
+    "id": "bugzilla -- 18219",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 276.0975998826325,
+    "tokens": 604
+  },
+  {
+    "id": "bugzilla -- 345930",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 468.1200999766588,
+    "tokens": 631
+  },
+  {
+    "id": "bugzilla -- 136782",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 276.15660009905696,
+    "tokens": 617
+  },
+  {
+    "id": "bugzilla -- 96972",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 367.26279999129474,
+    "tokens": 723
+  },
+  {
+    "id": "bugzilla -- 65121",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 376.8573999404907,
+    "tokens": 608
+  },
+  {
+    "id": "bugzilla -- 326922",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 182.56940017454326,
+    "tokens": 578
+  },
+  {
+    "id": "bugzilla -- 314213",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 304.5468998607248,
+    "tokens": 603
+  },
+  {
+    "id": "bugzilla -- 307672",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 319.07259998843074,
+    "tokens": 654
+  },
+  {
+    "id": "bugzilla -- 362987",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 219.90590007044375,
+    "tokens": 588
+  },
+  {
+    "id": "bugzilla -- 21521",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 324.0505000576377,
+    "tokens": 564
+  },
+  {
+    "id": "bugzilla -- 326303",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 222.68500016070902,
+    "tokens": 596
+  },
+  {
+    "id": "bugzilla -- 188988",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 316.2203000392765,
+    "tokens": 525
+  },
+  {
+    "id": "bugzilla -- 8648",
+    "truth": "medium",
+    "predicted": "high",
+    "latency_ms": 218.7258000485599,
+    "tokens": 558
+  },
+  {
+    "id": "bugzilla -- 62907",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 234.26200007088482,
+    "tokens": 598
+  },
+  {
+    "id": "bugzilla -- 486947",
+    "truth": "critical",
+    "predicted": "critical",
+    "latency_ms": 315.04659983329475,
+    "tokens": 587
+  },
+  {
+    "id": "bugzilla -- 38227",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 414.518800098449,
+    "tokens": 554
+  },
+  {
+    "id": "bugzilla -- 71931",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 219.6082000155002,
+    "tokens": 539
+  },
+  {
+    "id": "bugzilla -- 172326",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 323.85649997740984,
+    "tokens": 588
+  },
+  {
+    "id": "bugzilla -- 23926",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 523.2021999545395,
+    "tokens": 543
+  },
+  {
+    "id": "bugzilla -- 386306",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 323.85080005042255,
+    "tokens": 559
+  },
+  {
+    "id": "bugzilla -- 366373",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 421.90399998798966,
+    "tokens": 549
+  },
+  {
+    "id": "bugzilla -- 250706",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 467.1498998068273,
+    "tokens": 559
+  },
+  {
+    "id": "bugzilla -- 495404",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 281.03459998965263,
+    "tokens": 616
+  },
+  {
+    "id": "bugzilla -- 454263",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 322.4663999862969,
+    "tokens": 509
+  },
+  {
+    "id": "bugzilla -- 359527",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 265.03230002708733,
+    "tokens": 703
+  },
+  {
+    "id": "bugzilla -- 261419",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 233.65489998832345,
+    "tokens": 538
+  },
+  {
+    "id": "bugzilla -- 231923",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 252.53969989717007,
+    "tokens": 549
+  },
+  {
+    "id": "bugzilla -- 482665",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 187.46730010025203,
+    "tokens": 495
+  },
+  {
+    "id": "bugzilla -- 38487",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 247.8515999391675,
+    "tokens": 491
+  },
+  {
+    "id": "bugzilla -- 380489",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 211.76379988901317,
+    "tokens": 547
+  },
+  {
+    "id": "bugzilla -- 316765",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 229.23239995725453,
+    "tokens": 546
+  },
+  {
+    "id": "bugzilla -- 131176",
+    "truth": "critical",
+    "predicted": "critical",
+    "latency_ms": 324.25699988380075,
+    "tokens": 481
+  },
+  {
+    "id": "bugzilla -- 154317",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 421.01809987798333,
+    "tokens": 539
+  },
+  {
+    "id": "bugzilla -- 397875",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 320.628099841997,
+    "tokens": 588
+  },
+  {
+    "id": "bugzilla -- 222485",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 324.3756000883877,
+    "tokens": 525
+  },
+  {
+    "id": "bugzilla -- 442908",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 524.4524998124689,
+    "tokens": 483
+  },
+  {
+    "id": "bugzilla -- 499274",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 221.35599981993437,
+    "tokens": 590
+  },
+  {
+    "id": "bugzilla -- 507929",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 420.23629997856915,
+    "tokens": 504
+  },
+  {
+    "id": "bugzilla -- 74632",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 524.4171998929232,
+    "tokens": 465
+  },
+  {
+    "id": "bugzilla -- 288465",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 229.4734998140484,
+    "tokens": 494
+  },
+  {
+    "id": "bugzilla -- 232047",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 233.04710001684725,
+    "tokens": 552
+  },
+  {
+    "id": "bugzilla -- 198547",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 401.90059994347394,
+    "tokens": 506
+  },
+  {
+    "id": "bugzilla -- 501851",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 421.6889999806881,
+    "tokens": 534
+  },
+  {
+    "id": "bugzilla -- 61430",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 319.120500003919,
+    "tokens": 476
+  },
+  {
+    "id": "bugzilla -- 263142",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 423.0440000537783,
+    "tokens": 490
+  },
+  {
+    "id": "bugzilla -- 380399",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 729.6719001606107,
+    "tokens": 529
+  },
+  {
+    "id": "bugzilla -- 248786",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 640.8247998915613,
+    "tokens": 515
+  },
+  {
+    "id": "bugzilla -- 211826",
+    "truth": "critical",
+    "predicted": "critical",
+    "latency_ms": 330.6338998954743,
+    "tokens": 481
+  },
+  {
+    "id": "bugzilla -- 69170",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 469.80979992076755,
+    "tokens": 554
+  },
+  {
+    "id": "bugzilla -- 462156",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 435.52360008470714,
+    "tokens": 499
+  },
+  {
+    "id": "bugzilla -- 153533",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 447.88910006172955,
+    "tokens": 500
+  },
+  {
+    "id": "bugzilla -- 31144",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 340.01919999718666,
+    "tokens": 447
+  },
+  {
+    "id": "bugzilla -- 288185",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 569.8824999853969,
+    "tokens": 509
+  },
+  {
+    "id": "bugzilla -- 454589",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 301.05750006623566,
+    "tokens": 493
+  },
+  {
+    "id": "bugzilla -- 355142",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 479.32690009474754,
+    "tokens": 462
+  },
+  {
+    "id": "bugzilla -- 178003",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 425.2885999158025,
+    "tokens": 483
+  },
+  {
+    "id": "bugzilla -- 24957",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 475.98200011998415,
+    "tokens": 434
+  },
+  {
+    "id": "bugzilla -- 391190",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 361.0197000671178,
+    "tokens": 435
+  },
+  {
+    "id": "bugzilla -- 1606021",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 334.8773999605328,
+    "tokens": 487
+  },
+  {
+    "id": "bugzilla -- 394316",
+    "truth": "critical",
+    "predicted": "critical",
+    "latency_ms": 418.2601000647992,
+    "tokens": 472
+  },
+  {
+    "id": "bugzilla -- 9203",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 421.11070011742413,
+    "tokens": 452
+  },
+  {
+    "id": "bugzilla -- 243184",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 318.9968999940902,
+    "tokens": 468
+  },
+  {
+    "id": "bugzilla -- 338761",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 326.9199999049306,
+    "tokens": 487
+  },
+  {
+    "id": "bugzilla -- 217310",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 419.6361000649631,
+    "tokens": 467
+  },
+  {
+    "id": "bugzilla -- 234547",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 628.9168999064714,
+    "tokens": 451
+  },
+  {
+    "id": "bugzilla -- 26353",
+    "truth": "medium",
+    "predicted": "high",
+    "latency_ms": 422.72099992260337,
+    "tokens": 428
+  },
+  {
+    "id": "bugzilla -- 101836",
+    "truth": "low",
+    "predicted": "high",
+    "latency_ms": 526.1761001311243,
+    "tokens": 435
+  },
+  {
+    "id": "bugzilla -- 114005",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 301.50999990291893,
+    "tokens": 463
+  },
+  {
+    "id": "bugzilla -- 441710",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 443.4581999666989,
+    "tokens": 456
+  },
+  {
+    "id": "bugzilla -- 367801",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 1448.3431000262499,
+    "tokens": 467
+  },
+  {
+    "id": "bugzilla -- 32641",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 422.7088999468833,
+    "tokens": 418
+  },
+  {
+    "id": "bugzilla -- 243721",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 210.82499995827675,
+    "tokens": 460
+  },
+  {
+    "id": "bugzilla -- 128369",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 221.73500014469028,
+    "tokens": 446
+  },
+  {
+    "id": "bugzilla -- 19454",
+    "truth": "medium",
+    "predicted": "high",
+    "latency_ms": 221.9479000195861,
+    "tokens": 394
+  },
+  {
+    "id": "bugzilla -- 530608",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 315.40269986726344,
+    "tokens": 433
+  },
+  {
+    "id": "bugzilla -- 470062",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 218.07130007073283,
+    "tokens": 440
+  },
+  {
+    "id": "bugzilla -- 24625",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 319.38440003432333,
+    "tokens": 412
+  },
+  {
+    "id": "bugzilla -- 73222",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 319.8744000401348,
+    "tokens": 397
+  },
+  {
+    "id": "bugzilla -- 356535",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 225.7046999875456,
+    "tokens": 479
+  },
+  {
+    "id": "bugzilla -- 352333",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 207.0124999154359,
+    "tokens": 426
+  },
+  {
+    "id": "bugzilla -- 23514",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 307.5535998214036,
+    "tokens": 419
+  },
+  {
+    "id": "bugzilla -- 186834",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 436.86859984882176,
+    "tokens": 413
+  },
+  {
+    "id": "bugzilla -- 13025",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 322.82890006899834,
+    "tokens": 403
+  },
+  {
+    "id": "bugzilla -- 139686",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 318.92170011997223,
+    "tokens": 561
+  },
+  {
+    "id": "bugzilla -- 147191",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 374.268899904564,
+    "tokens": 434
+  },
+  {
+    "id": "bugzilla -- 391263",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 273.2712998986244,
+    "tokens": 414
+  },
+  {
+    "id": "bugzilla -- 24069",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 222.1812999341637,
+    "tokens": 430
+  },
+  {
+    "id": "bugzilla -- 89034",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 304.61440002545714,
+    "tokens": 422
+  },
+  {
+    "id": "bugzilla -- 83475",
+    "truth": "low",
+    "predicted": "high",
+    "latency_ms": 424.7934001032263,
+    "tokens": 440
+  },
+  {
+    "id": "bugzilla -- 141491",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 510.5067999102175,
+    "tokens": 420
+  },
+  {
+    "id": "bugzilla -- 36341",
+    "truth": "medium",
+    "predicted": "high",
+    "latency_ms": 248.13199997879565,
+    "tokens": 393
+  },
+  {
+    "id": "bugzilla -- 219181",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 310.72059995494783,
+    "tokens": 432
+  },
+  {
+    "id": "bugzilla -- 457605",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 312.5636999029666,
+    "tokens": 411
+  },
+  {
+    "id": "bugzilla -- 235385",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 220.99830000661314,
+    "tokens": 432
+  },
+  {
+    "id": "bugzilla -- 398151",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 315.9282000269741,
+    "tokens": 427
+  },
+  {
+    "id": "bugzilla -- 506478",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 220.28010012581944,
+    "tokens": 408
+  },
+  {
+    "id": "bugzilla -- 132393",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 319.44789993576705,
+    "tokens": 390
+  },
+  {
+    "id": "bugzilla -- 180997",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 420.5247999634594,
+    "tokens": 403
+  },
+  {
+    "id": "bugzilla -- 17199",
+    "truth": "medium",
+    "predicted": "high",
+    "latency_ms": 221.83390008285642,
+    "tokens": 381
+  },
+  {
+    "id": "bugzilla -- 159446",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 217.53240004181862,
+    "tokens": 374
+  },
+  {
+    "id": "bugzilla -- 328714",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 317.9895000066608,
+    "tokens": 421
+  },
+  {
+    "id": "bugzilla -- 197439",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 218.7689000274986,
+    "tokens": 406
+  },
+  {
+    "id": "bugzilla -- 153677",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 430.206699995324,
+    "tokens": 398
+  },
+  {
+    "id": "bugzilla -- 135560",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 261.2360999919474,
+    "tokens": 381
+  },
+  {
+    "id": "bugzilla -- 442110",
+    "truth": "critical",
+    "predicted": "critical",
+    "latency_ms": 380.9958000201732,
+    "tokens": 398
+  },
+  {
+    "id": "bugzilla -- 84542",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 308.19349992088974,
+    "tokens": 400
+  },
+  {
+    "id": "bugzilla -- 38521",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 261.46729988977313,
+    "tokens": 383
+  },
+  {
+    "id": "bugzilla -- 83412",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 370.7716001663357,
+    "tokens": 392
+  },
+  {
+    "id": "bugzilla -- 86261",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 326.99349988251925,
+    "tokens": 396
+  },
+  {
+    "id": "bugzilla -- 392510",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 217.3067000694573,
+    "tokens": 426
+  },
+  {
+    "id": "bugzilla -- 92257",
+    "truth": "low",
+    "predicted": "high",
+    "latency_ms": 300.54629989899695,
+    "tokens": 383
+  },
+  {
+    "id": "bugzilla -- 316941",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 235.4625000152737,
+    "tokens": 370
+  },
+  {
+    "id": "bugzilla -- 343851",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 421.2206001393497,
+    "tokens": 390
+  },
+  {
+    "id": "bugzilla -- 354935",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 220.16729996539652,
+    "tokens": 406
+  },
+  {
+    "id": "bugzilla -- 12926",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 241.50050012394786,
+    "tokens": 365
+  },
+  {
+    "id": "bugzilla -- 379849",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 293.9087001141161,
+    "tokens": 420
+  },
+  {
+    "id": "bugzilla -- 213911",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 217.24019991233945,
+    "tokens": 415
+  },
+  {
+    "id": "bugzilla -- 98674",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 320.3279001172632,
+    "tokens": 402
+  },
+  {
+    "id": "bugzilla -- 63673",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 220.14020010828972,
+    "tokens": 375
+  },
+  {
+    "id": "bugzilla -- 97031",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 251.14499987103045,
+    "tokens": 400
+  },
+  {
+    "id": "bugzilla -- 158581",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 242.6245000679046,
+    "tokens": 407
+  },
+  {
+    "id": "bugzilla -- 274330",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 268.1489000096917,
+    "tokens": 386
+  },
+  {
+    "id": "bugzilla -- 276991",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 411.52979992330074,
+    "tokens": 372
+  },
+  {
+    "id": "bugzilla -- 531088",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 217.52789989113808,
+    "tokens": 408
+  },
+  {
+    "id": "bugzilla -- 383718",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 220.75950005091727,
+    "tokens": 416
+  },
+  {
+    "id": "bugzilla -- 136393",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 315.7758000306785,
+    "tokens": 382
+  },
+  {
+    "id": "bugzilla -- 36843",
+    "truth": "medium",
+    "predicted": "high",
+    "latency_ms": 237.0580998249352,
+    "tokens": 359
+  },
+  {
+    "id": "bugzilla -- 101715",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 295.0061000883579,
+    "tokens": 387
+  },
+  {
+    "id": "bugzilla -- 62510",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 216.96879994124174,
+    "tokens": 349
+  },
+  {
+    "id": "bugzilla -- 20152",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 423.5507999546826,
+    "tokens": 358
+  },
+  {
+    "id": "bugzilla -- 22474",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 319.3268000613898,
+    "tokens": 379
+  },
+  {
+    "id": "bugzilla -- 367689",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 216.06380003504455,
+    "tokens": 342
+  },
+  {
+    "id": "bugzilla -- 14156",
+    "truth": "medium",
+    "predicted": "high",
+    "latency_ms": 216.8250000104308,
+    "tokens": 360
+  },
+  {
+    "id": "bugzilla -- 38114",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 321.3156999554485,
+    "tokens": 378
+  },
+  {
+    "id": "bugzilla -- 122176",
+    "truth": "low",
+    "predicted": "high",
+    "latency_ms": 187.41409992799163,
+    "tokens": 349
+  },
+  {
+    "id": "bugzilla -- 148376",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 455.7825999800116,
+    "tokens": 372
+  },
+  {
+    "id": "bugzilla -- 25087",
+    "truth": "medium",
+    "predicted": "high",
+    "latency_ms": 209.81440017931163,
+    "tokens": 351
+  },
+  {
+    "id": "bugzilla -- 30896",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 714.1527999192476,
+    "tokens": 354
+  },
+  {
+    "id": "bugzilla -- 170206",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 237.59669996798038,
+    "tokens": 360
+  },
+  {
+    "id": "bugzilla -- 154014",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 341.79969993419945,
+    "tokens": 345
+  },
+  {
+    "id": "bugzilla -- 94251",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 396.64790011011064,
+    "tokens": 365
+  },
+  {
+    "id": "bugzilla -- 150676",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 362.6598999835551,
+    "tokens": 365
+  },
+  {
+    "id": "bugzilla -- 234411",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 384.7558000124991,
+    "tokens": 375
+  },
+  {
+    "id": "bugzilla -- 255745",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 244.37750014476478,
+    "tokens": 358
+  },
+  {
+    "id": "bugzilla -- 284030",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 325.49490011297166,
+    "tokens": 394
+  },
+  {
+    "id": "bugzilla -- 35601",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 280.23939998820424,
+    "tokens": 328
+  },
+  {
+    "id": "bugzilla -- 101576",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 320.8650001324713,
+    "tokens": 352
+  },
+  {
+    "id": "bugzilla -- 35281",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 416.9669998809695,
+    "tokens": 338
+  },
+  {
+    "id": "bugzilla -- 16717",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 218.10960001312196,
+    "tokens": 331
+  },
+  {
+    "id": "bugzilla -- 35268",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 198.67820013314486,
+    "tokens": 341
+  },
+  {
+    "id": "bugzilla -- 92269",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 219.82389991171658,
+    "tokens": 352
+  },
+  {
+    "id": "bugzilla -- 200031",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 229.6683001331985,
+    "tokens": 368
+  },
+  {
+    "id": "bugzilla -- 120795",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 343.3099000249058,
+    "tokens": 356
+  },
+  {
+    "id": "bugzilla -- 92939",
+    "truth": "low",
+    "predicted": "high",
+    "latency_ms": 200.3425001166761,
+    "tokens": 367
+  },
+  {
+    "id": "bugzilla -- 20417",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 205.90119995176792,
+    "tokens": 325
+  },
+  {
+    "id": "bugzilla -- 157859",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 217.61419996619225,
+    "tokens": 351
+  },
+  {
+    "id": "bugzilla -- 21342",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 175.1989999320358,
+    "tokens": 326
+  },
+  {
+    "id": "bugzilla -- 228978",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 257.9141999594867,
+    "tokens": 330
+  },
+  {
+    "id": "bugzilla -- 168822",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 281.4421998336911,
+    "tokens": 335
+  },
+  {
+    "id": "bugzilla -- 155824",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 297.0935001503676,
+    "tokens": 320
+  },
+  {
+    "id": "bugzilla -- 9468",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 269.4663000293076,
+    "tokens": 325
+  },
+  {
+    "id": "bugzilla -- 103142",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 234.36690005473793,
+    "tokens": 346
+  },
+  {
+    "id": "bugzilla -- 108055",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 200.48599992878735,
+    "tokens": 321
+  },
+  {
+    "id": "bugzilla -- 170909",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 423.7758999224752,
+    "tokens": 342
+  },
+  {
+    "id": "bugzilla -- 10080",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 418.388299876824,
+    "tokens": 321
+  },
+  {
+    "id": "bugzilla -- 80706",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 217.44889998808503,
+    "tokens": 364
+  },
+  {
+    "id": "bugzilla -- 57578",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 423.01569995470345,
+    "tokens": 326
+  },
+  {
+    "id": "bugzilla -- 100114",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 216.63509984500706,
+    "tokens": 314
+  },
+  {
+    "id": "bugzilla -- 366789",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 523.6444000620395,
+    "tokens": 362
+  },
+  {
+    "id": "bugzilla -- 41994",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 215.9661001060158,
+    "tokens": 321
+  },
+  {
+    "id": "bugzilla -- 138631",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 199.65990004129708,
+    "tokens": 317
+  },
+  {
+    "id": "bugzilla -- 11521",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 189.32959996163845,
+    "tokens": 312
+  },
+  {
+    "id": "bugzilla -- 473966",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 177.6644999627024,
+    "tokens": 380
+  },
+  {
+    "id": "bugzilla -- 65453",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 330.55890002287924,
+    "tokens": 310
+  },
+  {
+    "id": "bugzilla -- 33523",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 247.72139987908304,
+    "tokens": 297
+  },
+  {
+    "id": "bugzilla -- 71402",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 253.78779997117817,
+    "tokens": 307
+  },
+  {
+    "id": "bugzilla -- 487498",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 419.32740015909076,
+    "tokens": 328
+  },
+  {
+    "id": "bugzilla -- 31907",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 207.21250004135072,
+    "tokens": 291
+  },
+  {
+    "id": "bugzilla -- 54832",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 169.68300007283688,
+    "tokens": 276
+  },
+  {
+    "id": "bugzilla -- 210943",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 275.7838999386877,
+    "tokens": 325
+  },
+  {
+    "id": "bugzilla -- 67605",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 215.5728000216186,
+    "tokens": 303
+  },
+  {
+    "id": "bugzilla -- 33583",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 320.35309984348714,
+    "tokens": 304
+  },
+  {
+    "id": "bugzilla -- 176473",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 319.70019987784326,
+    "tokens": 340
+  },
+  {
+    "id": "bugzilla -- 28769",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 319.48999990709126,
+    "tokens": 291
+  },
+  {
+    "id": "bugzilla -- 73637",
+    "truth": "low",
+    "predicted": "high",
+    "latency_ms": 216.27660002559423,
+    "tokens": 306
+  },
+  {
+    "id": "bugzilla -- 27338",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 216.7595000937581,
+    "tokens": 282
+  },
+  {
+    "id": "bugzilla -- 1108821",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 336.2747000064701,
+    "tokens": 317
+  },
+  {
+    "id": "bugzilla -- 102418",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 201.62109984084964,
+    "tokens": 290
+  },
+  {
+    "id": "bugzilla -- 85712",
+    "truth": "low",
+    "predicted": "high",
+    "latency_ms": 260.32400014810264,
+    "tokens": 324
+  },
+  {
+    "id": "bugzilla -- 137606",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 276.2726000510156,
+    "tokens": 296
+  },
+  {
+    "id": "bugzilla -- 195737",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 269.82860011048615,
+    "tokens": 330
+  },
+  {
+    "id": "bugzilla -- 35467",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 289.5724999252707,
+    "tokens": 291
+  },
+  {
+    "id": "bugzilla -- 150317",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 191.02650019340217,
+    "tokens": 290
+  },
+  {
+    "id": "bugzilla -- 11387",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 216.39670012518764,
+    "tokens": 301
+  },
+  {
+    "id": "bugzilla -- 367896",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 313.94640007056296,
+    "tokens": 329
+  },
+  {
+    "id": "bugzilla -- 13383",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 279.21120007522404,
+    "tokens": 323
+  },
+  {
+    "id": "bugzilla -- 131307",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 210.50100005231798,
+    "tokens": 282
+  },
+  {
+    "id": "bugzilla -- 148280",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 200.74469991959631,
+    "tokens": 272
+  },
+  {
+    "id": "bugzilla -- 303310",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 202.19849981367588,
+    "tokens": 330
+  },
+  {
+    "id": "bugzilla -- 15322",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 393.9922000281513,
+    "tokens": 288
+  },
+  {
+    "id": "bugzilla -- 23419",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 215.01049981452525,
+    "tokens": 281
+  },
+  {
+    "id": "bugzilla -- 135105",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 219.20299995690584,
+    "tokens": 292
+  },
+  {
+    "id": "bugzilla -- 65613",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 343.1669999845326,
+    "tokens": 275
+  },
+  {
+    "id": "bugzilla -- 145877",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 191.69160001911223,
+    "tokens": 305
+  },
+  {
+    "id": "bugzilla -- 20104",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 216.05910011567175,
+    "tokens": 285
+  },
+  {
+    "id": "bugzilla -- 15781",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 215.91090015135705,
+    "tokens": 270
+  },
+  {
+    "id": "bugzilla -- 136879",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 212.89650001563132,
+    "tokens": 284
+  },
+  {
+    "id": "bugzilla -- 79998",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 320.01499994657934,
+    "tokens": 273
+  },
+  {
+    "id": "bugzilla -- 148957",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 1651.5746000222862,
+    "tokens": 308
+  },
+  {
+    "id": "bugzilla -- 72798",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 316.82680011726916,
+    "tokens": 296
+  },
+  {
+    "id": "bugzilla -- 106834",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 218.11949997209013,
+    "tokens": 278
+  },
+  {
+    "id": "bugzilla -- 25141",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 215.23179998621345,
+    "tokens": 278
+  },
+  {
+    "id": "bugzilla -- 128679",
+    "truth": "low",
+    "predicted": "low",
+    "latency_ms": 216.25600010156631,
+    "tokens": 281
+  },
+  {
+    "id": "bugzilla -- 953273",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 405.25589999742806,
+    "tokens": 326
+  },
+  {
+    "id": "bugzilla -- 37990",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 337.3624999076128,
+    "tokens": 266
+  },
+  {
+    "id": "bugzilla -- 23114",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 318.8243000768125,
+    "tokens": 271
+  },
+  {
+    "id": "bugzilla -- 85505",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 345.1090999878943,
+    "tokens": 267
+  },
+  {
+    "id": "bugzilla -- 142564",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 300.0694999936968,
+    "tokens": 297
+  },
+  {
+    "id": "bugzilla -- 87515",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 203.72330001555383,
+    "tokens": 298
+  },
+  {
+    "id": "bugzilla -- 35550",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 222.52169996500015,
+    "tokens": 252
+  },
+  {
+    "id": "bugzilla -- 146289",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 295.14750000089407,
+    "tokens": 258
+  },
+  {
+    "id": "bugzilla -- 103400",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 340.1723001152277,
+    "tokens": 264
+  },
+  {
+    "id": "bugzilla -- 26943",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 210.67599998787045,
+    "tokens": 277
+  },
+  {
+    "id": "bugzilla -- 95507",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 311.6687999572605,
+    "tokens": 276
+  },
+  {
+    "id": "bugzilla -- 16255",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 430.04710017703474,
+    "tokens": 271
+  },
+  {
+    "id": "bugzilla -- 57162",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 215.85969999432564,
+    "tokens": 279
+  },
+  {
+    "id": "bugzilla -- 110904",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 317.74950004182756,
+    "tokens": 267
+  },
+  {
+    "id": "bugzilla -- 235312",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 216.2874999921769,
+    "tokens": 263
+  },
+  {
+    "id": "bugzilla -- 72607",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 220.25909996591508,
+    "tokens": 269
+  },
+  {
+    "id": "bugzilla -- 21263",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 311.5801000967622,
+    "tokens": 251
+  },
+  {
+    "id": "bugzilla -- 78619",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 219.09599984064698,
+    "tokens": 258
+  },
+  {
+    "id": "bugzilla -- 82676",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 421.57890019007027,
+    "tokens": 263
+  },
+  {
+    "id": "bugzilla -- 164238",
+    "truth": "critical",
+    "predicted": "high",
+    "latency_ms": 319.41940006799996,
+    "tokens": 264
+  },
+  {
+    "id": "bugzilla -- 14988",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 315.9692999906838,
+    "tokens": 257
+  },
+  {
+    "id": "bugzilla -- 19260",
+    "truth": "medium",
+    "predicted": "high",
+    "latency_ms": 320.65610005520284,
+    "tokens": 252
+  },
+  {
+    "id": "bugzilla -- 640702",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 185.00789999961853,
+    "tokens": 283
+  },
+  {
+    "id": "bugzilla -- 23756",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 348.6989000812173,
+    "tokens": 255
+  },
+  {
+    "id": "bugzilla -- 9410",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 218.11320004053414,
+    "tokens": 262
+  },
+  {
+    "id": "bugzilla -- 5599",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 319.3717999383807,
+    "tokens": 263
+  },
+  {
+    "id": "bugzilla -- 16909",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 194.71479998901486,
+    "tokens": 244
+  },
+  {
+    "id": "bugzilla -- 406022",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 229.14880001917481,
+    "tokens": 246
+  },
+  {
+    "id": "bugzilla -- 89822",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 216.63379995152354,
+    "tokens": 245
+  },
+  {
+    "id": "bugzilla -- 149870",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 218.65840000100434,
+    "tokens": 254
+  },
+  {
+    "id": "bugzilla -- 289644",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 184.5825999043882,
+    "tokens": 262
+  },
+  {
+    "id": "bugzilla -- 126694",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 349.88219989463687,
+    "tokens": 245
+  },
+  {
+    "id": "bugzilla -- 1347753",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 195.74949983507395,
+    "tokens": 247
+  },
+  {
+    "id": "bugzilla -- 17888",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 235.24110019207,
+    "tokens": 249
+  },
+  {
+    "id": "bugzilla -- 147474",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 251.01400003768504,
+    "tokens": 238
+  },
+  {
+    "id": "bugzilla -- 34146",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 283.5305000189692,
+    "tokens": 255
+  },
+  {
+    "id": "bugzilla -- 140780",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 217.2220000065863,
+    "tokens": 254
+  },
+  {
+    "id": "bugzilla -- 64294",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 171.1057999636978,
+    "tokens": 245
+  },
+  {
+    "id": "bugzilla -- 9940",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 258.60069994814694,
+    "tokens": 252
+  },
+  {
+    "id": "bugzilla -- 33340",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 216.39310009777546,
+    "tokens": 242
+  },
+  {
+    "id": "bugzilla -- 103247",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 218.47690013237298,
+    "tokens": 241
+  },
+  {
+    "id": "bugzilla -- 93952",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 320.5426000058651,
+    "tokens": 234
+  },
+  {
+    "id": "bugzilla -- 16647",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 942.41559994407,
+    "tokens": 241
+  },
+  {
+    "id": "bugzilla -- 13013",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 302.8019000776112,
+    "tokens": 235
+  },
+  {
+    "id": "bugzilla -- 72006",
+    "truth": "low",
+    "predicted": "low",
+    "latency_ms": 219.40269996412098,
+    "tokens": 237
+  },
+  {
+    "id": "bugzilla -- 58979",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 312.8076000139117,
+    "tokens": 246
+  },
+  {
+    "id": "bugzilla -- 72824",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 319.58240014500916,
+    "tokens": 233
+  },
+  {
+    "id": "bugzilla -- 38454",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 173.15289983525872,
+    "tokens": 231
+  },
+  {
+    "id": "bugzilla -- 103540",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 357.0375998970121,
+    "tokens": 246
+  },
+  {
+    "id": "bugzilla -- 184540",
+    "truth": "high",
+    "predicted": "medium",
+    "latency_ms": 219.3086000625044,
+    "tokens": 244
+  },
+  {
+    "id": "bugzilla -- 132121",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 308.49670013412833,
+    "tokens": 231
+  },
+  {
+    "id": "bugzilla -- 94537",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 198.02080001682043,
+    "tokens": 231
+  },
+  {
+    "id": "bugzilla -- 10709",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 238.65059996023774,
+    "tokens": 224
+  },
+  {
+    "id": "bugzilla -- 85600",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 213.6929000262171,
+    "tokens": 231
+  },
+  {
+    "id": "bugzilla -- 16359",
+    "truth": "medium",
+    "predicted": "high",
+    "latency_ms": 461.4772000350058,
+    "tokens": 225
+  },
+  {
+    "id": "bugzilla -- 133481",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 183.7105001322925,
+    "tokens": 228
+  },
+  {
+    "id": "bugzilla -- 27820",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 224.73839996382594,
+    "tokens": 224
+  },
+  {
+    "id": "bugzilla -- 13818",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 208.33449997007847,
+    "tokens": 232
+  },
+  {
+    "id": "bugzilla -- 11875",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 216.23359993100166,
+    "tokens": 218
+  },
+  {
+    "id": "bugzilla -- 70183",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 166.88950010575354,
+    "tokens": 222
+  },
+  {
+    "id": "bugzilla -- 128694",
+    "truth": "low",
+    "predicted": "low",
+    "latency_ms": 264.38180007971823,
+    "tokens": 230
+  },
+  {
+    "id": "bugzilla -- 78484",
+    "truth": "high",
+    "predicted": "high",
+    "latency_ms": 312.06830008886755,
+    "tokens": 238
+  },
+  {
+    "id": "bugzilla -- 9403",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 221.32869996130466,
+    "tokens": 233
+  },
+  {
+    "id": "bugzilla -- 130646",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 274.8911001253873,
+    "tokens": 217
+  },
+  {
+    "id": "bugzilla -- 71128",
+    "truth": "low",
+    "predicted": "low",
+    "latency_ms": 451.5193998813629,
+    "tokens": 216
+  },
+  {
+    "id": "bugzilla -- 11050",
+    "truth": "critical",
+    "predicted": "medium",
+    "latency_ms": 323.60340002924204,
+    "tokens": 217
+  },
+  {
+    "id": "bugzilla -- 35435",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 228.4812000580132,
+    "tokens": 205
+  },
+  {
+    "id": "bugzilla -- 16979",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 226.26130003482103,
+    "tokens": 200
+  },
+  {
+    "id": "bugzilla -- 100239",
+    "truth": "low",
+    "predicted": "medium",
+    "latency_ms": 283.2571999169886,
+    "tokens": 213
+  },
+  {
+    "id": "bugzilla -- 34925",
+    "truth": "medium",
+    "predicted": "medium",
+    "latency_ms": 176.5580999199301,
+    "tokens": 201
+  },
+  {
+    "id": "bugzilla -- 24088",
+    "truth": "medium",
+    "predicted": "low",
+    "latency_ms": 364.30699983611703,
+    "tokens": 199
+  }
+]
