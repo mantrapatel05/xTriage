@@ -1,6 +1,6 @@
 import chromadb
 import uuid
-from embeddings import EmbeddingsService
+from backend.app.services.embeddings import EmbeddingsService
 
 COLLECTION_NAME = "bug-embeddings"
 
