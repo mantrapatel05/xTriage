@@ -25,6 +25,8 @@ Steps to Reproduce: {steps}
 Expected Behavior: {expected}
 Actual Behavior: {actual}
 Labels: {labels}
+{historical_context}
+IMPORTANT: The historical bugs are for reference only. Base your severity primarily on the current bug’s own symptoms and impact, not on what similar bugs were classified as.
 
 Output JSON format:
 {{
@@ -55,9 +57,8 @@ class TechnicalAnalyzer:
             expected=bug.expected_behavior or "Not specified",
             actual=bug.actual_behavior or "Not specified",
             labels=", ".join(bug.labels) if bug.labels else "None",
+            historical_context=f"{context}\n" if context else "",
         )
-        if context:
-            prompt += f"\n\n{context}"
 
         used_fallback = False
         try:

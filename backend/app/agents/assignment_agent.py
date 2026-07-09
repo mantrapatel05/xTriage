@@ -13,6 +13,8 @@ Repository: {repository}
 Labels: {labels}
 Technical Analysis: {tech_analysis}
 Business Impact: {business_analysis}
+{historical_context}
+IMPORTANT: The historical bugs are for reference only. Base your severity primarily on the current bug’s own symptoms and impact, not on what similar bugs were classified as.
 
 Available teams:
 - "frontend-team" (UI, editor, extensions)
@@ -51,9 +53,8 @@ class AssignmentAgent:
             labels=", ".join(bug.labels) if bug.labels else "none",
             tech_analysis=tech_analysis or "pending",
             business_analysis=business_analysis or "pending",
+            historical_context=f"{context}\n" if context else "",
         )
-        if context:
-            prompt += f"\n\n{context}"
 
         used_fallback = False
         try:

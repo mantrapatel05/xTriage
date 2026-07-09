@@ -104,7 +104,7 @@ class VectorStore:
         )
 
         # here chromadb will return everything inside single-element list
-        # we are sending one query vectorr
+        # we are sending one query vectorrr
         ids = results["ids"][0]
         documents = results["documents"][0]
         distances = results["distances"][0]

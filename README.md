@@ -1,109 +1,135 @@
 # xTriage
 
-xTriage is an AI-assisted bug triage system that reads a bug report, checks for related issues, predicts severity, explains the decision, and recommends the engineering team that should handle it.
+**AI-assisted bug triage that actually gets measured.**
 
-The project combines a FastAPI backend, a React frontend, LLM-based analysis agents, sentence-transformer embeddings, and ChromaDB vector search to simulate a practical engineering triage workflow.
+xTriage reads a bug report, searches for similar historical issues, predicts severity, explains the decision, and recommends the engineering team that should own it — then proves whether each architectural choice actually works on a balanced, real-world evaluation set.
+
+Built with a FastAPI backend, React dashboard, multi-agent LLM pipeline, sentence-transformer embeddings, and ChromaDB vector search. Every design decision — multi-agent vs. single-call, RAG on vs. off, threshold tuning, prompt calibration — is backed by a 300-bug Mozilla Bugzilla benchmark with full confusion matrices, macro-F1, and per-class recall.
+
+---
+
+## Results at a Glance
+
+Evaluated on a **balanced 300-bug Bugzilla set** (75 per severity tier). Majority baseline on balanced data: **25.0%**.
+
+| Approach | Accuracy | Macro-F1 | Critical Recall | High Recall |
+|----------|----------|----------|-----------------|-------------|
+| Single-call LLM | 31.0% | — | 0% | 49% |
+| Multi-agent (no RAG) | 38.0% | 26.3% | 17% | 60% |
+| Multi-agent + RAG v1 | 38.0% | 33.4% | 71% | 28% |
+| **Multi-agent + RAG v2** | **47.0%** | **42.0%** | **73%** | **51%** |
+
+The final RAG-powered pipeline **nearly doubles macro-F1** over vanilla multi-agent, catches almost three-quarters of critical bugs, and recovers high-severity detection without the over-escalation that plagued the first RAG attempt.
+
+---
 
 ## Why This Project Exists
 
-Engineering teams receive bug reports with different levels of detail, urgency, and quality. Triage often requires answering the same questions repeatedly:
+Engineering teams answer the same triage questions on every bug report:
 
-- Is this a duplicate of an existing issue?
-- How severe is the bug?
-- What is the business impact?
+- Is this a duplicate of something we've already seen?
+- How severe is it — really?
+- What's the business impact?
 - Which team should own it?
 - What context should the assignee know first?
 
-xTriage explores how an AI system can assist that workflow by combining deterministic API design, vector similarity search, and specialized analysis agents — and, just as importantly, by honestly measuring whether the multi-agent approach actually beats simpler baselines.
+xTriage explores how an AI system can assist that workflow — and, just as importantly, **honestly measures** whether complexity (multi-agent orchestration, RAG, prompt engineering) actually beats simpler baselines. Early on, a data-quality bug inflated headline accuracy: a GitHub-sourced eval set was 96% "medium," so a model that always guessed "medium" would beat our system. We caught that, replaced the dataset, and now report macro-F1 and per-class recall alongside raw accuracy.
+
+---
 
 ## Features
 
-- **Bug report intake** — Submit bug reports with title, description, and optional metadata
-- **Technical severity analysis** — LLM-powered analysis of bug complexity, affected components, and severity
-- **Business impact analysis** — LLM-powered analysis of user impact, revenue risk, and priority
-- **Duplicate detection** — Semantic similarity search using sentence-transformer embeddings and ChromaDB
-- **Team assignment** — LLM-powered recommendation of the engineering team that should handle the bug
-- **Max-rule severity aggregation** — Business analysis can escalate severity, never reduce it (max of tech + business)
-- **Groq API key rotation** — Automatic rotation across multiple API keys with cooldown on rate limits, exponential backoff, and smart retry-after header parsing, with keys partitioned between the multi-agent pipeline and the single-call benchmark so the two never compete for the same quota
+- **Bug report intake** — Submit title, description, and optional metadata via API or React UI
+- **Multi-agent severity analysis** — Separate technical and business LLM agents, aggregated with a max-rule (business can escalate, never reduce)
+- **RAG over historical bugs** — Retrieves top-3 similar past bugs from ChromaDB and injects severity, resolution, component, and team metadata into every agent prompt
+- **Duplicate detection** — Semantic similarity search using sentence-transformer embeddings
+- **Team assignment** — LLM-powered recommendation informed by tech + business analysis and historical context
 - **Explainable triage** — Full agent trace with rationale, confidence scores, and signals
-- **Evaluation pipeline** — Bulk eval script with confusion matrix, per-class precision/recall/F1, and majority-baseline comparison (not just raw accuracy)
-- **Agent-vs-single-call benchmark** — Head-to-head comparison of the 3-agent pipeline against one consolidated LLM call, on the same labelled bugs, measuring accuracy, latency, and token cost
-- **Bugzilla-sourced eval set** — 300 real bugs pulled from Mozilla Bugzilla's public REST API, stratified to be perfectly balanced across severity tiers (see [Evaluation Data](#evaluation-data) below)
+- **Groq API key rotation** — Automatic rotation across multiple keys with cooldown on rate limits, exponential backoff, and retry-after header parsing; keys partitioned between multi-agent pipeline and single-call benchmark so they never compete for quota
+- **Evaluation pipeline** — Bulk eval with confusion matrix, per-class precision/recall/F1, macro-F1, and majority-baseline comparison
+- **Agent-vs-single-call benchmark** — Head-to-head on the same 300 labelled bugs: accuracy, latency, token cost
+- **Bugzilla-sourced eval set** — 300 real bugs from Mozilla Bugzilla's public REST API, stratified 75/75/75/75 across severity tiers with human-assigned ground truth
 - **Metrics endpoint** — Triage counts, duplicate rate, average triage time, severity distribution
-- **React dashboard** — UI for submission, history, and telemetry
-- **Typed backend models** — Pydantic-based request and response models
-- **OpenAPI docs** — Auto-generated at `/docs`
+- **React dashboard** — Editorial UI for submission, history, and telemetry
+- **Graceful degradation** — Groq unavailable → safe fallback results, never 500 errors; fallback calls tracked separately in eval runs
+
+---
 
 ## Tech Stack
 
-### Backend
+| Layer | Technologies |
+|-------|-------------|
+| **Backend** | Python 3.12, FastAPI, Uvicorn, Pydantic v2 |
+| **LLM** | Groq API (`llama-3.1-8b-instant`) |
+| **Embeddings** | sentence-transformers (`all-MiniLM-L6-v2`) |
+| **Vector DB** | ChromaDB (`PersistentClient`, cosine similarity) |
+| **Frontend** | React, TypeScript, Vite, TanStack Router, Tailwind CSS, Motion |
 
-- Python 3.12
-- FastAPI + Uvicorn
-- Pydantic v2
-- Groq API (llama-3.1-8b-instant) for LLM-powered agents
-- ChromaDB for vector storage
-- sentence-transformers (all-MiniLM-L6-v2) for text embeddings
-- python-dotenv for configuration
-
-### Frontend
-
-- React
-- TypeScript
-- Vite
-- TanStack Router
-- Tailwind CSS
-- Motion
+---
 
 ## System Architecture
 
 ```text
 User submits bug report
-        |
-        v
-Frontend React app
-        |
-        v
-FastAPI /triage endpoint
-        |
-        +--> Duplicate detector
-        |       +--> SentenceTransformer embeddings
-        |       +--> ChromaDB similarity search
-        |
-        +--> Technical analyzer agent (Llama via Groq)
-        |
-        +--> Business impact agent (Llama via Groq)
-        |
-        +--> Assignment agent (Llama via Groq)
-        |
-        v
+        │
+        ▼
+Frontend React app  ──►  POST /triage
+        │
+        ▼
+TriageLead orchestrator
+        │
+        ├─► Duplicate detector
+        │       └─► SentenceTransformer embeddings + ChromaDB similarity
+        │
+        ├─► RAG retrieval (top-3 similar historical bugs, similarity ≥ threshold)
+        │       └─► Injects severity, resolution, component, team into prompts
+        │
+        ├─► Technical analyzer agent  (Llama via Groq)
+        ├─► Business impact agent     (Llama via Groq)
+        └─► Assignment agent          (Llama via Groq)
+        │
+        ▼
 Triage result
-        |
-        +--> Severity (max of tech + business)
-        +--> Assigned team
-        +--> Confidence score
-        +--> Explanation with agent traces
-        +--> Duplicate matches
+        ├─► Severity (max of tech + business)
+        ├─► Assigned team
+        ├─► Confidence score
+        ├─► Explanation with agent traces
+        └─► Duplicate + historical context matches
 ```
 
-### API Key Rotation Architecture
+### RAG Pipeline
+
+Historical bugs from the eval corpus are embedded and stored in ChromaDB. At triage time:
+
+1. The incoming bug's title + description is embedded and queried against the collection
+2. Top-3 matches above the similarity threshold are retrieved with metadata (severity, resolution, component, team)
+3. A formatted context block is injected into all three LLM agent prompts
+4. Agents are instructed to treat historical bugs as **reference only** — severity is calibrated from the current bug's own symptoms, not blindly copied from similar past issues
+
+```bash
+# Seed the vector store before running eval or serving triage with RAG
+cd backend/app/eval
+python index_historical_bugs.py
+```
+
+### API Key Rotation
 
 ```text
 GroqClientPool (shared singleton)
-        |
-        +--> Slot 1 (GROQ_API_KEY_1)
-        +--> Slot 2 (GROQ_API_KEY_2)
-        +--> Slot 3 (GROQ_API_KEY_3)
-        +--> Slot 4 (GROQ_API_KEY_4)
-        +--> Slot 5 (GROQ_API_KEY_5)
-        |
-        +--> Rate-limited keys go on cooldown (retry-after header)
-        +--> Invalid keys are permanently disabled
-        +--> Transient errors trigger exponential backoff
-        +--> All keys exhausted → GroqClientUnavailable → agent returns fallback
+        │
+        ├─► Slot 1 (GROQ_API_KEY_1)  ─┐
+        ├─► Slot 2 (GROQ_API_KEY_2)   ├─► Multi-agent pool (keys 1–3)
+        ├─► Slot 3 (GROQ_API_KEY_3)  ─┘
+        ├─► Slot 4 (GROQ_API_KEY_4)  ─┐
+        └─► Slot 5 (GROQ_API_KEY_5)  ─┘  Single-call benchmark pool (keys 4–5)
+        │
+        ├─► Rate-limited keys → cooldown (retry-after header)
+        ├─► Invalid keys → permanently disabled
+        ├─► Transient errors → exponential backoff
+        └─► All keys exhausted → GroqClientUnavailable → agent fallback
 ```
 
-Keys are partitioned in `config.py` so the multi-agent backend and the single-call benchmark draw from separate pools (`GROQ_MULTI_API_KEYS` / `GROQ_SINGLE_API_KEYS`, both derived automatically from `GROQ_API_KEY_1..5` if not set explicitly). This exists specifically so that running `agent_benchmark.py` doesn't starve the production `/triage` endpoint of quota, and so the two phases of the benchmark don't contaminate each other's rate limits.
+---
 
 ## Repository Structure
 
@@ -112,139 +138,68 @@ xTriage/
 ├── backend/
 │   ├── app/
 │   │   ├── agents/
-│   │   │   ├── __init__.py
-│   │   │   ├── triage_lead.py        # Orchestrator — runs all agents, aggregates severity
-│   │   │   ├── technical_analyzer.py # Technical severity & complexity analysis
-│   │   │   ├── business_analyzer.py  # Business impact & priority analysis
-│   │   │   ├── duplicate_detector.py # Vector similarity duplicate search
-│   │   │   └── assignment_agent.py   # Team assignment recommendation
+│   │   │   ├── triage_lead.py          # Orchestrator — RAG + agents + max-rule severity
+│   │   │   ├── technical_analyzer.py   # Technical severity & complexity
+│   │   │   ├── business_analyzer.py    # Business impact & priority
+│   │   │   ├── duplicate_detector.py   # Vector similarity duplicate search
+│   │   │   └── assignment_agent.py     # Team assignment recommendation
 │   │   ├── models/
-│   │   │   ├── bug.py                # BugReport Pydantic model
-│   │   │   └── triage_result.py      # TriageResult, AgentOutput models
+│   │   │   ├── bug.py                  # BugReport Pydantic model
+│   │   │   └── triage_result.py        # TriageResult, AgentOutput models
 │   │   ├── routers/
-│   │   │   ├── triage.py             # POST /triage endpoint
-│   │   │   ├── bugs.py               # GET /bugs endpoint
-│   │   │   ├── metrics.py            # GET /metrics endpoint
-│   │   │   └── health.py             # GET /health endpoint
+│   │   │   ├── triage.py               # POST /triage
+│   │   │   ├── bugs.py                 # GET /bugs
+│   │   │   ├── metrics.py              # GET /metrics
+│   │   │   └── health.py               # GET /health
 │   │   ├── services/
-│   │   │   ├── groq_client.py        # Multi-key Groq client pool with rotation & cooldown
-│   │   │   ├── embeddings.py         # SentenceTransformer embedding service
-│   │   │   ├── vector_store.py       # ChromaDB vector store interface
-│   │   │   └── metrics_tracker.py    # In-memory triage metrics tracking
-│   │   ├── utils/
-│   │   │   └── logger.py             # Logging configuration
+│   │   │   ├── groq_client.py          # Multi-key pool with rotation & cooldown
+│   │   │   ├── embeddings.py           # SentenceTransformer embedding service
+│   │   │   ├── vector_store.py         # ChromaDB persistent vector store
+│   │   │   └── metrics_tracker.py      # In-memory triage metrics
 │   │   ├── eval/
-│   │   │   ├── run_eval.py           # Bulk eval script (confusion matrix + macro-F1)
-│   │   │   ├── baseline_eval.py      # Majority/uniform/weighted-random baselines (new)
-│   │   │   ├── agent_benchmark.py    # 3-agent pipeline vs single-call comparison (new)
-│   │   │   ├── smoke_test.py         # Quick 1-bug-per-tier pipeline sanity check (new)
-│   │   │   ├── fetch_bugzilla_issues.py  # Mozilla Bugzilla REST API fetcher (new)
-│   │   │   ├── fetch_github_issues.py    # GitHub issue scraper (legacy source)
-│   │   │   ├── curate_and_label.py       # Curation / labelling tool
+│   │   │   ├── run_eval.py             # Full 300-bug eval (confusion matrix + macro-F1)
+│   │   │   ├── agent_benchmark.py      # Multi-agent vs single-call head-to-head
+│   │   │   ├── baseline_eval.py        # Majority / uniform / weighted-random baselines
+│   │   │   ├── smoke_test.py           # 1-bug-per-tier pipeline sanity check
+│   │   │   ├── index_historical_bugs.py # Seed ChromaDB from eval corpus (RAG)
+│   │   │   ├── fetch_bugzilla_issues.py # Mozilla Bugzilla REST API fetcher
+│   │   │   ├── fetch_github_issues.py   # GitHub issue scraper (legacy source)
+│   │   │   ├── curate_and_label.py      # Curation / labelling tool
 │   │   │   └── eval/
-│   │   │       ├── bugs.json                    # 300 labelled Bugzilla bugs (current eval set)
-│   │   │       ├── raw_bugzilla_bugs.json        # Raw stratified Bugzilla pull
-│   │   │       ├── raw_github_bugs.json          # Raw scraped GitHub issues (legacy)
-│   │   │       ├── predictions.json              # Latest run_eval.py raw predictions
-│   │   │       ├── agent_benchmark_single.json   # Single-call benchmark run output
-│   │   │       └── agent_benchmark_multi.json    # Multi-agent benchmark run output
+│   │   │       ├── bugs.json                    # 300 labelled Bugzilla bugs
+│   │   │       ├── raw_bugzilla_bugs.json
+│   │   │       ├── predictions.json
+│   │   │       ├── agent_benchmark_single.json
+│   │   │       └── agent_benchmark_multi.json
 │   │   ├── data/
-│   │   │   └── seed_bugs.py          # Seed data for demo
-│   │   ├── config.py                 # Settings via env vars (incl. key partitioning)
-│   │   └── main.py                   # FastAPI app entry point
+│   │   │   └── seed_bugs.py
+│   │   ├── config.py
+│   │   └── main.py
 │   └── requirements.txt
 ├── frontend/
 │   ├── src/
-│   │   ├── components/               # Shared UI components
-│   │   ├── lib/                      # API client and utilities
-│   │   ├── routes/                   # App routes and screens
-│   │   └── styles.css
+│   │   ├── components/                   # UI components (shadcn/ui)
+│   │   ├── lib/                          # API client
+│   │   └── routes/                       # Triage form + dashboard
 │   └── package.json
-├── run.py                            # Backend launcher
+├── run.py
 ├── .env.example
-├── .gitignore
-├── sample_bugs.json                  # Sample bug reports for testing
-├── requirements.txt
+├── sample_bugs.json
 └── README.md
 ```
 
-## API Overview
+---
 
-### Health Check
+## Quick Start
 
-```http
-GET /health
-```
-
-Returns service status, environment, and version.
-
-### Submit Bug For Triage
-
-```http
-POST /triage
-```
-
-Example request:
-
-```json
-{
-  "title": "OAuth callback redirects to 404",
-  "description": "After approving Google sign-in, users are redirected to /404 instead of /dashboard. This happens only in production.",
-  "repository": "org/my-app",
-  "issue_url": "https://github.com/org/my-app/issues/42",
-  "labels": ["bug", "auth"]
-}
-```
-
-Example response:
-
-```json
-{
-  "bug_id": "3f9c8d8a-4a4e-4f5c-b8f9-7b7a9a2d0f16",
-  "status": "triaged",
-  "severity": "high",
-  "assigned_team": "frontend-team",
-  "confidence": 0.78,
-  "summary": "High severity — frontend-team",
-  "explanation": "**Technical Analysis:** ...\n\n**Business Impact:** ...\n\n**Assignment:** ...",
-  "duplicate_matches": [],
-  "agent_outputs": [
-    {"agent_name": "duplicate_detector", "decision": "no_duplicate", ...},
-    {"agent_name": "technical_analyzer", "decision": "high", ...},
-    {"agent_name": "business_analyzer", "decision": "high", ...},
-    {"agent_name": "assignment_agent", "decision": "frontend-team", ...}
-  ]
-}
-```
-
-### List Bugs
-
-```http
-GET /bugs
-```
-
-Returns known and recently submitted bug reports with pagination.
-
-### Metrics
-
-```http
-GET /metrics
-```
-
-Returns triage totals, duplicate rate, average triage time, and severity breakdown.
-
-## Local Setup
-
-### 1. Clone The Repository
+### 1. Clone and configure
 
 ```bash
 git clone <your-repo-url>
 cd xTriage
 ```
 
-### 2. Configure Environment Variables
-
-Create a `.env` file in the project root:
+Create a `.env` in the project root (see `.env.example`):
 
 ```env
 APP_NAME=Bug Triage Agent
@@ -254,50 +209,41 @@ DEBUG=true
 LOG_LEVEL=INFO
 CORS_ORIGINS=http://localhost:5173,http://127.0.0.1:5173,http://localhost:8080,http://127.0.0.1:8080
 
-# At least one Groq API key is required.
-# Single key:
-# GROQ_API_KEY=gsk_your_key_here
-
-# Or multiple keys for automatic rotation on rate limits:
+# At least one Groq key required. Multiple keys enable automatic rotation:
 GROQ_API_KEY_1=gsk_your_key_1
 GROQ_API_KEY_2=gsk_your_key_2
 GROQ_API_KEY_3=gsk_your_key_3
 GROQ_API_KEY_4=gsk_your_key_4
 GROQ_API_KEY_5=gsk_your_key_5
 
-# Optional overrides. Defaults are:
-# - multi-agent backend: GROQ_API_KEY_1..3
-# - single-call benchmark: GROQ_API_KEY_4..5
+# Optional overrides (defaults: keys 1–3 = multi-agent, keys 4–5 = benchmark)
 # GROQ_MULTI_API_KEYS=
 # GROQ_SINGLE_API_KEYS=
 # GROQ_MODEL=llama-3.1-8b-instant
 # GROQ_MAX_COMPLETION_TOKENS=220
 # GROQ_PROMPT_DESCRIPTION_CHARS=2500
-# GROQ_MAX_COOLDOWN_WAIT_SECONDS=20
 ```
 
-### 3. Start The Backend
+### 2. Start the backend
 
 ```bash
 python -m venv .venv
-.venv\Scripts\activate
-pip install -r backend\requirements.txt
+.venv\Scripts\activate        # Windows
+# source .venv/bin/activate   # macOS/Linux
+pip install -r backend/requirements.txt
 python run.py
 ```
 
-The backend runs at:
+API: `http://localhost:8000` · Docs: `http://localhost:8000/docs`
 
-```text
-http://localhost:8000
+### 3. Seed historical bugs for RAG
+
+```bash
+cd backend/app/eval
+python index_historical_bugs.py
 ```
 
-FastAPI docs are available at:
-
-```text
-http://localhost:8000/docs
-```
-
-### 4. Start The Frontend
+### 4. Start the frontend
 
 ```bash
 cd frontend
@@ -305,238 +251,263 @@ npm install
 npm run dev
 ```
 
-The frontend runs at:
+UI: `http://localhost:8080`
 
-```text
-http://localhost:8080
+---
+
+## API Overview
+
+### `POST /triage`
+
+```json
+{
+  "title": "OAuth callback redirects to 404",
+  "description": "After approving Google sign-in, users are redirected to /404 instead of /dashboard. Production only.",
+  "repository": "org/my-app",
+  "issue_url": "https://github.com/org/my-app/issues/42",
+  "labels": ["bug", "auth"]
+}
 ```
 
-## Evaluation Data
+Response includes `severity`, `assigned_team`, `confidence`, `explanation`, `duplicate_matches`, and `agent_outputs` with per-agent rationale and signals.
 
-The original eval set was scraped from GitHub issues (`microsoft/vscode` and others) and auto-labelled, which turned out to have a serious flaw: **96% of the 100 labelled bugs ended up tagged "medium"**, because there was no reliable ground-truth severity signal in GitHub issues to key off of. A model that always guesses "medium" would score 96% on that set — so the 82% xTriage was scoring looked good but was actually **14 points below that trivial baseline**. This was a data-quality bug, not a model bug, and it's the reason the eval set was replaced.
+### `GET /bugs` · `GET /metrics` · `GET /health`
 
-The current eval set is pulled from **Mozilla Bugzilla's public REST API** (`fetch_bugzilla_issues.py`), which carries a real, human-assigned `severity` field on every bug. Bugzilla's 6-tier scale is mapped down to xTriage's 4 tiers:
+List known bugs (paginated), triage telemetry, and service health. Full schemas at `/docs`.
+
+---
+
+## Evaluation Methodology
+
+### The dataset
+
+The original eval set was scraped from GitHub issues and auto-labelled. **96% of bugs were tagged "medium"** — a model that always guessed "medium" would score 96%. Our 82% headline number was actually 14 points *below* that trivial baseline. Data bug, not model bug.
+
+The current set is pulled from **Mozilla Bugzilla's public REST API**, which carries human-assigned `severity` on every bug. Bugzilla's 6-tier scale maps to xTriage's 4 tiers:
 
 ```text
-blocker, critical  -> critical
-major              -> high
-normal             -> medium
-minor, trivial     -> low
+blocker, critical  →  critical
+major              →  high
+normal             →  medium
+minor, trivial     →  low
 ```
 
-The fetcher stratifies the pull to target ~75 bugs per tier. The current `eval/bugs.json` contains **300 bugs, split exactly 75/75/75/75** across critical/high/medium/low — a genuinely balanced set with real ground truth, replacing the old 96%-medium GitHub set.
+`eval/bugs.json` contains **300 bugs, split exactly 75/75/75/75** — genuinely balanced with real ground truth.
 
-## Running The Evaluation
-
-### Prerequisites
-
-Ensure the backend is running:
+### Running the eval
 
 ```bash
+# Terminal 1 — backend
 python run.py
-```
 
-### Run The Eval
+# Terminal 2 — seed RAG corpus (first time or after corpus changes)
+cd backend/app/eval
+python index_historical_bugs.py
 
-```bash
-cd backend\app\eval
+# Terminal 3 — full eval
+cd backend/app/eval
 python run_eval.py
 ```
-
-The script sends each bug to the `/triage` endpoint, builds a full confusion matrix, and reports per-class precision/recall/F1 plus macro-F1 — not just raw accuracy, since raw accuracy on an imbalanced set can be misleading (see [Evaluation Data](#evaluation-data)).
-
-```text
-[1/300] OK - bugzilla -- 108010 - Better & more explicit support of MIME structure...
-[2/300] MISS (got medium, expected high) - bugzilla -- 378046 - Mail composition...
-...
-
-Confusion matrix (rows=truth, cols=predicted):
-                   low    medium      high  critical
-         low         0        54        18         3
-      medium         4        38        29         4
-        high         0        18        45        12
-    critical         0        16        46        13
-
-Per-class metrics:
-  low        precision=0.00  recall=0.00  f1=0.00  support=75
-  medium     precision=0.30  recall=0.51  f1=0.38  support=75
-  high       precision=0.33  recall=0.60  f1=0.43  support=75
-  critical   precision=0.41  recall=0.17  f1=0.24  support=75
-
-=======================================================
-Accuracy:           42.4%
-Macro-F1:           26.3%   <- report THIS, not raw accuracy
-Majority baseline:  25.0% (always guessing 'critical')
-Lift over baseline: +17.4 points
-Total fallback calls: 0
-=======================================================
-```
-
-The eval respects optional environment variables:
 
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `TRIAGE_URL` | `http://localhost:8000/triage` | Backend endpoint |
 | `EVAL_REQUEST_TIMEOUT` | `300` | HTTP timeout per request (seconds) |
-| `EVAL_SLEEP_SECONDS` | `10` | Delay between requests to avoid rate limits |
+| `EVAL_SLEEP_SECONDS` | `10` | Delay between requests (rate-limit safety) |
 
-### Interpreting Results
+**How to read output:**
 
 - **OK** — Predicted severity matches ground truth
-- **MISS (got X, expected Y)** — Prediction didn't match, shows actual vs expected
-- **[FALLBACK xN]** — N of the agent calls for that bug fell back to a safe default (Groq unavailable), flagged so degraded predictions aren't silently mixed in with normal ones
-- Report **macro-F1**, not raw accuracy, when the class distribution isn't perfectly balanced — raw accuracy on a skewed set rewards always guessing the majority class
+- **MISS (got X, expected Y)** — Wrong prediction, shows actual vs expected
+- **[FALLBACK xN]** — N agent calls fell back to safe defaults (Groq unavailable)
+- Report **macro-F1**, not just raw accuracy — on imbalanced sets, accuracy rewards always guessing the majority class
 
-### Baseline Sanity Check
-
-`baseline_eval.py` computes the dumb baselines any real result should be compared against — majority-class, uniform-random, and weighted-random — so a headline accuracy number is never reported without context:
+### Baseline sanity check
 
 ```bash
-cd backend\app\eval
+cd backend/app/eval
 python baseline_eval.py
 ```
 
-## Benchmark: Multi-Agent Pipeline vs. Single LLM Call
+Computes majority-class, uniform-random, and weighted-random baselines so headline numbers are never reported without context.
 
-`agent_benchmark.py` runs the same 300 balanced Bugzilla bugs through two approaches back-to-back, on **separate Groq key pools** so neither phase competes for the other's quota, and reports accuracy, latency, and token cost side by side.
-
-### Results — 300 Bugs, 75 Per Tier
-
-```text
-============================================================
-Metric                          Single-call    Multi-agent
-------------------------------------------------------------
-Accuracy                              31.0%          42.4%
-Avg latency (ms)                        316           8797
-LLM calls per bug                         1              3
-Avg tokens per bug                      397            n/a
-Total tokens (all bugs)              119151            n/a
-============================================================
-```
-
-**Confusion matrix — single-call** (rows=truth, cols=predicted):
-
-```text
-                low   medium    high   critical
-         low     0       60      15          0
-      medium     9       50      16          0
-        high     0       38      37          0
-    critical     0       34      41          0
-```
-
-**Confusion matrix — multi-agent** (rows=truth, cols=predicted):
-
-```text
-                low   medium    high   critical
-         low     0       54      18          3
-      medium     4       38      29          4
-        high     0       18      45         12
-    critical     0       16      46         13
-```
-
-**Baselines (balanced 4-class set, majority baseline = 25%):**
-
-| Approach | Accuracy | Lift over 25% majority baseline |
-|---|---|---|
-| Single-call | 31.0% | +6.0 points |
-| Multi-agent | 42.4% | +14.0 points |
-
-### Takeaways
-
-- The 3-agent pipeline beats a single consolidated LLM call by **+11.4 accuracy points** on the same 300 bugs, at the cost of ~3 LLM calls and ~28x the latency per bug (317ms → 8.8s average).
-- Both approaches struggle hardest with the **`low` severity class** — neither ever correctly predicts `low` in this run (0/75 correct for both). Both models are biased toward over-escalating low-severity bugs into `medium`/`high`/`critical`, which is a real and known failure mode of LLM-based severity classifiers: framing language ("crash", "data loss", "fails") triggers escalation even in bugs a human triager would call cosmetic.
-- The single-call approach shows a stronger "everything gravitates to the middle" pattern (most predictions land in `medium`/`high` regardless of truth); the multi-agent pipeline spreads predictions more across the tiers and picks up more `critical` bugs correctly (13/75 vs. 0/75), consistent with the max-rule design intentionally biasing toward escalation when either agent flags concern.
-- Neither number should be read as "production-ready" — 42.4% accuracy on a 4-class balanced problem is meaningfully better than guessing, but severity classification from free text alone remains a hard problem. This benchmark exists to make that gap visible and trackable across iterations, not to declare victory.
-
-## Smoke Test
-
-`smoke_test.py` is a fast sanity check — one bug per severity tier — meant to catch pipeline breakage before running a full 300-bug eval:
+### Smoke test
 
 ```bash
-cd backend\app\eval
+cd backend/app/eval
 python smoke_test.py
 ```
 
-Latest run:
+Fast pre-flight: one bug per severity tier, fallback-call tracking. Run before a full 300-bug eval.
 
-```text
-Testing [critical] - ... -> predicted=high    fallbacks=[] [MISS]
-Testing [high]     - ... -> predicted=high    fallbacks=[] [OK]
-Testing [low]      - ... -> predicted=high    fallbacks=[] [MISS]
-Testing [medium]   - ... -> predicted=medium  fallbacks=[] [OK]
-Testing [high]     - ... -> predicted=medium  fallbacks=[] [MISS]
+### Agent benchmark (multi-agent vs single-call)
 
-2/4 passed, 0 total fallback calls
+```bash
+cd backend/app/eval
+python agent_benchmark.py
 ```
 
-Note: one of the 5 sampled bugs originally 422'd during this run due to a title-length validation issue in the request payload; that has since been fixed (title is now truncated consistently before being sent, matching the eval script's behavior), leaving 4 completed comparisons in the tally above. Zero fallback calls confirms the Groq key pool was healthy throughout — any MISS in this run is a model-accuracy issue, not an infrastructure issue.
+Runs the same 300 bugs through both approaches on **separate Groq key pools**, reporting accuracy, latency, and token cost side by side.
 
-## Fixes Applied Since Initial Build
+---
 
-| # | Fix | Files Changed |
-|---|-----|--------------|
-| 1 | Removed fake/auto-assigned "medium" ground-truth labels that were masking a 96%-medium data skew | `curate_and_label.py` |
-| 2 | Replaced raw-accuracy-only reporting with a full confusion matrix, per-class precision/recall/F1, and macro-F1 | `run_eval.py` |
-| 3 | Added severity-string normalization so Bugzilla's 6-tier vocabulary (`blocker`, `major`, `normal`, `minor`, `trivial`, etc.) is mapped correctly instead of silently mismatching | `agent_benchmark.py` |
-| 4 | Made the single-call and multi-agent benchmark phases run sequentially against separate key pools, eliminating rate-limit contamination between the two | `agent_benchmark.py` |
-| 5 | Added structured logging of 422 response bodies and consistent title truncation before submission | `agent_benchmark.py`, `run_eval.py` |
-| 6 | Added a Mozilla Bugzilla REST API fetcher to source a properly balanced, real-ground-truth eval set | `fetch_bugzilla_issues.py` (new) |
-| 7 | Added a fast 1-bug-per-tier smoke test with fallback-call tracking for pre-flight pipeline checks | `smoke_test.py` (new) |
-| 8 | Partitioned Groq API keys into separate multi-agent/single-call pools in settings | `config.py`, `groq_client.py` |
+## Evaluation Results
 
-## Known Issues / In Progress
+All results on the **balanced 300-bug Bugzilla set** (75 per tier). Majority baseline: **25.0%**.
 
-The following cleanup items are being worked on independently and are not yet fully complete as of this eval round:
+### 1. Pre-RAG — no historical context
 
-- Removing leftover BOM characters and informal inline dev comments from a few backend source files
-- Migrating `VectorStore` off the deprecated `chromadb.Client()` constructor onto `chromadb.PersistentClient(path="./chroma_data")`
-- Adding graceful fallbacks and retry/backoff for edge cases in Groq calls beyond what `GroqClientPool` already covers
-- Expanding automated test coverage beyond the eval/benchmark/smoke scripts described above
+#### Single-call LLM
 
-## Severity Aggregation
+| Metric | Value |
+|--------|-------|
+| Accuracy | 31.0% |
 
-xTriage uses a **max-rule** to combine technical and business severity:
+One consolidated Groq call returns technical severity, business severity, team, and confidence. Fast (~316 ms/bug) but shallow — 0% critical recall, heavy bias toward `medium`/`high`.
 
-- Each agent independently rates severity on a 1-4 scale (low → critical)
-- The final severity is the **maximum** of the two
-- Business can **escalate** severity (e.g., technically simple but blocks all users → critical)
-- Business can **never reduce** severity (e.g., technically complex but cosmetic → stays at tech's rating)
+#### Multi-agent (technical + business + assignment)
 
-This ensures that if either analysis flags a bug as critical, the final result reflects that — and, per the benchmark above, is a likely contributor to the multi-agent pipeline's stronger `critical`-class recall relative to the single-call approach.
+| Metric | Value |
+|--------|-------|
+| Accuracy | **38.0%** |
+| Macro-F1 | 26.3% |
+| Critical recall | 17% |
+| High recall | 60% |
+| Low recall | 0% |
+| Fallback calls | 0 |
 
-## Graceful Degradation
+Three specialized agents with max-rule severity aggregation. Better tier spread and stronger high recall, but still zero correct `low` predictions — classic LLM over-escalation on cosmetic bugs.
 
-When Groq API is unavailable (rate limited, quota exhausted, network error):
+---
 
-1. **GroqClientPool** retries with exponential backoff across all available API keys in its assigned pool
-2. If all keys are exhausted, it raises `GroqClientUnavailable`
-3. Each agent catches this and returns a safe fallback result (medium severity, triage-team assignment)
-4. The backend responds with `200 OK` and the fallback, never a 500 error
-5. Eval and benchmark scripts track and report fallback calls separately so degraded runs aren't silently averaged in with healthy ones
+### 2. RAG v1 — historical context (threshold = 0.5, full docs)
 
-## Example Workflow
+| Metric | Value |
+|--------|-------|
+| Accuracy | 38.0% |
+| Macro-F1 | 33.4% |
+| Critical recall | 71% |
+| High recall | 28% |
+| Low recall | 4% |
+| Fallback calls | 1 |
 
-1. Open the frontend at `http://localhost:8080`
-2. Enter a bug title and description
-3. Submit the report
-4. The backend runs duplicate detection, then all three LLM agents in parallel
-5. Severity is computed as the max of technical and business ratings
-6. The UI displays severity, assigned team, confidence, explanation, and agent traces
-7. The dashboard shows triage metrics and recent bug history
+**Confusion matrix** (rows = truth, cols = predicted):
+
+```text
+            low   medium   high   critical
+low          3       46     18         8
+medium       6       37     24         8
+high         0       14     21        40
+critical     0        7     15        53
+```
+
+**Per-class metrics:**
+
+| Class | Precision | Recall | F1 |
+|-------|-----------|--------|-----|
+| low | 0.33 | 0.04 | 0.07 |
+| medium | 0.36 | 0.49 | 0.41 |
+| high | 0.27 | 0.28 | 0.27 |
+| critical | 0.49 | 0.71 | 0.58 |
+
+RAG dramatically improved critical recall (17% → 71%) but introduced **over-escalation** — agents copied severity from similar historical bugs instead of calibrating from the current report. High recall collapsed (60% → 28%).
+
+---
+
+### 3. RAG v2 — optimised (threshold = 0.7, truncated docs, de-escalation prompt)
+
+| Metric | Value |
+|--------|-------|
+| Accuracy | **47.0%** |
+| Macro-F1 | **42.0%** |
+| Critical recall | **73%** |
+| High recall | **51%** |
+| Medium recall | 48% |
+| Low recall | 8% |
+| Fallback calls | 9 |
+
+**Confusion matrix** (rows = truth, cols = predicted):
+
+```text
+            low   medium   high   critical
+low          6       44     13        12
+medium       6       36     23        10
+high         0        9     38        28
+critical     0        5     15        55
+```
+
+**Per-class metrics:**
+
+| Class | Precision | Recall | F1 |
+|-------|-----------|--------|-----|
+| low | 0.50 | 0.08 | 0.14 |
+| medium | 0.38 | 0.48 | 0.43 |
+| high | 0.43 | 0.51 | **0.46** |
+| critical | 0.52 | 0.73 | **0.61** |
+
+Three targeted fixes over v1:
+
+1. **Higher similarity threshold (0.7)** — only inject historical bugs that are genuinely relevant, reducing noise
+2. **Truncated context (300-char summaries)** — keeps prompts focused, avoids drowning agents in full Bugzilla write-ups
+3. **De-escalation prompt** — explicit instruction that historical bugs are reference only; severity must come from the current bug's own symptoms
+
+Result: critical recall held at 73%, high recall recovered to 51%, macro-F1 nearly doubled vs. pre-RAG multi-agent.
+
+---
+
+### Improvement arc
+
+```text
+31% ──► 38% ──► 38% ──► 47%
+ │       │       │       │
+ │       │       │       └─ RAG v2: calibrated context + de-escalation
+ │       │       └─ RAG v1: critical recall spike, but over-escalation
+ │       └─ Multi-agent: better tier spread, still no low recall
+ └─ Single-call: fast, shallow, 0% critical recall
+```
+
+| What changed | Critical recall | High recall | Macro-F1 |
+|-------------|-----------------|-------------|----------|
+| Single-call → Multi-agent | 0% → 17% | 49% → 60% | — → 26.3% |
+| Multi-agent → RAG v1 | 17% → 71% | 60% → 28% | 26.3% → 33.4% |
+| RAG v1 → RAG v2 | 71% → 73% | 28% → 51% | 33.4% → 42.0% |
+
+---
+
+## Design Decisions
+
+### Max-rule severity aggregation
+
+Technical and business agents each rate severity independently (low → critical). The final severity is the **maximum** of the two:
+
+- Business **can escalate** (technically simple but blocks all users → critical)
+- Business **can never reduce** (technically complex but cosmetic → stays at tech's rating)
+
+This is a likely contributor to the multi-agent pipeline's stronger critical-class recall relative to single-call.
+
+### Graceful degradation
+
+When Groq is unavailable (rate limited, quota exhausted, network error):
+
+1. `GroqClientPool` retries with exponential backoff across all keys in its pool
+2. All keys exhausted → `GroqClientUnavailable`
+3. Each agent returns a safe fallback (medium severity, triage-team assignment)
+4. Backend responds `200 OK` with the fallback — never a 500
+5. Eval scripts track fallback calls separately so degraded runs aren't silently averaged in
+
+---
 
 ## What This Project Demonstrates
 
-- API design with FastAPI and Pydantic
-- Multi-agent AI orchestration with graceful degradation
-- API key rotation with cooldown-based rate limit handling and multi-pool partitioning
-- Vector search for semantic duplicate detection
-- Embedding-based similarity with sentence-transformers
-- Prompt engineering for structured JSON output from LLMs
-- Rigorous evaluation methodology: catching a data-quality bug (96%-medium skew) that inflated an earlier headline number, replacing it with a genuinely balanced, real-ground-truth eval set, and reporting macro-F1 and baselines alongside raw accuracy
-- Head-to-head benchmarking of architectural choices (multi-agent vs. single-call) on accuracy, latency, and cost — not just shipping the more complex approach on faith
-- React and TypeScript frontend development
-- End-to-end product thinking for engineering team workflows
+- **Rigorous eval methodology** — caught a 96%-medium data skew that inflated an earlier headline number; replaced it with balanced, real-ground-truth Bugzilla data
+- **Iterative RAG engineering** — v1 proved historical context helps critical recall; v2 fixed over-escalation with threshold tuning, truncation, and prompt calibration
+- **Multi-agent vs single-call benchmarking** — architectural choices measured on accuracy, latency, and cost, not shipped on faith
+- **Production-minded API design** — FastAPI + Pydantic, key rotation with pool partitioning, graceful degradation, explainable agent traces
+- **Vector search for triage** — embeddings for both duplicate detection and RAG context retrieval
+- **End-to-end product** — React dashboard, metrics, OpenAPI docs, eval tooling
+
+---
 
 ## License
 
-This project is currently intended for learning, experimentation, and portfolio development.
+Intended for learning, experimentation, and portfolio development.

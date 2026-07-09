@@ -22,6 +22,8 @@ Bug Title: {title}
 Description: {description}
 Severity Hint: {severity_hint}
 Reporter: {reporter}
+{historical_context}
+IMPORTANT: The historical bugs are for reference only. Base your severity primarily on the current bug’s own symptoms and impact, not on what similar bugs were classified as.
 
 Output JSON format:
 {{
@@ -50,9 +52,8 @@ class BusinessAnalyzer:
             description=desc,
             severity_hint=bug.severity_hint.value if bug.severity_hint else "not specified",
             reporter=bug.reporter or "unknown",
+            historical_context=f"{context}\n" if context else "",
         )
-        if context:
-            prompt += f"\n\n{context}"
 
         used_fallback = False
         try:

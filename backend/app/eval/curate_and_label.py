@@ -10,7 +10,8 @@ def main():
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
         raw = json.load(f)
 
-    # Bugzilla data already has ground_truth_severity set — just filter by description length
+    # Bugzilla data already has ground_truth_severity set lol
+    # here imma just filter by description length
     filtered = [iss for iss in raw if len(iss.get("description", "")) > 20]
     filtered.sort(key=lambda x: len(x.get("description", "")), reverse=True)
 
