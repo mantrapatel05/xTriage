@@ -41,7 +41,7 @@ class AssignmentAgent:
         self.max_tokens = settings.groq_max_completion_tokens
         self.max_desc_chars = settings.groq_prompt_description_chars
 
-    def assign(self, bug: BugReport, tech_analysis: str = "", business_analysis: str = "") -> AgentOutput:
+    def analyze(self, bug: BugReport, tech_analysis: str = "", business_analysis: str = "", context: str = "") -> AgentOutput:
         desc = bug.description[:self.max_desc_chars] if bug.description else ""
         prompt = ASSIGNMENT_PROMPT.format(
             title=bug.title,
@@ -52,6 +52,8 @@ class AssignmentAgent:
             tech_analysis=tech_analysis or "pending",
             business_analysis=business_analysis or "pending",
         )
+        if context:
+            prompt += f"\n\n{context}"
 
         used_fallback = False
         try:

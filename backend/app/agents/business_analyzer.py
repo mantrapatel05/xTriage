@@ -43,7 +43,7 @@ class BusinessAnalyzer:
         self.max_tokens = settings.groq_max_completion_tokens
         self.max_desc_chars = settings.groq_prompt_description_chars
 
-    def analyze(self, bug: BugReport) -> AgentOutput:
+    def analyze(self, bug: BugReport, context: str = "") -> AgentOutput:
         desc = bug.description[:self.max_desc_chars] if bug.description else ""
         prompt = BUSINESS_PROMPT.format(
             title=bug.title,
@@ -51,6 +51,8 @@ class BusinessAnalyzer:
             severity_hint=bug.severity_hint.value if bug.severity_hint else "not specified",
             reporter=bug.reporter or "unknown",
         )
+        if context:
+            prompt += f"\n\n{context}"
 
         used_fallback = False
         try:
